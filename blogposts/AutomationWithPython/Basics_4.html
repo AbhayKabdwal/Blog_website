@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loop statements in Python</title>
+    <link rel="stylesheet" type="text/css" href="../../css/post_style.css">
+</head>
+<body>
+<h1>Loop Statements in Python</h1>
+
+<p>Loop statements in Python allow you to repeat a block of code multiple times, making it easier to perform repetitive tasks. There are two primary types of loop statements in Python: <code>for</code> and <code>while</code> loops.</p>
+
+<h2>1. <code>for</code> Loop</h2>
+
+<p>A <code>for</code> loop is used to iterate over a sequence (e.g., a list, tuple, string, or range) or any iterable object. It executes a block of code for each item in the sequence.</p>
+
+<p><strong>Syntax:</strong></p>
+
+<pre>
+<code>
+for item in iterable:
+    # Code to execute for each item
+</code>
+</pre>
+
+<p><strong>Example 1: Looping Through a List</strong></p>
+
+<pre>
+<code>
+fruits = ["apple", "banana", "cherry"]
+for fruit in fruits:
+    print(fruit)
+</code>
+</pre>
+
+<p><strong>Example 2: Using <code>range()</code> to Generate a Sequence</strong></p>
+
+<pre>
+<code>
+for i in range(1, 5):
+    print(i)
+</code>
+</pre>
+
+<h2>2. <code>while</code> Loop</h2>
+
+<p>A <code>while</code> loop is used to repeatedly execute a block of code as long as a specified condition is true. It checks the condition before each iteration.</p>
+
+<p><strong>Syntax:</strong></p>
+
+<pre>
+<code>
+while condition:
+    # Code to execute as long as the condition is true
+</code>
+</pre>
+
+<p><strong>Example 1: Counting Down from 5</strong></p>
+
+<pre>
+<code>
+count = 5
+while count > 0:
+    print(count)
+    count -= 1
+</code>
+</pre>
+
+<p><strong>Example 2: User Input Validation</strong></p>
+
+<pre>
+<code>
+user_input = ""
+while user_input != "quit":
+    user_input = input("Enter a command ('quit' to exit): ")
+    print(f"You entered: {user_input}")
+</code>
+</pre>
+
+<p>These loop statements are fundamental in Python and are used extensively to perform tasks that involve repetitive actions. Whether you need to process items in a collection or repeatedly execute code based on a condition, <code>for</code> and <code>while</code> loops provide the necessary tools to handle various iteration scenarios.</p>
+
+<h2 id="thank-you">Thank You</h2>
+
+<p>Excited for more? Subscribe to the channel and hit the bell icon to receive notifications of further contents.</p>
+
+<h2>Next up in the series</h2>
+
+<ul>
+    <li>Basics of Python continued</li>
+    <ul>
+        <li>Functions</li>
+    </ul>
+</ul>
+
+<h2 id="contact">Contact Me</h2>
+
+<p>Author -- Abhay Kabdwal -- Doctor_Innovator</p>
+<p><a href="https://www.youtube.com/@doctor_innovator/featured">Youtube</a></p>
+<p><a href="https://discord.gg/7ydGD3aJ">Discord</a></p>
+<p><a href="https://t.me/doctor_innovator">Telegram</a></p>
+
+</body>
+</html>

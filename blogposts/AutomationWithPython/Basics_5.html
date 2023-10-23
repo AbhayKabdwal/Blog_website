@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Functions in Python</title>
+    <link rel="stylesheet" type="text/css" href="../../css/post_style.css">
+</head>
+<body>
+<h1>Functions in Python</h1>
+
+<p>Functions in Python are reusable blocks of code that perform specific tasks. They are essential for organizing and modularizing code. Functions can take input, process it, and return output. There are two main types of functions in Python: built-in functions and user-defined functions.</p>
+
+<h2>1. Built-in Functions</h2>
+
+<p>Python provides a wide range of built-in functions that are readily available for common tasks. Here are three examples:</p>
+
+<h3>a. <code>print()</code></h3>
+
+<p>The <code>print()</code> function is used to display text or variables on the console.</p>
+
+<pre><code>print("Hello, world!")
+</code></pre>
+
+<pre><code>x = 10
+y = 20
+print("Sum:", x + y)
+</code></pre>
+
+<h3>b. <code>len()</code></h3>
+
+<p>The <code>len()</code> function is used to determine the length of a sequence, such as a string, list, or tuple.</p>
+
+<pre><code>text = "Python is fun!"
+length = len(text)
+print("Length:", length)
+</code></pre>
+
+<pre><code>numbers = [1, 2, 3, 4, 5]
+count = len(numbers)
+print("Count:", count)
+</code></pre>
+
+<h3>c. <code>max()</code></h3>
+
+<p>The <code>max()</code> function is used to find the maximum value from a sequence or a set of arguments.</p>
+
+<pre><code>scores = [85, 92, 78, 95, 88]
+highest_score = max(scores)
+print("Highest Score:", highest_score)
+</code></pre>
+
+<pre><code>x = 45
+y = 72
+z = 60
+max_value = max(x, y, z)
+print("Maximum Value:", max_value)
+</code></pre>
+
+<h2>2. User-Defined Functions</h2>
+
+<p>User-defined functions are created by the programmer to perform specific tasks as needed. They enhance code modularity and reusability. Here are three examples:</p>
+
+<h3>a. <code>add_numbers()</code></h3>
+
+<p>A simple user-defined function to add two numbers.</p>
+
+<pre><code>def add_numbers(a, b):
+    return a + b
+
+result = add_numbers(5, 3)
+print("Sum:", result)
+</code></pre>
+
+<pre><code>def add_floats(x, y):
+    return x + y
+
+result = add_floats(3.5, 2.1)
+print("Sum:", result)
+</code></pre>
+
+<h3>b. <code>is_even()</code></h3>
+
+<p>A user-defined function to check if a number is even.</p>
+
+<pre><code>def is_even(number):
+    return number % 2 == 0
+
+result = is_even(6)
+print("Is Even:", result)
+</code></pre>
+
+<pre><code>def is_odd(number):
+    return not is_even(number)
+
+result = is_odd(9)
+print("Is Odd:", result)
+</code></pre>
+
+<h3>c. <code>calculate_average()</code></h3>
+
+<p>A user-defined function to calculate the average of a list of numbers.</p>
+
+<pre><code>def calculate_average(numbers):
+    total = sum(numbers)
+    count = len(numbers)
+    return total / count
+
+scores = [85, 92, 78, 95, 88]
+average = calculate_average(scores)
+print("Average Score:", average)
+</code></pre>
+
+<pre><code>def grade_average(grades):
+    grade_points = {"A": 4.0, "B": 3.0, "C": 2.0, "D": 1.0, "F": 0.0}
+    total_points = sum(grade_points[grade] for grade in grades)
+    count = len(grades)
+    return total_points / count
+
+student_grades = ["A", "B", "C", "A", "B"]
+average = grade_average(student_grades)
+print("Average GPA:", average)
+</code></pre>
+
+<p>Functions are a fundamental concept in Python programming, allowing you to encapsulate and reuse code efficiently. Built-in functions provide a wide range of functionality, while user-defined functions empower you to create custom logic tailored to your specific needs.</p>
+
+<h2 id="thank-you">Thank You</h2>
+
+<p>- Excited for more? Subscribe the channel and hit the bell icon to receive notifications of further contents.</p>
+
+<h2>Next up in the series</h2>
+
+<ul>
+    <li>Basics of python continued</li>
+    <ul>
+        <li>Modules and libraries</li>
+    </ul>
+</ul>
+
+<h2 id="contact">Contact Me</h2>
+
+<p>- Author -- Abhay Kabdwal -- Doctor_Innovator</p>
+<p>- <a href="https://www.youtube.com/@doctor_innovator/featured">Youtube</a></p>
+<p>- <a href="https://discord.gg/7ydGD3aJ">Discord</a></p>
+<p>- <a href="https://t.me/doctor_innovator">Telegram</a></p>
+</body>
+</html>

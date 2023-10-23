@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>File Management in Python</title>
+    <link rel="stylesheet" type="text/css" href="../../css/post_style.css">
+</head>
+
+<body>
+
+    <h1>File Management in Python</h1>
+
+    <p>File management in Python is essential for reading, writing, and manipulating files. This markdown script outlines
+        the fundamental concepts and operations related to file management, along with examples for each.</p>
+
+    <h2>Table of Contents</h2>
+    <ol>
+        <li><a href="#1-opening-and-closing-files">Opening and Closing Files</a></li>
+        <li><a href="#2-reading-files">Reading Files</a></li>
+        <li><a href="#3-writing-files">Writing Files</a></li>
+        <li><a href="#4-file-modes">File Modes</a></li>
+        <li><a href="#5-working-with-text-files">Working with Text Files</a></li>
+        <li><a href="#6-working-with-binary-files">Working with Binary Files</a></li>
+        <li><a href="#7-file-handling-using-with-statement">File Handling using <code>with</code> Statement</a></li>
+        <li><a href="#8-file-navigation-and-location">File Navigation and Location</a></li>
+        <li><a href="#9-file-information">File Information</a></li>
+    </ol>
+
+    <h2 id="1-opening-and-closing-files">1. Opening and Closing Files</h2>
+    <p>To work with files in Python, you must first open them and close them when you're done.</p>
+
+    <h3>Example : Opening and Closing a Text File</h3>
+    <pre><code># Open a file in write mode
+file = open('example.txt', 'w')
+# ... do some operations ...
+file.close()  # Close the file when done
+</code></pre>
+
+    <h3>Example : Opening and Closing a Binary File</h3>
+    <pre><code># Open a binary file in read mode
+binary_file = open('data.bin', 'rb')
+# ... do some operations ...
+binary_file.close()  # Close the binary file
+</code></pre>
+
+    <h2 id="2-reading-files">2. Reading Files</h2>
+    <p>Reading data from files is a common task in Python.</p>
+
+    <h3>Example : Reading a Text File Line by Line</h3>
+    <pre><code>with open('example.txt', 'r') as file:
+    for line in file:
+        print(line.strip())  # Strip newline character
+</code></pre>
+
+    <h3>Example : Reading the Entire Contents of a Binary File</h3>
+    <pre><code>with open('data.bin', 'rb') as binary_file:
+    data = binary_file.read()
+    # Process binary data here
+</code></pre>
+
+    <h2 id="3-writing-files">3. Writing Files</h2>
+    <p>You can write data to files using various methods.</p>
+
+    <h3>Example : Writing to a Text File</h3>
+    <pre><code>with open('example.txt', 'w') as file:
+    file.write('Hello, World!\n')
+    file.write('Python is awesome!')
+</code></pre>
+
+    <h3>Example : Writing to a Binary File</h3>
+    <pre><code>with open('data.bin', 'wb') as binary_file:
+    binary_data = bytes([0x48, 0x65, 0x6C, 0x6C, 0x6F])
+    binary_file.write(binary_data)
+</code></pre>
+
+    <h2 id="4-file-modes">4. File Modes</h2>
+    <p>Python supports different file modes for opening files.</p>
+    <ul>
+        <li><code>'r'</code>: Read (default)</li>
+        <li><code>'w'</code>: Write</li>
+        <li><code>'a'</code>: Append</li>
+        <li><code>'b'</code>: Binary</li>
+        <li><code>'t'</code>: Text (default)</li>
+    </ul>
+
+    <h2 id="5-working-with-text-files">5. Working with Text Files</h2>
+    <p>Text files store data in a human-readable format.</p>
+
+    <h3>Example : Reading and Writing Text Files</h3>
+    <pre><code>with open('textfile.txt', 'w') as text_file:
+    text_file.write('Python is fun!')
+
+with open('textfile.txt', 'r') as text_file:
+    content = text_file.read()
+    print(content)
+</code></pre>
+
+    <h2 id="6-working-with-binary-files">6. Working with Binary Files</h2>
+    <p>Binary files store data in a non-human-readable format.</p>
+
+    <h3>Example : Reading and Writing Binary Files</h3>
+    <pre><code>with open('binaryfile.bin', 'wb') as binary_file:
+    binary_data = bytes([0x48, 0x65, 0x6C, 0x6C, 0x6F])
+    binary_file.write(binary_data)
+
+with open('binaryfile.bin', 'rb') as binary_file:
+    data = binary_file.read()
+    # Process binary data here
+</code></pre>
+
+    <h2 id="7-file-handling-using-with-statement">7. File Handling using <code>with</code> Statement</h2>
+    <p>Using the <code>with</code> statement is recommended because it automatically closes files.</p>
+
+    <h2 id="8-file-navigation-and-location">8. File Navigation and Location</h2>
+    <p>Python provides methods for navigating and locating files.</p>
+
+    <h3>Example : Checking File Existence</h3>
+    <pre><code>import os
+
+if os.path.exists('myfile.txt'):
+    print('File exists!')
+else:
+    print('File does not exist.')
+</code></pre>
+
+    <h3>Example : Listing Files in a Directory</h3>
+    <pre><code>import os
+
+files_in_directory = os.listdir('.')
+for file_name in files_in_directory:
+    print(file_name)
+</code></pre>
+
+    <h2 id="9-file-information">9. File Information</h2>
+    <p>You can obtain information about files, such as size and modification time.</p>
+
+    <h3>Example : Getting File Size and Modification Time</h3>
+    <pre><code>import os
+
+file_info = os.stat('myfile.txt')
+print(f'File Size: {file_info.st_size} bytes')
+print(f'Modification Time: {file_info.st_mtime}')
+</code></pre>
+
+    <p>These basics of file management in Python should provide a solid foundation for working with files in your Python
+        programs.</p>
+
+    <h2 id="thank-you">Thank You</h2>
+    <p>Excited for more? Subscribe to the channel and hit the bell icon to receive notifications of further
+        contents.</p>
+
+    <h2>Next up in the series</h2>
+    <ul>
+        <li>Basics of python continued</li>
+        <ul>
+            <li>Regular expressions in python</li>
+        </ul>
+    </ul>
+
+    <h2 id="contact">Contact Me</h2>
+    <p>Author -- Abhay Kabdwal -- Doctor_Innovator</p>
+    <p><a href="https://www.youtube.com/@doctor_innovator/featured">Youtube</a></p>
+    <p><a href="https://discord.gg/7ydGD3aJ">Discord</a></p>
+    <p><a href="https://t.me/doctor_innovator">Telegram</a></p>
+
+</body>
+
+</html>
