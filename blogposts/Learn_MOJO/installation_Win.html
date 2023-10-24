@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Basics</title>
+    <link rel="stylesheet" type="text/css" href="../../css/post_style.css">
+
+</head>
+<body>
+    <h1>Installing and Using Mojo Programming Language on Windows</h1>
+
+    <h2>Introduction</h2>
+
+    <p>Mojo is a powerful and efficient programming language that combines the usability of Python with the performance of C, unlocking unparalleled programmability of AI hardware and extensibility of AI models.</p>
+
+    <h2>Installation</h2>
+
+    <p>As of now, Mojo is not available for Windows directly. However, you can use it on a Linux container or remote system. Here's how you can do that with Windows Subsystem for Linux (WSL):</p>
+
+    <ol>
+        <li><strong>Enable WSL</strong>: First, you need to enable the WSL feature on Windows. You can do this by opening PowerShell as Administrator and running the command</li>
+    </ol>
+
+    <pre>
+wsl --install
+    </pre>
+
+    <p>This will automatically enable the necessary optional components, download and install the latest Linux kernel, set WSL 2 as your default, and install a Linux distribution for you.</p>
+
+    <ol start="2">
+        <li><strong>Install Linux Distro</strong>: Install a Linux distribution using WSL. Ubuntu 22.04 is recommended. You can install it from the Microsoft Store.</li>
+        <li><strong>Set Ubuntu to use WSL 2</strong>: Set your Ubuntu to use WSL 2. You can do this by opening PowerShell and running the command</li>
+    </ol>
+
+    <pre>
+wsl --set-version Ubuntu-22.04 2
+    </pre>
+
+    <p>Check the version of WSL and update it if necessary. You can check your WSL version by opening PowerShell and running the command</p>
+
+    <pre>
+wsl --list --verbose
+    </pre>
+
+    <h2>Setting Up Development Environment</h2>
+
+    <ol start="1">
+        <li><strong>Install VS Code</strong>: Install Visual Studio Code, which is a popular code editor. You can download it from the official website and follow the installation instructions.</li>
+        <li><strong>Install WSL Extension</strong>: Install the WSL extension for VS Code. This extension lets you use the Windows Subsystem for Linux as your full-time development environment right from VS Code.</li>
+        <li><strong>Install Mojo Extension</strong>: Install the Mojo extension for VS Code. This extension provides support for Mojo programming language in Visual Studio Code.</li>
+    </ol>
+
+    <h2>Installing Mojo</h2>
+
+    <ol start="1">
+        <li><strong>Install Modular CLI</strong>: The Mojo SDK is available through the Modular CLI tool, which works like a package manager to install and update Mojo. You can install it by running</li>
+    </ol>
+
+    <pre>
+npm install -g modular-cli
+    </pre>
+
+    <ol start="2">
+        <li><strong>Install Mojo</strong>: Use the Modular CLI to install Mojo. You can do this by running</li>
+    </ol>
+
+    <pre>
+modular add mojo
+    </pre>
+
+    <h2>Using Mojo</h2>
+
+    <ol start="1">
+        <li><strong>Create Your First Program</strong>: Once you have installed Mojo, you can start writing your first program. Open VS Code, create a new file with a <code>.mojo</code> extension, and write your program.</li>
+        <li><strong>Save and Run Your Program</strong>: After writing your program, save it with a <code>.mojo</code> extension and run it. You can run your program by opening a terminal in VS Code (View &gt; Terminal), navigating to your file's directory, and running <code>mojo run filename.mojo</code>.</li>
+    </ol>
+
+    <h2>Conclusion</h2>
+
+    <p>That's it! You have successfully installed and set up Mojo on your Windows machine using WSL. Now you're ready to start exploring this powerful programming language!</p>
+</body>
+</html>

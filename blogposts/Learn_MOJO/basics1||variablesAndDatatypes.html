@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Basics</title>
+    <link rel="stylesheet" type="text/css" href="../../css/post_style.css">
+
+</head>
+<body>
+    <h1>Mojo Programming Language: Variables and Data Types</h1>
+
+    <h2>1. Variables</h2>
+
+    <p>In Mojo, you can assign a value to a name inside a <code>fn</code>, and it implicitly creates a function scope variable just like in Python. For example:</p>
+
+    <pre>
+fn main():
+    let x = 10
+    print(x)  # prints: 10
+    </pre>
+
+    <p>In the above example, <code>x</code> is a variable that holds the value <code>10</code>. The <code>let</code> keyword is used to declare a variable in Mojo.</p>
+
+    <p>Mojo also has another type of variable declaration which uses the <code>var</code> keyword.</p>
+
+    <pre>
+fn main():
+    var x = 10
+    print(x)   # prints: 10
+    </pre>
+
+    <p>On running the above code segment, we get a warning and the desired output:</p>
+
+    <pre>
+warning: 'x' was declared as a 'var' but never mutated, consider switching to a 'let'
+    var x = 10
+    ^
+10
+    </pre>
+
+    <p>From the above, it is clear that the <code>var</code> keyword is mutable, and the warning says that it is initialized as <code>var</code> but never mutated.</p>
+
+    <p>Similarly, if we try to mutate a variable which is initialized using <code>let</code> keyword, we get an error.</p>
+
+    <pre>
+fn main():
+    let x = 10
+    x = x + 5
+    print(x)
+    </pre>
+
+    <pre>
+error: expression must be mutable in assignment
+    x = x + 5
+    ^
+    </pre>
+
+    <p>This shows us that the <code>let</code> initialization is immutable while the <code>var</code> initialization is mutable.</p>
+
+    <h2>2. Data Types</h2>
+
+    <p>Mojo supports common data types such as integers, floats, strings, and booleans. Additionally, it provides advanced data types like arrays and dictionaries to handle collections of data.</p>
+
+    <h3>2.1 Integer</h3>
+
+    <p>An integer is a whole number that can be either greater than 0, called positive or less than 0, called negative. Zero is neither positive nor negative. For example:</p>
+
+    <pre>
+fn main():
+    let number = 42  # integer
+    print(number)    # prints: 42
+    </pre>
+
+    <p>Or</p>
+
+    <pre>
+fn main():
+    let marks: Int = 91                 # integer
+    print("Your marks are :",marks)     # prints: Your marks are 91
+    </pre>
+
+    <h3>2.2 Float</h3>
+
+    <p>A floating point number is a number, positive or negative, containing one or more decimals. For example:</p>
+
+    <pre>
+fn main():
+    let pi = 3.14     # float
+    print(pi)         # prints: 3.14
+    </pre>
+
+    <p>Or</p>
+
+    <pre>
+fn main():
+    let score: Float64 = 8.2              # float
+    print("Your score is :", score)       # prints: Your score is 8.2
+    </pre>
+
+    <h3>2.3 String</h3>
+
+    <p>Strings in Mojo are surrounded by either single quotation marks or double quotation marks. For example:</p>
+
+    <pre>
+fn main():
+    let name = "Mojo"    # string
+    print(name)          # prints: Mojo
+    </pre>
+
+    <p>Or</p>
+
+    <pre>
+fn main():
+    let language: String = "Mojo"       # string
+    print(language + " is awesome")     # prints: Mojo is awesome
+    print(language,"is awesome")
+    </pre>
+
+    <h3>2.4 Boolean</h3>
+
+    <p>Booleans represent one of two values: <code>true</code> or <code>false</code>. For example:</p>
+
+    <pre>
+fn main():
+    let is_true = true    # boolean
+    print(is_true)        # prints: true
+    </pre>
+
+    <p>Or</p>
+
+    <pre>
+fn main():
+    let is_false: Bool = false      # boolean
+    print(is_false)                 # prints: false
+    </pre>
+
+    <div id="thank-you">
+        <h3>Thank You</h3>
+
+        <ul>
+            <li>Excited for more? Subscribe to the channel and hit the bell icon to receive notifications of further contents. Also join my Discord server and Telegram channel for updates and resources.</li>
+        </ul>
+    </div>
+
+    <div id="contact">
+        <h3>Contact Me</h3>
+
+        <p>Author -- Abhay Kabdwal -- Doctor_Innovator</p>
+        <p><a href="https://www.youtube.com/@doctor_innovator/featured">Youtube</a></p>
+        <p><a href="https://discord.gg/7ydGD3aJ">Discord</a></p>
+        <p><a href="https://t.me/doctor_innovator">Telegram</a></p>
+    </div>
+</body>
+</html>

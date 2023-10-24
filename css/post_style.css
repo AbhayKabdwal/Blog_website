@@ -1,56 +1,60 @@
 /* Reset some default styles */
 body {
     font-family: Arial, sans-serif;
-    font-size: 18px;
+    font-size: 22px;
     margin: 20px;
     padding: 20px;
-    background-color: #1f1f1f; /* Dark background */
-    color: #fff; /* Light text */
-    word-wrap: break-word;
+    background-color: #0d1117; /* GitHub Dark Background */
+    color: #c9d1d9; /* Light text */
+    line-height: 1.6;
+    border: 2px solid #30363d; /* Add a border around the body */
+    border-radius: 5px; /* Rounded corners */
 }
 
 /* Style headings */
 h1, h2, h3 {
     padding: 20px 0;
     margin: 0;
+    color: #58a6ff; /* GitHub Blue for Headings */
 }
 
 /* Style links */
 a {
-    color: #4e91b2;
+    color: #58a6ff;
     text-decoration: none;
 }
 
 a:hover {
-    color: #007bff;
+    color: #1f6feb; /* Slightly darker blue on hover */
     text-decoration: underline;
 }
 
 /* Style paragraphs */
 p {
-    line-height: 1.6;
     margin: 10px 0;
 }
 
 /* Style code blocks */
 pre {
-    background-color: #333; /* Dark code block background */
-    color: #fff; /* Light text in code blocks */
+    background-color: #22284f;
+    color: #c9d1d9;
     padding: 10px;
+    border: 3px dotted #30363d; /* GitHub code block border */
+    border-radius: 10px;
     overflow-x: auto;
-    border-radius: 5px;
+    line-height: 1.4;
+    white-space: pre-wrap;
 }
 
 /* Style lists */
 ul, ol {
-    line-height: 1.6;
     padding-left: 20px;
 }
 
 /* Style the Thank You and Contact Me sections */
 #thank-you, #contact {
-    background-color: #333; /* Dark background for sections */
-    color: #fff; /* Light text in sections */
+    background-color: #0d1117;
+    color: #c9d1d9;
     padding: 20px;
     border-radius: 5px;
     margin-top: 20px;
