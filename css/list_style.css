@@ -1,79 +1,385 @@
-/* list.css */
+/* Add this CSS to your list_style.css file */
 
+/* Global Styles */
 body {
-    font-family: var(--Lexend);
-    background-color: var(--bg-color);
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  font-size: 20px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background-color: rgb(229, 235, 236);
+}
+
+/* Theme Colors */
+:root {
+  --text-gray: #3f4954;
+  --text-light: #686666da;
+  --bg-color: #0f0f0f;
+  --white: #ffffff;
+  --midnight: #104f55;
+  --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  --Anton: 'Anton', cursive;
+  --Josefin: 'Josefin', cursive;
+  --Livvic: 'Livvic', cursive;
+}
+
+/* Global Classes */
+a {
+  text-decoration: none;
+  color: var(--text-gray);
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+ul {
+  list-style-type: none;
+}
+
+h1 {
+  font-family: var(--Lexend);
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-family: var(--Lexend);
+}
+
+h3 {
+  font-family: var(--Abel);
+  font-size: 1.3rem;
+}
+
+button.btn {
+  border: none;
+  border-radius: 2rem;
+  padding: 1rem 3rem;
+  font-size: 1rem;
+  font-family: var(--Livvic);
+  cursor: pointer;
+}
+
+span {
+  font-family: var(--Abel);
+}
+
+.container {
+  margin: 0 5vw;
+}
+
+.text-gray {
+  color: var(--text-gray);
+}
+
+p {
+  font-family: var(--Lexend);
+  color: var(--text-light);
+}
+
+/* Navigation */
+.nav {
+  background: rgb(229, 235, 236);
+  padding: 0 2rem;
+  height: 0;
+  min-height: 10vh;
+  overflow: hidden;
+  transition: height 1s ease-in-out;
+}
+
+.nav .nav-menu {
+  justify-content: space-between;
+}
+
+.nav .toggle-collapse {
+  position: absolute;
+  top: 0;
+  width: 90%;
+  cursor: pointer;
+  display: none;
+}
+
+.nav .toggle-collapse .toggle-icons {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1.7rem 0;
+}
+
+.nav .toggle-collapse .toggle-icons i {
+  font-size: 1.4rem;
+  color: var(--text-gray);
+}
+
+.collapse {
+  height: 30rem;
+}
+
+.nav .nav-items {
+  display: flex;
+  margin: 0;
+}
+
+.nav .nav-items .nav-link {
+  padding: 1.6rem 1rem;
+  font-size: 1.1rem;
+  position: relative;
+  font-family: var(--Abel);
+  font-size: 1.1rem;
+}
+
+.nav .nav-items .nav-link:hover {
+  background-color: var(--midnight);
+}
+
+.nav .nav-items .nav-link:hover a {
+  color: var(--white);
+}
+
+.nav .nav-brand a {
+  font-size: 1.6rem;
+  padding: 1rem 0;
+  display: block;
+  font-family: var(--Lexend);
+  font-size: 1.6rem;
+}
+
+.nav .social {
+  padding: 1.4rem 0;
+}
+
+.nav .social i {
+  padding: 0 .2rem;
+}
+
+.nav .social i:hover {
+  color: #a1c4cf;
+}
+
+/* Site Title */
+.site-title {
+  background: url('../../assets/Background-image.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.site-title .site-background {
+  padding-top: 10rem;
+  text-align: center;
+  color: var(--white);
+}
+
+.site-title h1,
+h3 {
+  margin: .3rem;
+}
+
+.site-title .btn {
+  margin: 1.8rem;
+  background: var(--sky);
+}
+
+.site-title .btn:hover {
+  background: transparent;
+  border: 1px solid var(--white);
+  color: var(--white);
+}
+
+/* Blog Carousel */
+.blog {
+  background: url('../../assets/Abract01.png');
+  background-repeat: no-repeat;
+  background-position: right;
+  height: 100vh;
+  width: 100%;
+  background-size: 65%;
+}
+
+.blog .blog-post {
+  padding-top: 6rem;
+}
+
+.blog-post .blog-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  margin: 3rem 2rem;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+}
+
+.blog-content .blog-title {
+  padding: 2rem 0;
+}
+
+.blog-content .btn-blog {
+  padding: .7rem 2rem;
+  margin: 1rem 0;
+  background: var(--midnight);
+  border: 1px solid var(--white);
+  color: var(--white);
+  cursor: pointer;
+}
+
+.btn-blog:hover {
+  color: var(--midnight);
+  background: var(--white);
+}
+
+/* Footer */
+.footer {
+  background-color: var(--bg-color);
+  color: var(--white);
+  padding: 3rem 0;
+}
+
+.footer h3 {
+  color: var(--white);
+}
+
+/* Home Page - Posts List */
+.posts-list {
+  padding: 6rem 0;
+}
+
+.posts-list .posts-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.posts-list .post {
+  flex-basis: calc(33.333% - 4rem);
+  text-align: center;
+  margin: 2rem;
+  background-color: var(--white);
+  box-shadow: 0 0 25px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.posts-list .post:hover {
+  transform: translateY(-1rem);
+}
+
+.post img {
+  max-width: 100%;
+  border-bottom: 2px solid var(--midnight);
+}
+
+.post-content {
+  padding: 2rem 1.5rem;
+}
+
+.post-title {
+  font-size: 1.8rem;
+  margin: 1rem 0;
+  font-family: var(--Lexend);
+}
+
+.post-title a {
+  color: var(--text-gray);
+}
+
+.post-description {
+  margin: 1rem 0;
+}
+
+.post-description p {
+  color: var(--text-light);
+}
+
+/* List Page */
+.list-heading {
+  margin: 3rem 0;
+}
+
+.list-heading h2 {
+  font-size: 1.6rem;
+  font-family: var(--Abel);
+}
+
+.list-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.list-item {
+  flex-basis: calc(33.333% - 2rem);
+  background: var(--white);
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.1);
+  margin: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.list-item:hover {
+  transform: translateY(-1rem);
+}
+
+.list-image {
+  width: 100%;
+  max-height: 15rem;
+  overflow: hidden;
+}
+
+.list-image img {
+  max-width: 100%;
+}
+
+.list-content {
+  padding: 1rem;
+}
+
+.list-title {
+  font-size: 1.4rem;
+  font-family: var(--Abel);
+  margin: 1rem 0;
+}
+
+.list-description {
+  font-family: var(--Lexend);
+  color: var(--text-light);
+  margin: 1rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .site-title h1 {
+    font-size: 2rem;
   }
-  
-  header {
-    background: var(--sky);
-    text-align: center;
-    padding: 2rem 0;
-  }
-  
-  header h1 {
-    color: var(--white);
-    font-size: 2.5rem;
-    font-family: var(--Lexend);
-  }
-  
-  nav {
-    background: var(--white);
-    text-align: center;
-    padding: 1rem 0;
-  }
-  
-  nav a {
-    color: var(--text-gray);
-    text-decoration: none;
-    margin: 0 1rem;
-    font-family: var(--Abel);
-  }
-  
-  nav a:hover {
-    color: var(--midnight);
-  }
-  
-  .content {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem;
-    background: var(--white);
-    border-radius: 1rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 2rem;
-  }
-  
-  .content h2 {
-    font-family: var(--Anton);
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .content ul {
-    list-style-type: disc;
-    margin-left: 2rem;
-    font-family: var(--Lexend);
+
+  .site-title h3 {
     font-size: 1rem;
   }
-  
-  .content a {
-    color: var(--text-gray);
-    text-decoration: none;
+
+  .site-title .btn {
+    margin: 1rem;
+    padding: 1rem 2rem;
   }
-  
-  .content a:hover {
-    color: var(--midnight);
+
+  .blog {
+    background-size: 100%;
+    background-position: right;
+    height: auto;
+    padding-bottom: 4rem;
   }
-  
-  footer {
-    text-align: center;
-    padding: 1rem 0;
-    background: var(--bg-color);
-    color: var(--white);
-    font-family: var(--Josefin);
-    font-size: 0.9rem;
+
+  .blog-post .blog-content {
+    margin: 1rem 0;
   }
-  
+
+  .blog-post .btn-blog {
+    padding: 0.6rem 1.6rem;
+  }
+
+  .posts-list .post {
+    flex-basis: calc(50% - 4rem);
+  }
+
+  .list-item {
+    flex-basis: calc(50% - 2rem);
+  }
+}
