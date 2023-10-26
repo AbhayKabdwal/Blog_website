@@ -96,7 +96,7 @@ p{
     font-size: medium;
     padding: 0 2rem;
     height: 0rem;
-    min-height: 10vh;
+    min-height: 11vh;
     overflow: hidden;
     transition: height 1s ease-in-out;
 }
@@ -595,8 +595,9 @@ footer.footer .move-up span:hover{
       content: "Scroll down for awesome content";
       display: block;
       font-size: 1.2rem;
-      color: rgba(0, 0, 0);
+      color: rgba(0, 0, 0,0.5);
       text-align: top;
+      position: relative;
       margin-top: 400px;
     }
   }
