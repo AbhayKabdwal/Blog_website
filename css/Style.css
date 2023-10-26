@@ -93,6 +93,7 @@ p{
 
 .nav{
     background: rgb(229, 235, 236);
+    font-size: medium;
     padding: 0 2rem;
     height: 0rem;
     min-height: 10vh;
@@ -588,3 +589,14 @@ footer.footer .move-up span:hover{
 }
 
 /*        x      Viewport less then or equal to 520px       x     */
+
+@media only screen and (max-width: 750px) {
+    main .site-title::before {
+      content: "Scroll down for awesome content";
+      display: block;
+      font-size: 1.2rem;
+      color: rgba(0, 0, 0);
+      text-align: top;
+      margin-top: 400px;
+    }
+  }
