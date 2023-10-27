@@ -6,20 +6,28 @@ body {
   font-size: 20px;
   box-sizing: border-box;
   overflow-x: hidden;
-  background-color: rgb(229, 235, 236);
+  background-color: var(--background-color-complete);
 }
 
 /* Theme Colors */
-:root {
-  --text-gray: #3f4954;
-  --text-light: #686666da;
-  --bg-color: #0f0f0f;
-  --white: #ffffff;
-  --midnight: #104f55;
+:root{
+
+  /*      Theme colors        */
+  --background-color-complete: #00b4d8;
+  --text-gray: #ffffff;
+  --text-light : #90e0ef;
+  --bg-color: #03045e;
+  --white: #caf0f8;
+  --midnight: #0077b6;
+
+  /* gradient color   */
   --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+
+  /*      theme font-family   */
+  
   --Anton: 'Anton', cursive;
-  --Josefin: 'Josefin', cursive;
-  --Livvic: 'Livvic', cursive;
+  --Josefin : 'Josefin', cursive;
+  --Livvic : 'Livvic', cursive;
 }
 
 /* Global Classes */
@@ -29,7 +37,7 @@ a {
 }
 
 a:hover{
-  color: rgb(255, 71, 71);
+  color: #caf0f8;
 }
 
 .flex-row {
@@ -39,7 +47,7 @@ a:hover{
 }
 
 ul {
-  list-style-type: none;
+  list-style-type: square;
 }
 
 h1 {
@@ -84,7 +92,7 @@ p {
 
 /* Navigation */
 .nav {
-  background: rgb(229, 235, 236);
+  background: var(--background-color-complete);
   padding: 0 2rem;
   height: 0;
   min-height: 10vh;
@@ -130,6 +138,7 @@ p {
   position: relative;
   font-family: var(--Abel);
   font-size: 1.1rem;
+  list-style: none;
 }
 
 .nav .nav-items .nav-link:hover {
@@ -194,6 +203,9 @@ h3 {
 
 .site-content{
   height: 50vh;
+  padding: 30px;
+  border: 1px solid #15616d;
+  border-radius: 10px;
   max-height: fit-content
 }
 
