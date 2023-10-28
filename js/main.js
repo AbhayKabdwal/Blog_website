@@ -46,3 +46,11 @@ $(document).ready(function () {
     AOS.init();
 
 });
+
+var text = document.getElementById("timer");
+
+var intervalID = window.setInterval(myCallback, 3000);
+
+function myCallback() {
+  text.textContent = "";
+}

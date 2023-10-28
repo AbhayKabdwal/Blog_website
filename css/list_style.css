@@ -49,6 +49,12 @@ a:hover{
 ul {
   list-style-type: square;
   color: aliceblue;
+  font-size: 1.1rem;
+  padding: 30px;
+}
+
+ul li {
+  padding: 8px;
 }
 
 h1 {
@@ -64,15 +70,6 @@ h2 {
 h3 {
   font-family: var(--Abel);
   font-size: 1.3rem;
-}
-
-button.btn {
-  border: none;
-  border-radius: 2rem;
-  padding: 1rem 3rem;
-  font-size: 1rem;
-  font-family: var(--Livvic);
-  cursor: pointer;
 }
 
 span {
@@ -168,7 +165,7 @@ p {
 }
 
 .nav .social i:hover {
-  color: #a1cfbd;
+  color: #c3cb28;
 }
 
 /* Site Title */
@@ -180,66 +177,15 @@ h3 {
   color: aliceblue;
 }
 
-.site-title .btn {
-  margin: 1.8rem;
-  background: var(--sky);
-}
-
-.site-title .btn:hover {
-  background: transparent;
-  border: 1px solid var(--white);
-  color: var(--white);
-}
-
 .site-content{
   height: fit-content;
   padding: 20px;
   margin: 100px 0 120px 0;
-  border: 1px solid #15616d;
+  border: 3px solid #073941;
   border-radius: 10px;
   max-height: fit-content;
 }
 
-/* Blog Carousel */
-.blog {
-  background: url('../../assets/Abract01.png');
-  background-repeat: no-repeat;
-  background-position: right;
-  height: 100vh;
-  width: 100%;
-  background-size: 65%;
-}
-
-.blog .blog-post {
-  padding-top: 6rem;
-}
-
-.blog-post .blog-content {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  width: 100%;
-  margin: 3rem 2rem;
-  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
-}
-
-.blog-content .blog-title {
-  padding: 2rem 0;
-}
-
-.blog-content .btn-blog {
-  padding: .7rem 2rem;
-  margin: 1rem 0;
-  background: var(--midnight);
-  border: 1px solid var(--white);
-  color: var(--white);
-  cursor: pointer;
-}
-
-.btn-blog:hover {
-  color: var(--midnight);
-  background: var(--white);
-}
 
 /* Footer */
 .footer {
