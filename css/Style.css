@@ -312,8 +312,8 @@ main .site-content .post-content > .post-image .img {
 }
 
 main .site-content .post-content > .post-title {
-    width: 80%;
-    padding: 0 2rem;
+    width: 100%;
+    padding: 0 1rem;
     justify-content: center;
     align-items: center;
 }
@@ -326,7 +326,7 @@ main .site-content .post-content > .post-title a {
     transition: transform 0.3s ease;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
 }
 
 .site-content .post-content .post-title .post-btn {
@@ -356,7 +356,7 @@ main .site-content .post-content > .post-title a {
 
 /* Hover effects with animations */
 main .post-content:hover {
-    transform: scale(1.04);
+    transform: scale(1.05);
     cursor: pointer;
     justify-content: center;
     align-items: center;
@@ -590,7 +590,7 @@ footer.footer .move-up span:hover{
     }
 
     main .site-content .post-content > .post-image {
-        width: 80%;
+        width: 100%;
         transition: transform 0.3s ease;
     }
 
