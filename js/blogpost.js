@@ -68,7 +68,7 @@ function displayBlogPosts() {
   blogPosts.forEach((post) => {
       const postDiv = document.createElement("div");
       postDiv.className = "post-content";
-      postDiv.innerHTML = `<a href="${post.htmlFile}"></a>`;
+      
 
       const postImage = document.createElement("div");
       postImage.className = "post-image";
@@ -85,6 +85,7 @@ function displayBlogPosts() {
       postDiv.appendChild(postImage);
       postDiv.appendChild(postTitle);
       postDiv.appendChild(postAbout);
+      
       postContent.appendChild(postDiv);
   });
 }
