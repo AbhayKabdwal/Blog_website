@@ -186,9 +186,10 @@ main .site-title{
     width: 100%;
     display: flex;
     justify-content: center;
-    background-position: 50% 100px;
+    background-position:50% 110px;
     background-attachment: fixed;
     background-color: var(--background-color-complete);
+    
 }
 
 main .site-title .site-background{
@@ -285,6 +286,8 @@ main .site-content {
     display: flex;
     flex-direction: column;
     color: white;
+    justify-content: center;
+    align-items: center;
 }
 
 main .post-content {
@@ -301,19 +304,20 @@ main .post-content {
 }
 
 main .site-content .post-content > .post-image {
-    width: 50%;
+    width: 100%;
     transition: transform 0.3s ease;
 }
 
 main .site-content .post-content > .post-image .img {
-    width: 100%;
-    border-radius: 20px;
-    transition: all 1s ease;
+    width: 90%;
+    border-radius: 10%;
+    padding: 0 5%;
+    transition: transform 1s ease;
 }
 
 main .site-content .post-content > .post-title {
     width: 100%;
-    padding: 0 1rem;
+    /* padding: 0 1rem; */
     justify-content: center;
     align-items: center;
 }
@@ -645,16 +649,22 @@ footer.footer .move-up span:hover{
 /*        x      Viewport less then or equal to 520px       x     */
 
 @media only screen and (max-width: 750px) {
-    main .site-title::before {
-      content: "Scroll down for awesome content";
-      display: block;
-      font-size: 1.2rem;
-      color: #caf0f8;
-      text-align: top;
-      position: absolute;
-      margin-top: 400px;
-    }
-    
+    /* Add an ID to ::before pseudo-element */
+    /* Add a class to ::before pseudo-element */
+main .site-title::before {
+    /* Your existing styles */
+    /* ... */
+    /* Add a class for JavaScript control */
+    content: "Scroll down for awesome content";
+    display: block;
+    font-size: 1.2rem;
+    color: #caf0f8;
+    text-align: top;
+    position: absolute;
+    margin-top: 500px;
+    height: 50px;
+    transition: opacity 0.3s; /* Add a transition for smooth fade */
+}
   }
 
 /* Your existing CSS styles remain the same */
@@ -712,3 +722,5 @@ footer.footer .move-up span:hover{
         font-size: 1.2rem; /* Adjust the font size as needed */
     }
 }
+
+

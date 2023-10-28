@@ -8,32 +8,30 @@ const blogPosts = [
     },
 
     {
-        title: "Learn input and output basics in Python easily",
-        htmlFile: "./blogposts/AutomationWithPython/Basics_2.html",
-        about: "Without input and output there is no major significance of a program to the user, Click here to learn about them now",
-        imageSrc: "./blogposts/AutomationWithPython/images/Basics2||Episode3.png",
-        date: "October 11, 2023",
-      },
+      title: "Learn input and output basics in Python easily",
+      htmlFile: "./blogposts/AutomationWithPython/Basics_2.html",
+      about: "Without input and output there is no major significance of a program to the user, Click here to learn about them now",
+      imageSrc: "./blogposts/AutomationWithPython/images/Basics2||Episode3.png",
+      date: "October 11, 2023",
+    },
 
-      {
-        title: "Learn conditional statements in Python easily",
-        htmlFile: "./blogposts/AutomationWithPython/Basics_3.html",
-        about: "Conditional statements provide you the flexibility to maipulate the flow of your program, Click here to learn about them now",
-        imageSrc: "./blogposts/AutomationWithPython/images/Basics3||Episode4.png",
-        date: "October 17, 2023",
-      },
+    {
+      title: "Learn conditional statements in Python easily",
+      htmlFile: "./blogposts/AutomationWithPython/Basics_3.html",
+      about: "Conditional statements provide you the flexibility to maipulate the flow of your program, Click here to learn about them now",
+      imageSrc: "./blogposts/AutomationWithPython/images/Basics3||Episode4.png",
+      date: "October 17, 2023",
+    },
 
-      {
-        title: "Learn Loop statements in Python easily",
-        htmlFile: "./blogposts/AutomationWithPython/Basics_4.html",
-        about: "Repetitiveness is now not an issue, Click here to learn about Loops now",
-        imageSrc: "./blogposts/AutomationWithPython/images/Basics4||Episode5.png",
-        date: "October 29, 2023",
-      },
+    {
+      title: "Learn Loop statements in Python easily",
+      htmlFile: "./blogposts/AutomationWithPython/Basics_4.html",
+      about: "Repetitiveness is now not an issue, Click here to learn about Loops now",
+      imageSrc: "./blogposts/AutomationWithPython/images/Basics4||Episode5.png",
+      date: "October 29, 2023",
+    },
     // Add other blog post entries here
   ];
-
-blogPosts.sort((a, b) => new Date(a.date) - new Date(b.date));
 
   const tutorials = [
     {
@@ -46,7 +44,7 @@ blogPosts.sort((a, b) => new Date(a.date) - new Date(b.date));
       title: "Learn complete MOJO basics for free",
       htmlFile: "./blogposts/Learn_MOJO/list.html",
       imageSrc: "./blogposts/Learn_MOJO/images/Mojo.png",
-      date: "October 24, 2023",
+      date: "October 25, 2023",
     },
     {
       title: "Learn about mistakes every programmer makes and how to avoid them",
@@ -57,10 +55,9 @@ blogPosts.sort((a, b) => new Date(a.date) - new Date(b.date));
     // Add other tutorial entries here
   ];
   
-  // Sort the tutorials by date
+// Sort the tutorials and blogposts by date
 tutorials.sort((a, b) => new Date(a.date) - new Date(b.date));
-
-// Your existing code for blogPosts and tutorials
+blogPosts.sort((a, b) => new Date(a.date) - new Date(b.date));
 
 function displayBlogPosts() {
   const postContent = document.querySelector(".posts");
@@ -80,7 +77,7 @@ function displayBlogPosts() {
 
       const postAbout = document.createElement("div");
       postAbout.className = "post-about";
-      postAbout.innerHTML = `${post.about}`;
+      postAbout.innerHTML = `<a href="${post.htmlFile}">${post.about}</a>`;
 
       postDiv.appendChild(postImage);
       postDiv.appendChild(postTitle);
@@ -108,7 +105,7 @@ function displayTutorials() {
 
       const postAbout = document.createElement("div");
       postAbout.className = "post-about";
-      postAbout.innerHTML = `${post.about}`;
+      postAbout.innerHTML = `<a href="${post.htmlFile}">${post.about}</a>`;
 
       postDiv.appendChild(postImage);
       postDiv.appendChild(postTitle);
@@ -117,6 +114,6 @@ function displayTutorials() {
   });
 }
 
-  displayBlogPosts();
-  displayTutorials();
+displayBlogPosts();
+displayTutorials();
 
