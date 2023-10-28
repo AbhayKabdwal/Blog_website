@@ -194,7 +194,7 @@ h3 {
 .site-content{
   height: fit-content;
   padding: 20px;
-  margin: 0 0 120px 0;
+  margin: 100px 0 120px 0;
   border: 1px solid #15616d;
   border-radius: 10px;
   max-height: fit-content;
