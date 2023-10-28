@@ -72,7 +72,7 @@ function displayBlogPosts() {
 
       const postImage = document.createElement("div");
       postImage.className = "post-image";
-      postImage.innerHTML = `<a href="${post.htmlFile}"><img src="${post.imageSrc}" class="img" alt="blog1"></a>`;
+      postImage.innerHTML = `<a href="${post.htmlFile}"><img src="${post.imageSrc}" class="img" alt="${post.postTitle}"></a>`;
 
       const postTitle = document.createElement("div");
       postTitle.className = "post-title";

@@ -111,7 +111,7 @@ p{
 }
 
 .nav .toggle-collapse{
-    position: fixed;
+    position: absolute;
     top: 0%;
     width: 90%;
     cursor: pointer;
@@ -651,7 +651,7 @@ footer.footer .move-up span:hover{
       font-size: 1.2rem;
       color: #caf0f8;
       text-align: top;
-      position: relative;
+      position: absolute;
       margin-top: 400px;
     }
     
