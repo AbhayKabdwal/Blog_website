@@ -116,7 +116,6 @@ function displayTutorials() {
   });
 }
 
-document.addEventListener("DOMContentLoaded", function () {
   displayBlogPosts();
   displayTutorials();
-});
+
