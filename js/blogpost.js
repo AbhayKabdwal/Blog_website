@@ -37,18 +37,21 @@ const blogPosts = [
     {
       title: "Complete Automation course with Python free",
       htmlFile: "./blogposts/AutomationWithPython/list.html",
+      about: "Automation is a great way to ease up your task and make your programs do them for you -- Click here to learn about automation with the easiest language possible - Python !!",
       imageSrc: "./blogposts/AutomationWithPython/images/CourseAWP.png",
       date: "October 23, 2023",
     },
     {
       title: "Learn complete MOJO basics for free",
       htmlFile: "./blogposts/Learn_MOJO/list.html",
+      about: "Mojo is a newly developing language vastly used for Artifical intelligence and know for its speed -- Click here to learn about Mojo🔥 now !!",
       imageSrc: "./blogposts/Learn_MOJO/images/Mojo.png",
       date: "October 25, 2023",
     },
     {
       title: "Learn about mistakes every programmer makes and how to avoid them",
       htmlFile: "./blogposts/Mistakes/list.html",
+      about: "If I had to start over my programming journey I will not repeat these mistakes again -- Click here to learn how to avoid all the mistakes I did in the easiest way possible !!",
       imageSrc: "./blogposts/Mistakes/images/Mistakes.png",
       date: "October 24, 2023",
     },
