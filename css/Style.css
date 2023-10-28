@@ -94,20 +94,24 @@ p{
 
 .nav{
     background-color: var(--background-color-complete);
-    font-size: medium;
-    padding: 0 2rem;
+    font-size: large;
+    padding: 1rem 1rem 0 1rem;
     height: 0rem;
     min-height: 11vh;
     overflow: hidden;
     transition: height 1s ease-in-out;
+    font-weight: 600;
+    color: #ffffff;
 }
 
 .nav .nav-menu{    
     justify-content: space-between;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .nav .toggle-collapse{
-    position: absolute;
+    position: fixed;
     top: 0%;
     width: 90%;
     cursor: pointer;
@@ -122,7 +126,6 @@ p{
 
 .nav .toggle-collapse .toggle-icons i{
     font-size: 1.4rem;
-    color: var(--text-gray);
 }
 
 .collapse{
@@ -151,11 +154,10 @@ p{
 }
 
 .nav .nav-brand a{
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     padding: 1rem 0;
     display: block;
     font-family: var(--Lexend);
-    font-size: 1.6rem;
 }
 
 .nav .social{
@@ -287,30 +289,33 @@ main .site-content {
 
 main .post-content {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: top;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin: 2rem 0;
     padding: 2rem;
     background: #0077b6;
-    border-radius: 10px;
+    border-radius: 20px;
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
 }
 
 main .site-content .post-content > .post-image {
-    width: 40%;
+    width: 50%;
     transition: transform 0.3s ease;
 }
 
 main .site-content .post-content > .post-image .img {
     width: 100%;
+    border-radius: 20px;
     transition: all 1s ease;
 }
 
 main .site-content .post-content > .post-title {
-    width: 55%;
+    width: 80%;
     padding: 0 2rem;
+    justify-content: center;
+    align-items: center;
 }
 
 main .site-content .post-content > .post-title a {
@@ -319,12 +324,16 @@ main .site-content .post-content > .post-title a {
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
 .site-content .post-content .post-title .post-btn {
     border-radius: 0;
     padding: .7rem 1.5rem;
     background: var(--sky);
+    
 }
 
 .site-content .pagination {
@@ -347,16 +356,22 @@ main .site-content .post-content > .post-title a {
 
 /* Hover effects with animations */
 main .post-content:hover {
-    transform: scale(1.05);
+    transform: scale(1.04);
     cursor: pointer;
+    justify-content: center;
+    align-items: center;
 }
 
 main .post-content:hover .post-image .img {
-    transform: scale(1.1);
+    transform: scale(1.04);
+    justify-content: center;
+    align-items: center;
 }
 
 main .post-content:hover .post-title a {
-    transform: translateX(10px);
+    justify-content: center;
+    align-items: center;
+    /* transform: translateX(10px); */
 }
 
 
@@ -374,7 +389,7 @@ main .post-content:hover .post-title a {
     border-radius: 10px;
     width: 70%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .site-content > .sidebar .category-list .list-items a{
@@ -553,12 +568,30 @@ footer.footer .move-up span:hover{
         flex-direction: column;
     }
 
+    main .post-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 2rem 0;
+        padding: 2rem;
+        background: #0077b6;
+        border-radius: 20px;
+        box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+    }
+
     .nav .toggle-collapse{
         display: initial;
     }
 
     main .site-content{
         grid-template-columns: 100%;
+    }
+
+    main .site-content .post-content > .post-image {
+        width: 80%;
+        transition: transform 0.3s ease;
     }
 
     footer.footer .container{
@@ -616,7 +649,7 @@ footer.footer .move-up span:hover{
       content: "Scroll down for awesome content";
       display: block;
       font-size: 1.2rem;
-      color: rgba(0, 0, 0,0.5);
+      color: #caf0f8;
       text-align: top;
       position: relative;
       margin-top: 400px;
@@ -629,13 +662,13 @@ footer.footer .move-up span:hover{
 /* Add the following styles for responsive design */
 /* Smaller Displays (max-width: 750px) */
 @media only screen and (max-width: 750px) {
-    .site-content .post-content {
+    /* .site-content .post-content {
         display: flex;
         flex-direction: row;
-    }
+    } */
 
     .site-content .post-content .post-image {
-        width: 100%;
+        width: 150%;
     }
 
     .site-content .post-content .post-about {
@@ -645,5 +678,37 @@ footer.footer .move-up span:hover{
 
     .site-content .sidebar .popular-post .post-title {
         font-size: 0.9rem;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    main .site-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 100px; /* Adjust the gap as needed */
+    }
+
+    main .post-content {
+        width: 80%; /* Make each post take the full width of the grid cell */
+    }
+    
+    main .post-content .post-image {
+        width: 100%;
+    }
+
+    main .site-content .post-content > .post-title a {
+        font-size: 1.2rem; /* Adjust the font size as needed */
+    }
+
+    .site-content .post-content .post-about {
+        font-size: 1rem; /* Adjust the font size as needed */
+    }
+
+    .site-content .sidebar .popular-post .post-content {
+        margin: 1rem 0;
+    }
+    
+    .site-content .sidebar .popular-post .post-content .post-title a {
+        font-size: 1.2rem; /* Adjust the font size as needed */
     }
 }

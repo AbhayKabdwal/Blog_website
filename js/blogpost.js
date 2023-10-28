@@ -64,10 +64,11 @@ tutorials.sort((a, b) => new Date(a.date) - new Date(b.date));
 
 function displayBlogPosts() {
   const postContent = document.querySelector(".posts");
-
+  
   blogPosts.forEach((post) => {
       const postDiv = document.createElement("div");
       postDiv.className = "post-content";
+      postDiv.innerHTML = `<a href="${post.htmlFile}"></a>`;
 
       const postImage = document.createElement("div");
       postImage.className = "post-image";
@@ -94,6 +95,7 @@ function displayTutorials() {
   tutorials.forEach((post) => {
       const postDiv = document.createElement("div");
       postDiv.className = "post-content";
+      postDiv.innerHTML = `<a href="${post.htmlFile}"></a>`;
 
       const postImage = document.createElement("div");
       postImage.className = "post-image";
@@ -103,8 +105,13 @@ function displayTutorials() {
       postTitle.className = "post-title";
       postTitle.innerHTML = `<a href="${post.htmlFile}">${post.title}</a>`;
 
+      const postAbout = document.createElement("div");
+      postAbout.className = "post-about";
+      postAbout.innerHTML = `${post.about}`;
+
       postDiv.appendChild(postImage);
       postDiv.appendChild(postTitle);
+      postDiv.appendChild(postAbout);
       postContent.appendChild(postDiv);
   });
 }
