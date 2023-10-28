@@ -96,7 +96,7 @@ p {
 .nav {
   background: var(--background-color-complete);
   padding: 0 2rem;
-  height: 0;
+  height: 110px;
   min-height: 10vh;
   overflow: hidden;
   transition: height 1s ease-in-out;
