@@ -1,36 +1,54 @@
 const blogPosts = [
     {
-      title: "Learn variables and operators basics in Python easily",
+      title: "Variables, data types and operators basics in Python",
       htmlFile: "./blogposts/AutomationWithPython/Basics_1.html",
-      about: "Variables and operators are the most essential elements of every programming language, Click here to know about them now",
+      about: "Unlocking the Magic of Python: Dive into the World of Variables, Data Types, and Operators with us! Learn the ABCs of Python programming in this fun and easy-to-follow blog, Click here to know about them now",
       imageSrc: "./blogposts/AutomationWithPython/images/Basics1||Episode2.png",
       date: "October 23, 2023",
     },
 
     {
-      title: "Learn input and output basics in Python easily",
+      title: "Input and output basics in Python",
       htmlFile: "./blogposts/AutomationWithPython/Basics_2.html",
-      about: "Without input and output there is no major significance of a program to the user, Click here to learn about them now",
+      about: "Unlock the Magic of Python's Input and Output: Learn how to send and receive information with Python in this beginner-friendly blog. From user input to printing results, we've got you covered!, Click here to learn about them now",
       imageSrc: "./blogposts/AutomationWithPython/images/Basics2||Episode3.png",
-      date: "October 11, 2023",
+      date: "October 23, 2023",
     },
 
     {
-      title: "Learn conditional statements in Python easily",
+      title: "Conditional statements in Python",
       htmlFile: "./blogposts/AutomationWithPython/Basics_3.html",
-      about: "Conditional statements provide you the flexibility to maipulate the flow of your program, Click here to learn about them now",
+      about: "Unlock the Power of Python's Conditionals! Learn the basics of if, elif, and else statements in Python with easy-to-follow examples and step-by-step guidance in this beginner-friendly blog, Click here to learn about them now",
       imageSrc: "./blogposts/AutomationWithPython/images/Basics3||Episode4.png",
-      date: "October 17, 2023",
+      date: "October 23, 2023",
     },
 
     {
-      title: "Learn Loop statements in Python easily",
+      title: "Loop statements in Python",
       htmlFile: "./blogposts/AutomationWithPython/Basics_4.html",
-      about: "Repetitiveness is now not an issue, Click here to learn about Loops now",
+      about: "Discover the magic of loops in Python! Learn how 'for' and 'while' loops can automate repetitive tasks and make your code dance to a rhythm of its own. Let's loop and roll!, Click here to learn about Loops now",
       imageSrc: "./blogposts/AutomationWithPython/images/Basics4||Episode5.png",
       date: "October 29, 2023",
     },
-    // Add other blog post entries here
+    
+    {
+      title: "Functions in Python",
+      htmlFile: "./blogposts/AutomationWithPython/Basics_5.html",
+      about: "Unlocking the Magic of Functions: A Beginner's Guide to Understanding Functions - Explore the fundamental building blocks of programming in a fun and easy-to-follow journey. Let's dive in!, Click here to learn about Functions now",
+      imageSrc: "./blogposts/AutomationWithPython/images/Basics5||Episode6.png",
+      date: "October 29, 2023",
+    },
+
+    // {
+    //   title: "Modules and libraries in Python",
+    //   htmlFile: "./blogposts/AutomationWithPython/Basics_6.html",
+    //   about: "Unlocking the Power of Modules and Libraries: Your Starter Guide to Streamlining Code and Boosting Productivity. Discover the magic of code reuse and simplification!, Click here to learn about Modules and Libraries now",
+    //   imageSrc: "./blogposts/AutomationWithPython/images/Basics6||Episode7.png",
+    //   date: "October 29, 2023",
+    // },
+
+
+
   ];
 
   const tutorials = [
@@ -69,10 +87,9 @@ function displayBlogPosts() {
       const postDiv = document.createElement("div");
       postDiv.className = "post-content";
       
-
       const postImage = document.createElement("div");
       postImage.className = "post-image";
-      postImage.innerHTML = `<a href="${post.htmlFile}"><img src="${post.imageSrc}" class="img" alt="${post.postTitle}"></a>`;
+      postImage.innerHTML = `<a href="${post.htmlFile}"><img src="${post.imageSrc}" class="img" alt="${post.title}"></a>`;
 
       const postTitle = document.createElement("div");
       postTitle.className = "post-title";
