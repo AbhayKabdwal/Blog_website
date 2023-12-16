@@ -73,6 +73,13 @@ const blogPosts = [
       imageSrc: "./blogposts/Mistakes/images/Mistakes.png",
       date: "October 24, 2023",
     },
+    {
+      title: "1 Minute - 1 New Insight",
+      htmlFile: "./blogposts/Shorts/list.html",
+      about: "Clike here to learn many new concepts and ideas in under 1 minute -- Basics unleashed...",
+      imageSrc: "./blogposts/Shorts/images/1_minute.png",
+      date: "October 20, 2023",
+    },
     // Add other tutorial entries here
   ];
   
