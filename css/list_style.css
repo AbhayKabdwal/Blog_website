@@ -13,12 +13,12 @@ body {
 :root{
 
   /*      Theme colors        */
-  --background-color-complete: #00b4d8;
-  --text-gray: #ffffff;
-  --text-light : #90e0ef;
-  --bg-color: #03045e;
-  --white: #caf0f8;
-  --midnight: #0077b6;
+  --background-color-complete: #2a3344;
+    --text-gray: #caf0f8;
+    --text-light: #90e0ef;
+    --bg-color: #0d1b2a;
+    --white: #caf0f8;
+    --midnight: #415a77;
 
   /* gradient color   */
   --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
@@ -37,7 +37,7 @@ a {
 }
 
 a:hover{
-  color: #eeff00;
+  color: #39ddd5;
 }
 
 .flex-row {
@@ -165,7 +165,7 @@ p {
 }
 
 .nav .social i:hover {
-  color: #c3cb28;
+  color: #28bdcb;
 }
 
 /* Site Title */
