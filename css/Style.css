@@ -11,15 +11,15 @@ body {
 
 :root {
     /*      Theme colors        */
-    --background-color-complete: #00b4d8;
+    --background-color-complete: #2a3344;
     --text-gray: #caf0f8;
     --text-light: #90e0ef;
-    --bg-color: #03045e;
+    --bg-color: #0d1b2a;
     --white: #caf0f8;
-    --midnight: #0077b6;
+    --midnight: #415a77;
 
     /* gradient color   */
-    --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    --sky: linear-gradient(120deg, #253237 0%, #253237 100%);
 
     /*      theme font-family   */
 
@@ -182,13 +182,12 @@ main .site-title {
     width: 100%;
     display: flex;
     justify-content: center;
-    background-position: 50% 110px;
-    background-attachment: fixed;
+    background-position: 50% 20px;
     background-color: var(--background-color-complete);
 }
 
 main .site-title .site-background {
-    padding-top: 10rem;
+    padding-top: 0;
     text-align: center;
     color: var(--white);
 }
@@ -204,16 +203,6 @@ main .site-title #timer{
 /* --------x------ Site title --------x------- */
 
 /* --------------- Blog Carousel ------------ */
-
-main .blog {
-    background: url("../assets/Abract01.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: right;
-    height: 100vh;
-    width: 100%;
-    /* background-size: 65%; */
-}
 
 main .blog .blog-post {
     padding-top: 6rem;
@@ -284,7 +273,7 @@ main .post-content {
     align-items: center;
     margin: 2rem 0;
     padding: 2rem;
-    background: #0077b6;
+    background: #243852;
     border-radius: 20px;
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
@@ -552,7 +541,7 @@ button.formbox-button-1753926 {
 }
 
 .formbox-editor-1753926 {
-    background-color: #03045e !important;
+    background-color: #0d1b2a !important;
 }
 
 .formbox-title-1753926 {
@@ -569,7 +558,7 @@ button.formbox-button-1753926 {
     color: #ffffff !important;
     background-color: #0077b6 !important;
     border-radius: 10px !important;
-    border-color: #16a7e0 !important;
+    border-color: #0d1b2a !important;
     border-width: 0px !important;
     border-style: solid;
 }
@@ -625,6 +614,9 @@ footer.footer .move-up span:hover {
 /*      x       Viewport less then or equal to 1130px    x     */
 
 @media only screen and (min-width: 1024px) {
+    main .site-title{
+        height: 100vh;
+    }
     main .site-content {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -665,6 +657,9 @@ footer.footer .move-up span:hover {
 
 @media only screen and (max-width: 750px) {
 
+    main .site-title{
+        height: 40vh;
+    }
     .nav .nav-menu,
     .nav .nav-items {
         flex-direction: column;
@@ -677,10 +672,6 @@ footer.footer .move-up span:hover {
         align-items: center;
         margin: 2rem 0;
         padding: 2rem;
-        background: #0077b6;
-        border-radius: 20px;
-        box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
-        transition: transform 0.3s ease;
     }
 
     .nav .toggle-collapse {
@@ -739,6 +730,9 @@ footer.footer .move-up span:hover {
 /*              Viewport less then or equal to 520px            */
 
 @media only screen and (max-width: 520px) {
+    main .site-title{
+        height: 25vh;
+    }
     main .blog {
         height: 125vh;
     }
