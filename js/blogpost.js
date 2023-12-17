@@ -118,6 +118,13 @@ const blogPosts = [
       imageSrc: "./blogposts/Shorts/images/1_minute.png",
       date: "October 20, 2023",
     },
+    {
+      title: "One stop solution - to all your problems",
+      htmlFile: "./blogposts/Shorts/solutions/list.html",
+      about: "Click here to find solutions to most common but time consuming problems",
+      imageSrc: "./blogposts/Shorts/images/solutions.png",
+      date: "October 21, 2023",
+    },
     // Add other tutorial entries here
   ];
   
@@ -251,7 +258,7 @@ function addPagination() {
     }
     
     if(tutorials.length > 0){
-      tutorialContent.innerHTML = "<h1>Tutorials</h1>";
+      tutorialContent.innerHTML = "<h1>Compilations</h1>";
 
       tutorials.forEach((post) => {
         const postDiv = document.createElement("div");
