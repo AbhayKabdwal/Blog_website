@@ -47,8 +47,6 @@ $(document).ready(function () {
 
 });
 
-var text = document.getElementById("timer");
-
 var intervalID = window.setInterval(myCallback, 3000);
 
 function myCallback() {

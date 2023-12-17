@@ -197,64 +197,7 @@ h3 {
     margin: 0.3rem;
 }
 
-main .site-title #timer{
-    display: none;
-}
 /* --------x------ Site title --------x------- */
-
-/* --------------- Blog Carousel ------------ */
-
-main .blog .blog-post {
-    padding-top: 6rem;
-}
-
-main .blog-post .blog-content {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    width: 100%;
-    margin: 3rem 2rem;
-    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
-}
-
-main .blog-content .blog-title {
-    padding: 2rem 0;
-}
-
-main .blog-content .btn-blog {
-    padding: 0.7rem 2rem;
-    background: var(--sky);
-    margin: 0.5rem;
-}
-
-main .blog-content span {
-    display: block;
-}
-
-section .container .owl-nav {
-    position: absolute;
-    top: 0%;
-    margin: 0 auto;
-    width: 100%;
-}
-
-.owl-nav .owl-prev .owl-nav-prev,
-.owl-nav .owl-next .owl-nav-next {
-    color: var(--text-gray);
-    background: transparent;
-    font-size: 2rem;
-}
-
-.owl-theme .owl-nav [class*="owl-"]:hover {
-    background: transparent;
-    color: var(--midnight);
-}
-
-.owl-theme .owl-nav [class*="owl-"] {
-    outline: none;
-}
-
-/* -------x------- Blog Carousel -----x------ */
 
 /* ---------------- Site Content ----------------*/
 
@@ -291,14 +234,14 @@ main .site-content .post-content>.post-image .img {
     transition: transform 1s ease;
 }
 
-main .site-content .post-content>.post-title {
+.site-content .post-content>.post-title {
     width: 100%;
     /* padding: 0 1rem; */
     justify-content: center;
     align-items: center;
 }
 
-main .site-content .post-content>.post-title a {
+.site-content .post-content>.post-title a {
     font-family: var(--Anton);
     font-size: 1.5rem;
     display: flex;
@@ -307,30 +250,6 @@ main .site-content .post-content>.post-title a {
     justify-content: center;
     align-items: center;
     padding: 10px;
-}
-
-.site-content .post-content .post-title .post-btn {
-    border-radius: 0;
-    padding: 0.7rem 1.5rem;
-    background: var(--sky);
-}
-
-.site-content .pagination {
-    justify-content: center;
-    color: var(--text-gray);
-    margin: 4rem 0;
-}
-
-.site-content .pagination a {
-    padding: 0.6rem 0.9rem;
-    border-radius: 2rem;
-    margin: 0 0.3rem;
-    font-family: var(--Lexend);
-}
-
-.site-content .pagination .pages {
-    background: var(--text-gray);
-    color: var(--white);
 }
 
 /* Hover effects with animations */
@@ -352,6 +271,38 @@ main .post-content:hover .post-title a {
     align-items: center;
     /* transform: translateX(10px); */
 }
+
+button {
+    min-width: 20;
+    font-size: 16px;
+    padding: 0.8rem 1rem;
+    border-radius: 2rem;
+    margin: 10px 2px;
+    font-family: var(--Lexend);
+    cursor: pointer;
+    transition: background-color 1s ease, color 1s ease;
+    border: 0.1px solid var(--text-light);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+    background-color: #243954;
+    color: var(--text-gray);
+}
+
+button:hover {
+    background-color: #46648a;
+    color: var(--white);
+    transform: scale(1.06);
+}
+
+button.active {
+    background-color: #357bc6;
+    color: #ffffff;
+    /* Add any additional styling as needed */
+  }
+.pagination {
+    width: 100%;
+    text-align: center;
+    /* padding: 0 20%; */
+  }
 
 /* --------------- Sidebar ----------------------- */
 
@@ -401,25 +352,18 @@ main .post-content:hover .post-title a {
     font-size: 1.4rem;
 }
 
-.site-content .sidebar .popular-tags {
-    padding: 5rem 0;
-}
-
-.site-content .sidebar .popular-tags .tags .tag {
-    background: var(--sky);
-    padding: 0.4rem 1rem;
-    border-radius: 3rem;
-    margin: 0.4rem 0.6rem;
-}
-
 /* -------x------- Sidebar -----------x----------- */
 
 /* ---------x------- Main Content -----x----- */
 
 /* ----------------- Footer --------------------- */
 
+footer img {
+    margin: 5px;
+}
+
 footer.footer {
-    height: 80%;
+    height: 150%;
     background: var(--bg-color);
     position: relative;
 }
@@ -733,14 +677,16 @@ footer.footer .move-up span:hover {
     main .site-title{
         height: 25vh;
     }
-    main .blog {
-        height: 125vh;
-    }
 
     .site-content .post-content>.post-image .post-info {
         display: none;
         font-family: var(--Anton);
         font-size: 0.9rem;
+    }
+
+    .pagination button {
+        font-size: 15px;
+        padding: 5px 11px;
     }
 
     footer.footer .container>div {

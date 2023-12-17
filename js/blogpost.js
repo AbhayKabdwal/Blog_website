@@ -39,15 +39,53 @@ const blogPosts = [
       date: "October 29, 2023",
     },
 
-    // {
-    //   title: "Modules and libraries in Python",
-    //   htmlFile: "./blogposts/AutomationWithPython/Basics_6.html",
-    //   about: "Unlocking the Power of Modules and Libraries: Your Starter Guide to Streamlining Code and Boosting Productivity. Discover the magic of code reuse and simplification!, Click here to learn about Modules and Libraries now",
-    //   imageSrc: "./blogposts/AutomationWithPython/images/Basics6||Episode7.png",
-    //   date: "October 29, 2023",
-    // },
+    {
+      title: "Modules and libraries in Python",
+      htmlFile: "./blogposts/AutomationWithPython/Basics_6.html",
+      about: "Unlocking the Power of Modules and Libraries: Your Starter Guide to Streamlining Code and Boosting Productivity. Discover the magic of code reuse and simplification!, Click here to learn about Modules and Libraries now",
+      imageSrc: "./blogposts/AutomationWithPython/images/Basics6||Episode7.png",
+      date: "October 29, 2023",
+    },
 
+    {
+      title: "Mistakes Every programmer makes .. And how to avoid them",
+      htmlFile: "./blogposts/Mistakes/intro.html",
+      about: "Click here to learn how to avoid all the mistakes I did in the easiest way possible !!",
+      imageSrc: "./blogposts/Mistakes/images/Mistakes.png",
+      date: "October 31, 2023",
+    },
 
+    {
+      title: "Basics of linux LS command",
+      htmlFile: "./blogposts/Shorts/linux_commands/linux_ls_command.html",
+      about: "Learn complete basics and all the variations of linux LS command to traverse and access contents of directories efficiently in under 1 minute along with syntax .. Click here !!",
+      imageSrc: "./blogposts/Shorts/images/linux_commands/linux_ls_command.png",
+      date: "December 17, 2023",
+    },
+
+    {
+      title: "Basics of linux CD command",
+      htmlFile: "./blogposts/Shorts/linux_commands/linux_cd_command.html",
+      about: "Learn complete basics and all the variations of linux CD command to change directories efficiently in under 1 minute along with syntax .. Click here !!",
+      imageSrc: "./blogposts/Shorts/images/linux_commands/linux_cd_command.png",
+      date: "December 17, 2023",
+    },
+
+    {
+      title: "Basics of linux CAT command",
+      htmlFile: "./blogposts/Shorts/linux_commands/linux_cat_command.html",
+      about: "Learn complete basics and all the variations of linux CAT command to check the contents of files in under 1 minute along with syntax .. Click here !!",
+      imageSrc: "./blogposts/Shorts/images/linux_commands/linux_cat_command.png",
+      date: "December 17, 2023",
+    },
+
+    {
+      title: "Basics of linux MV command",
+      htmlFile: "./blogposts/Shorts/linux_commands/linux_mv_command.html",
+      about: "Learn complete basics and all the variations of linux MV command to move and rename files and directories efficiently in under 1 minute along with syntax .. Click here !!",
+      imageSrc: "./blogposts/Shorts/images/linux_commands/linux_mv_command.png",
+      date: "December 17, 2023",
+    },
 
   ];
 
@@ -75,8 +113,8 @@ const blogPosts = [
     },
     {
       title: "1 Minute - 1 New Insight",
-      htmlFile: "./blogposts/Shorts/list.html",
-      about: "Clike here to learn many new concepts and ideas in under 1 minute -- Basics unleashed...",
+      htmlFile: "./blogposts/Shorts/linux_commands/list.html",
+      about: "Click here to learn many new concepts and ideas in under 1 minute -- Basics unleashed...",
       imageSrc: "./blogposts/Shorts/images/1_minute.png",
       date: "October 20, 2023",
     },
@@ -85,62 +123,189 @@ const blogPosts = [
   
 // Sort the tutorials and blogposts by date
 tutorials.sort((a, b) => new Date(a.date) - new Date(b.date));
-blogPosts.sort((a, b) => new Date(a.date) - new Date(b.date));
+blogPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
 
-function displayBlogPosts() {
-  const postContent = document.querySelector(".posts");
+
+function addPagination() {
+  const postsPerPage = 6;
+  const tutorialsPerPage = 4;
+
+  const totalBlogPosts = blogPosts.length;
+  const totalTutorials = tutorials.length;
+
+  const totalBlogPages = Math.ceil(totalBlogPosts / postsPerPage);
+  const totalTutorialPages = Math.ceil(totalTutorials / tutorialsPerPage);
+
+  const totalPages = Math.max(totalBlogPages, totalTutorialPages);
+
+  const paginationContainer = document.querySelector(".site-content");
+  const buttonContainer = document.querySelector(".pagination")
+  // buttonContainer.className = "pagination";
+
+  // Add Previous Button
+  const prevButton = document.createElement("button");
+  prevButton.textContent = " < ";
+  prevButton.addEventListener("click", () => {
+    const currentPage = getCurrentPage();
+    if (currentPage > 1) {
+      displayPage(currentPage - 1);
+    }
+  });
+  buttonContainer.appendChild(prevButton);
+
+  for (let i = 1; i <= totalPages; i++) {
+    const pageButton = document.createElement("button");
+    pageButton.textContent = i;
+    pageButton.addEventListener("click", () => displayPage(i));
+    buttonContainer.appendChild(pageButton);
+  }
+
+  // Add Next Button
+  const nextButton = document.createElement("button");
+  nextButton.textContent = " > ";
+  nextButton.addEventListener("click", () => {
+    const currentPage = getCurrentPage();
+    if (currentPage < totalPages) {
+      displayPage(currentPage + 1);
+    }
+  });
+  buttonContainer.appendChild(nextButton);
+
+  function getCurrentPage() {
+    const activeButton = buttonContainer.querySelector(".active");
+    return activeButton ? parseInt(activeButton.textContent) : 1;
+  }
+
+  function updateButtonsState() {
+    const currentPage = getCurrentPage();
+    prevButton.disabled = currentPage === 1;
+    nextButton.disabled = currentPage === totalPages;
+  }
+
+
+  function displayPage(pageNumber) {
+    const startBlogIndex = (pageNumber - 1) * postsPerPage;
+    const endBlogIndex = startBlogIndex + postsPerPage;
+    const visibleBlogPosts = blogPosts.slice(startBlogIndex, endBlogIndex);
+
+    const startTutorialIndex = (pageNumber - 1) * tutorialsPerPage;
+    const endTutorialIndex = startTutorialIndex + tutorialsPerPage;
+    const visibleTutorials = tutorials.slice(startTutorialIndex, endTutorialIndex);
+
+    // Determine if navigating forward or backward in the browser's history
+    const navigatingBackward = pageNumber < getCurrentPage();
+    const navigatingForward = pageNumber > getCurrentPage();
+
+    // Highlight the active page button
+    const buttons = buttonContainer.querySelectorAll("button");
+    buttons.forEach((button) => {
+      button.classList.remove("active");
+    });
+    buttons[pageNumber].classList.add("active");
+
+    // Update the state of previous and next buttons
+    updateButtonsState();
+    
+    // Check if navigating forward or backward in the browser's history
+    if (navigatingBackward || navigatingForward) {
+      // Scroll to the top of the page with a smooth animation
+      smoothScrollToTop();
+    } else {
+      // If coming back from an external webpage, don't scroll to top
+      // You can add additional conditions based on your requirements
+    }
+
+    // Display the posts after scrolling
+    displayPosts(visibleBlogPosts, visibleTutorials);
+  }
+
+  function displayPosts(blogPosts, tutorials) {
+    const postContent = document.querySelector(".posts");
+    const tutorialContent = document.querySelector(".popular-post");
+
+    if(blogPosts.length > 0){
+      postContent.innerHTML = "<h1>Posts</h1>";
+      
+      blogPosts.forEach((post) => {
+        const postDiv = document.createElement("div");
+        postDiv.className = "post-content";
+        
+        const postImage = document.createElement("div");
+        postImage.className = "post-image";
+        postImage.innerHTML = `<a href="${post.htmlFile}"><img src="${post.imageSrc}" class="img" alt="${post.title}"></a>`;
   
-  blogPosts.forEach((post) => {
-      const postDiv = document.createElement("div");
-      postDiv.className = "post-content";
-      
-      const postImage = document.createElement("div");
-      postImage.className = "post-image";
-      postImage.innerHTML = `<a href="${post.htmlFile}"><img src="${post.imageSrc}" class="img" alt="${post.title}"></a>`;
+        const postTitle = document.createElement("div");
+        postTitle.className = "post-title";
+        postTitle.innerHTML = `<a href="${post.htmlFile}">${post.title}</a>`;
+  
+        const postAbout = document.createElement("div");
+        postAbout.className = "post-about";
+        postAbout.innerHTML = `<a href="${post.htmlFile}">${post.about}</a>`;
+  
+        postDiv.appendChild(postImage);
+        postDiv.appendChild(postTitle);
+        postDiv.appendChild(postAbout);
+        
+        postContent.appendChild(postDiv);
+      });
+    }
+    
+    if(tutorials.length > 0){
+      tutorialContent.innerHTML = "<h1>Tutorials</h1>";
 
-      const postTitle = document.createElement("div");
-      postTitle.className = "post-title";
-      postTitle.innerHTML = `<a href="${post.htmlFile}">${post.title}</a>`;
+      tutorials.forEach((post) => {
+        const postDiv = document.createElement("div");
+        postDiv.className = "post-content";
+        postDiv.innerHTML = `<a href="${post.htmlFile}"></a>`;
+  
+        const postImage = document.createElement("div");
+        postImage.className = "post-image";
+        postImage.innerHTML = `<a href="${post.htmlFile}"><img src="${post.imageSrc}" class="img" alt="tutorial1"></a>`;
+  
+        const postTitle = document.createElement("div");
+        postTitle.className = "post-title";
+        postTitle.innerHTML = `<a href="${post.htmlFile}">${post.title}</a>`;
+  
+        const postAbout = document.createElement("div");
+        postAbout.className = "post-about";
+        postAbout.innerHTML = `<a href="${post.htmlFile}">${post.about}</a>`;
+  
+        postDiv.appendChild(postImage);
+        postDiv.appendChild(postTitle);
+        postDiv.appendChild(postAbout);
+        tutorialContent.appendChild(postDiv);
+      });
 
-      const postAbout = document.createElement("div");
-      postAbout.className = "post-about";
-      postAbout.innerHTML = `<a href="${post.htmlFile}">${post.about}</a>`;
+    }
+    paginationContainer.appendChild(postContent)
+    paginationContainer.appendChild(tutorialContent)
 
-      postDiv.appendChild(postImage);
-      postDiv.appendChild(postTitle);
-      postDiv.appendChild(postAbout);
-      
-      postContent.appendChild(postDiv);
-  });
+  }
+
+  // Display the first page by default
+  displayPage(1);
 }
 
-function displayTutorials() {
-  const postContent = document.querySelector(".popular-post");
+function smoothScrollToTop() {
+  const duration = 400; // Adjust the duration as needed
+  const start = window.scrollY;
+  const startTime = performance.now();
 
-  tutorials.forEach((post) => {
-      const postDiv = document.createElement("div");
-      postDiv.className = "post-content";
-      postDiv.innerHTML = `<a href="${post.htmlFile}"></a>`;
+  function scrollStep(timestamp) {
+    const elapsed = timestamp - startTime;
+    const progress = Math.min(elapsed / duration, 1);
 
-      const postImage = document.createElement("div");
-      postImage.className = "post-image";
-      postImage.innerHTML = `<a href="${post.htmlFile}"><img src="${post.imageSrc}" class="img" alt="tutorial1"></a>`;
+    window.scrollTo(0, start * (1 - progress));
 
-      const postTitle = document.createElement("div");
-      postTitle.className = "post-title";
-      postTitle.innerHTML = `<a href="${post.htmlFile}">${post.title}</a>`;
+    if (progress < 1) {
+      window.requestAnimationFrame(scrollStep);
+    }
+  }
 
-      const postAbout = document.createElement("div");
-      postAbout.className = "post-about";
-      postAbout.innerHTML = `<a href="${post.htmlFile}">${post.about}</a>`;
-
-      postDiv.appendChild(postImage);
-      postDiv.appendChild(postTitle);
-      postDiv.appendChild(postAbout);
-      postContent.appendChild(postDiv);
-  });
+  window.requestAnimationFrame(scrollStep);
 }
 
-displayBlogPosts();
-displayTutorials();
-
+document.addEventListener("DOMContentLoaded", function () {
+  // Call the function to add pagination after the DOM has fully loaded
+  addPagination();
+});
