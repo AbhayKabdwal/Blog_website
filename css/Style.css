@@ -225,6 +225,8 @@ main .post-content {
 main .site-content .post-content>.post-image {
     width: 100%;
     transition: transform 0.3s ease;
+    justify-content: center;
+    align-items: center;
 }
 
 main .site-content .post-content>.post-image .img {
@@ -574,7 +576,7 @@ footer.footer .move-up span:hover {
     }
 
     main .post-content .post-image {
-        width: 100%;
+        width: 120%;
     }
 
     main .site-content .post-content>.post-title a {
@@ -614,8 +616,8 @@ footer.footer .move-up span:hover {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin: 2rem 0;
-        padding: 2rem;
+        /* margin: 2rem 0; */
+        /* padding: 2rem; */
     }
 
     .nav .toggle-collapse {
@@ -627,7 +629,7 @@ footer.footer .move-up span:hover {
     }
 
     main .site-content .post-content>.post-image {
-        width: 100%;
+        width: 130%;
         transition: transform 0.3s ease;
     }
 
@@ -644,19 +646,8 @@ footer.footer .move-up span:hover {
         font-size: 0.9rem;
     }
 
-    main .site-title #timer{
-        display: block;
-        font-size: 23px;
-        color: #caf0f8;
-        text-align: top;
-        position: absolute;
-        margin-top: 500px;
-        height: 50px;
-        transition: opacity 0.3s;
-    }
-
     .site-content .post-content .post-image {
-        width: 150%;
+        width: 130%;
     }
 
     .site-content .post-content .post-about {
@@ -685,8 +676,8 @@ footer.footer .move-up span:hover {
     }
 
     .pagination button {
-        font-size: 15px;
-        padding: 5px 11px;
+        font-size: 17px;
+        padding: 8px 13px;
     }
 
     footer.footer .container>div {
