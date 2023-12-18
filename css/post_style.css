@@ -83,4 +83,7 @@ ul, ol {
     #thank-you, #contact {
         padding: 10px;
     }
+    img{
+        width: 35px;
+      }
 }

@@ -670,7 +670,7 @@ footer.footer .move-up span:hover {
         font-size: 15px;
     }
     h1{
-        font-size: 40px;
+        font-size: 35px;
     }
     main .site-title{
         height: 25vh;
@@ -712,6 +712,10 @@ footer.footer .move-up span:hover {
         font-size: 27px;
         margin-bottom: 0.4rem;
     }
+
+    .footer .container .follow img{
+        width: 40px;
+      }
 }
 
 /*        x      Viewport less then or equal to 520px       x     */
