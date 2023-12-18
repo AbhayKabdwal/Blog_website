@@ -94,7 +94,7 @@ p {
     font-size: large;
     padding: 1rem 1rem 0 1rem;
     height: 0rem;
-    min-height: 11vh;
+    min-height: 7vh;
     overflow: hidden;
     transition: height 1s ease-in-out;
     font-weight: 600;
@@ -109,7 +109,7 @@ p {
 
 .nav .toggle-collapse {
     position: absolute;
-    top: 0%;
+    top: 1%;
     width: 90%;
     cursor: pointer;
     display: none;
@@ -126,7 +126,7 @@ p {
 }
 
 .collapse {
-    height: 30rem;
+    height: 22rem;
 }
 
 .nav .nav-items {
@@ -187,7 +187,7 @@ main .site-title {
 }
 
 main .site-title .site-background {
-    padding-top: 0;
+    /* padding-top: ; */
     text-align: center;
     color: var(--white);
 }
@@ -238,6 +238,7 @@ main .site-content .post-content>.post-image .img {
 
 .site-content .post-content>.post-title {
     width: 100%;
+    letter-spacing: 0.5px;
     /* padding: 0 1rem; */
     justify-content: center;
     align-items: center;
@@ -494,12 +495,12 @@ button.formbox-button-1753926 {
     font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif !important;
     font-size: 36px !important;
     color: #ffffff !important;
-    text-align: center !important;
+    text-align: left !important;
 }
 
 .formbox-button-1753926 {
     font-family: Helvetica, Arial, sans-serif !important;
-    font-size: 14px !important;
+    font-size: 11px !important;
     font-weight: 600 !important;
     color: #ffffff !important;
     background-color: #0077b6 !important;
@@ -639,7 +640,7 @@ footer.footer .move-up span:hover {
 
     main .site-content .post-content>.post-title a {
         font-family: var(--Anton);
-        font-size: 0.9rem;
+        font-size: 20px;
     }
 
     .site-content .sidebar .popular-post .post-title a {
@@ -651,7 +652,7 @@ footer.footer .move-up span:hover {
     }
 
     .site-content .post-content .post-about {
-        font-size: 0.9rem;
+        font-size: 15px;
         margin-top: 1rem;
     }
 
@@ -665,6 +666,12 @@ footer.footer .move-up span:hover {
 /*              Viewport less then or equal to 520px            */
 
 @media only screen and (max-width: 520px) {
+    .post-content .post-about{
+        font-size: 15px;
+    }
+    h1{
+        font-size: 40px;
+    }
     main .site-title{
         height: 25vh;
     }
@@ -681,16 +688,29 @@ footer.footer .move-up span:hover {
     }
 
     footer.footer .container>div {
+        font-size: 17px;
         padding: 1rem 0.9rem !important;
     }
 
     footer .rights {
+        font-size: 15px;
         padding: 0 1.4rem;
         text-align: center;
     }
 
     nav .toggle-collapse {
         width: 80% !important;
+    }
+
+    input.formbox-field-1753926 {
+        font-size: 11px;
+        width: 80%;
+    }
+
+    footer.footer .newsletter h2 {
+        color: var(--white);
+        font-size: 27px;
+        margin-bottom: 0.4rem;
     }
 }
 
