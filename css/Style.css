@@ -1,4 +1,5 @@
 @import url("../css/fonts.css");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
 
 html,
 body {
@@ -300,12 +301,13 @@ button.active {
     background-color: #357bc6;
     color: #ffffff;
     /* Add any additional styling as needed */
-  }
+}
+
 .pagination {
     width: 100%;
     text-align: center;
     /* padding: 0 20%; */
-  }
+}
 
 /* --------------- Sidebar ----------------------- */
 
@@ -514,6 +516,7 @@ button.formbox-button-1753926 {
     margin-bottom: 10px;
     max-width: 230px;
 }
+
 footer.footer .rights {
     justify-content: center;
     font-family: var(--Josefin);
@@ -561,9 +564,10 @@ footer.footer .move-up span:hover {
 /*      x       Viewport less then or equal to 1130px    x     */
 
 @media only screen and (min-width: 1024px) {
-    main .site-title{
+    main .site-title {
         height: 100vh;
     }
+
     main .site-content {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -604,9 +608,10 @@ footer.footer .move-up span:hover {
 
 @media only screen and (max-width: 750px) {
 
-    main .site-title{
+    main .site-title {
         height: 40vh;
     }
+
     .nav .nav-menu,
     .nav .nav-items {
         flex-direction: column;
@@ -666,13 +671,15 @@ footer.footer .move-up span:hover {
 /*              Viewport less then or equal to 520px            */
 
 @media only screen and (max-width: 520px) {
-    .post-content .post-about{
+    .post-content .post-about {
         font-size: 15px;
     }
-    h1{
+
+    h1 {
         font-size: 35px;
     }
-    main .site-title{
+
+    main .site-title {
         height: 25vh;
     }
 
@@ -713,12 +720,9 @@ footer.footer .move-up span:hover {
         margin-bottom: 0.4rem;
     }
 
-    .footer .container .follow img{
+    .footer .container .follow img {
         width: 40px;
-      }
+    }
 }
 
 /*        x      Viewport less then or equal to 520px       x     */
-
-
-

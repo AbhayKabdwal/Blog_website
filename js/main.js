@@ -47,8 +47,8 @@ $(document).ready(function () {
 
 });
 
-var intervalID = window.setInterval(myCallback, 3000);
+// var intervalID = window.setInterval(myCallback, 3000);
 
-function myCallback() {
-  text.textContent = "";
-}
+// function myCallback() {
+//   text.textContent = "";
+// }

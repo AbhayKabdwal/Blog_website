@@ -87,6 +87,14 @@ const blogPosts = [
       date: "December 17, 2023",
     },
 
+    {
+      title: "Why you should start using linux right now...",
+      htmlFile: "./blogs/linux_intro.html",
+      about: "",
+      imageSrc: "./blogs/images/intro_to_linux.png",
+      date: "December 20, 2023",
+    },
+
   ];
 
   const tutorials = [
