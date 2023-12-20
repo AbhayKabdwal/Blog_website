@@ -11,7 +11,7 @@ body {
 
 :root {
     /*      Theme colors        */
-    --background-color-complete: #385380;
+    --background-color-complete: #395687;
     --text-gray: #caf0f8;
     --text-light: #90e0ef;
     --bg-color: #0d1b2a;
@@ -105,14 +105,14 @@ Timeline
     min-height: 7vh;
     overflow: hidden;
     transition: height 1s ease-in-out;
-    font-weight: 600;
+    font-weight: 700;
     color: #ffffff;
 }
 
 .nav .nav-menu {
     justify-content: space-between;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 0.7rem;
+    padding-right: 0.9rem;
 }
 
 .nav .toggle-collapse {
@@ -159,8 +159,8 @@ Timeline
 }
 
 .nav .nav-brand a {
-    font-size: 1.2rem;
-    padding: 1rem 0;
+    font-size: 1.5rem;
+    padding: 1.3rem 0;
     display: block;
     font-family: var(--Lexend);
 }
@@ -292,6 +292,7 @@ Timeline
     position: absolute;
     left: 200px;
     top: 0;
+    font-family: var(--Lexend);
     font-size: 30px;
     font-weight: 600;
     color: #ffffff;
@@ -450,6 +451,11 @@ Timeline
 }
 
 @media only screen and (max-width: 520px) {
+    .nav .nav-brand a {
+        font-size: 1rem;
+
+    }
+
     .img-fluid{
         width: 100%;
     }
