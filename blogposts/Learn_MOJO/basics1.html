@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOJO basics 1</title>
+    <link rel="stylesheet" type="text/css" href="../../css/post_style.css">
+
+</head>
+<body>
+    <h1>1. Variables</h1>
+
+    <p>In Mojo, you can assign a value to a name inside a <code>fn</code>, and it implicitly creates a function scope
+        variable just like in Python. For example:</p>
+
+    <pre><code>fn main():
+    let x = 10
+    print(x)  # prints: 10
+</code></pre>
+
+    <p>In the above example, <code>x</code> is a variable that holds the value <code>10</code>. The <code>let</code>
+        keyword is used to declare a variable in Mojo.</p>
+
+    <pre><code>fn main():
+    var x = 10
+    print(x)   # prints: 10
+</code></pre>
+
+    <p>On running the above code segment we get a warning and the desired output</p>
+
+    <pre><code>warning: 'x' was declared as a 'var' but never mutated, consider switching to a 'let'
+    var x = 10
+    ^
+10
+</code></pre>
+
+    <p>From the above, it is clear that the <code>var</code> keyword is mutable and the warning says that it is
+        initialized as <code>var</code> but never mutated.</p>
+
+    <p>Similarly, if we try to mutate a variable which is initialized using <code>let</code> keyword we get an
+        error.</p>
+
+    <pre><code>fn main():
+    let x = 10
+    x = x + 5
+    print(x)
+</code></pre>
+
+    <pre><code>error: expression must be mutable in assignment
+    x = x + 5
+    ^
+</code></pre>
+
+    <p>This shows us that the <code>let</code> initialization is immutable while the <code>var</code> initialization is
+        mutable.</p>
+
+    <h2>2. Data Types</h2>
+
+    <p>Mojo supports common data types such as integers, floats, strings, and booleans. Additionally, it provides
+        advanced data types like arrays and dictionaries to handle collections of data.</p>
+
+    <h3>2.1 Integer</h3>
+
+    <p>An integer is a whole number that can be either greater than 0, called positive or less than 0, called negative.
+        Zero is neither positive nor negative. For example:</p>
+
+    <pre><code>fn main():
+    let number = 42  # integer
+    print(number)    # prints: 42
+</code></pre>
+
+    <pre><code>fn main():
+    let marks: Int = 91                 # integer
+    print("Your marks are :",marks)     # prints: Your marks are 91
+</code></pre>
+
+    <h3>2.2 Float</h3>
+
+    <p>A floating point number is a number, positive or negative, containing one or more decimals. For example:</p>
+
+    <pre><code>fn main():
+    let pi = 3.14     # float
+    print(pi)         # prints: 3.14
+</code></pre>
+
+    <pre><code>fn main():
+    let score: Float64 = 8.2              # float
+    print("Your score is :", score)       # prints: Your score is 8.2
+</code></pre>
+
+    <h3>2.3 String</h3>
+
+    <p>Strings in Mojo are surrounded by either single quotation marks or double quotation marks. For example:</p>
+
+    <pre><code>fn main():
+    let name = "Mojo"    # string
+    print(name)          # prints: Mojo
+</code></pre>
+
+    <pre><code>fn main():
+    let language: String = "Mojo"       # string
+    print(language + " is awesome")     # prints: Mojo is awesome
+    print(language,"is awesome")
+</code></pre>
+
+    <h3>2.4 Boolean</h3>
+
+    <p>Booleans represent one of two values: <code>true</code> or <code>false</code>. For example:</p>
+
+    <pre><code>fn main():
+    let is_true = true    # boolean
+    print(is_true)        # prints: true
+</code></pre>
+
+    <pre><code>fn main():
+    let is_false: Bool = false      # boolean
+    print(is_false)                 # prints: false
+</code></pre>
+
+    <h2>3. Operators</h2>
+
+    <p>Operators are special symbols in programming that carry out arithmetic or logical computation. The value that the
+        operator operates on is called the operand¹.</p>
+
+    <h3>3.1. Arithmetic Operators</h3>
+
+    <p>Arithmetic operators are used to perform mathematical operations like addition, subtraction, multiplication,
+        etc.</p>
+
+    <pre><code>fn main():
+    let x = 10
+    let y = 5
+    print(x + y)       # prints: 15
+    print(x - y)       # prints: 5
+    print(x * y)       # prints: 50
+    print(x / y)       # prints: 2.0
+    print(x % y)       # prints: 0
+    print(x ** y)      # prints: 100000
+    print(x // y)      # prints: 2
+</code></pre>
+
+    <h3>3.2. Assignment Operators</h3>
+
+    <p>Assignment operators are used to assign values to variables. The basic assignment operator is <code>=</code>.</p>
+
+    <pre><code>fn main():
+   var x: Int64 = 10  # integer
+   print(x)
+   x += 5
+   print(x)
+   x -= 3
+   print(x)
+   x *= 2
+   print(x)
+   x /= 5
+   print(x)
+   x %= 5
+   print(x)
+   x **= 2
+   print(x)
+   x //= 3
+   print(x)
+</code></pre>
+
+    <h3>3.3. Comparison Operators</h3>
+
+    <p>Comparison operators are used to compare two values.</p>
+
+    <pre><code>fn main():
+    let x = 10
+    let y = 20
+    print(x == y)   # prints: false
+    print(x != y)   # prints: true
+    print(x > y)    # prints: false
+    print(x < y)    # prints: true
+    print(x >= y)   # prints: false
+    print(x <= y)   # prints: true
+</code></pre>
+
+    <h2>4. Output Method</h2>
+
+    <p>The method for giving output here is the same as in Python. Let us see that with the following examples</p>
+
+    <pre><code>fn main():
+    let x: String = "Mojo is fun"
+    print(x)
+</code></pre>
+
+    <pre><code>fn main():
+    let c: Int = 10
+    print("Hello world",c)
+    print("Hello world "+str(c))
+</code></pre>
+
+    <h2>5. Input Method</h2>
+
+    <p>In Mojo, a simple and concise syntax is used to take input from the user. The primary function for user input is
+        <code>impy.import_module("builtins").input</code>. Here's a basic script to illustrate how input is taken in
+        Mojo:</p>
+
+    <pre><code>from python import Python as impy
+
+fn main() raises:
+    let py_input = impy.import_module("builtins").input
+    let text_input: String = str(input)
+</code></pre>
+
+    <p>In this script:</p>
+
+    <ul>
+        <li>The <code>impy</code> module is used to import the Python module as Python.</li>
+        <li>The input function from the Python builtins module is assigned to <code>py_input</code> in Mojo.</li>
+        <li>The <code>text_input</code> variable is declared as a String to store the user input converted to a
+            string.</li>
+    </ul>
+
+    <pre><code>Example : Accepting User Input
+
+from python import Python as impy
+
+fn main() raises:
+    let py_input = impy.import_module("builtins").input
+    let user_input: String = str(py_input("Enter your name: "))
+    print("Hello, " + user_input + "!")
+</code></pre>
+
+    <pre><code>Example : Calculating the Sum of Two Numbers
+
+from python import Python as impy
+
+fn main() raises:
+    let py_input = impy.import_module("builtins").input
+    let num1: Float = float(py_input("Enter the first number: "))
+    let num2: Float = float(py_input("Enter the second number: "))
+    let sum: Float = num1 + num2
+    print("The sum is: " + sum.str())
+</code></pre>
+
+    <h2>5. Conditional Statements</h2>
+
+    <p>The mojo programming language contains all the conditional statements that are available in python.</p>
+
+    <p>We have 2 types of conditional statements --</p>
+
+    <h3>5.1 If - Else Statements</h3>
+
+    <pre><code>Example : Check age
+
+fn check_age(age:Int) -&gt; String:
+    if age &gt; 18:
+        return 'Adult'
+    else:
+        return 'Minor'
+
+fn main():
+    let age = 24
+    print("You are a",check_age(age))
+</code></pre>
+
+    <pre><code>Example : Check even or odd
+
+fn check_even(number: Int) -&gt; Bool:
+    if number % 2 == 0:
+        return True
+    else:
+        return False
+
+fn main():
+    let num = 7
+    print("The number is Even :",check_even(num))
+    print("The number is Odd :",not check_even(num))
+</code></pre>
+
+    <h3>5.2 Loop statements</h3>
+
+    <h4>5.2.1 For loop</h4>
+
+    <pre><code>Example
+
+fn write_even(num: Int) -&gt; None:
+    for i in range (2,num,2):
+        print(i)
+
+fn main():
+    write_even(30)
+</code></pre>
+
+    <p>Same can be performed by the following code</p>
+
+    <h4>5.2.2 While loop</h4>
+
+    <pre><code>fn write_even(num: Int) -&gt; None:
+    var i = 2
+    while i &lt; num:
+        print(i)
+        i += 1
+
+fn main():
+    write_even(30)
+</code></pre>
+
+    <h2>6. Comments</h2>
+
+    <pre><code>fn main():
+    print("Hello world") # this is a  single line comment
+</code></pre>
+
+    <pre><code>fn main():
+    print("Hello world")
+    '''
+    this is a
+    multiline
+    comment
+    '''
+</code></pre>
+
+    <div id="thank-you">
+        <h2>Thank You</h2>
+
+        <ul>
+            <li>Excited for more? Subscribe to the channel and hit the bell icon to receive notifications of further contents. Also join my Discord server and Telegram channel for updates and resources.</li>
+        </ul>
+    </div>
+    <div id="contact">
+        <h2>Connect with me on -- </h2>
+                <p>Author -- Abhay Kabdwal</p>
+        
+                <a href="https://www.youtube.com/@doctor_innovator/featured"><img src="../../assets/youtube_icon.png" width="50px"></a>
+                <a href="https://discord.gg/7ydGD3aJ"><img src="../../assets/discord_icon.png" width="50px"></a>
+                <a href="https://t.me/doctor_innovator"><img src="../../assets/telegram_icon.png" width="50px"></a>
+                <a href="https://github.com/AbhayKabdwal"><img src="../../assets/github_icon.png" width="50px"></a>
+    </div>
+</body>
+</html>

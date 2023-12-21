@@ -11,7 +11,7 @@ body {
 
 :root {
     /*      Theme colors        */
-    --background-color-complete: #395687;
+    --background-color-complete: #1c3663;
     --text-gray: #caf0f8;
     --text-light: #90e0ef;
     --bg-color: #0d1b2a;
@@ -75,6 +75,11 @@ span {
 }
 
 p {
+    font-family: var(--Lexend);
+    color: var(--text-light);
+}
+
+pre {
     font-family: var(--Lexend);
     color: var(--text-light);
 }
@@ -216,6 +221,13 @@ Timeline
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2),0 6px 10px 0 rgba(0,0,0,0.3);
 } */
 
+.dark{
+    background-color: var(--background-color-complete);
+    color: #e2e9f0;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+}
 .vtimeline-content-column {
     margin: 0 10% 5% 10%;
     background: #395687;
@@ -255,6 +267,15 @@ Timeline
     margin: 18px;
 }
 .vtimeline-content-row p {
+    font-size: 20px;
+    margin: 18px;
+}
+
+.vtimeline-content-column pre {
+    font-size: 20px;
+    margin: 18px;
+}
+.vtimeline-content-row pre {
     font-size: 20px;
     margin: 18px;
 }
@@ -329,6 +350,10 @@ Timeline
         font-size: 20px;
         margin: 18px;
     }
+    .vtimeline-content-column pre {
+        font-size: 20px;
+        margin: 18px;
+    }
     
     .vtimeline-title {
         left: 100px;
@@ -366,7 +391,16 @@ Timeline
         font-size: 18px;
         margin: 18px;
     }
-    .vtimeline-content-column p {
+    .vtimeline-content-row p {
+        font-size: 18px;
+        margin: 18px;
+    }
+
+    .vtimeline-content-column pre {
+        font-size: 18px;
+        margin: 18px;
+    }
+    .vtimeline-content-row pre {
         font-size: 18px;
         margin: 18px;
     }
@@ -416,6 +450,10 @@ Timeline
     }
 
     .vtimeline-content-column p {
+        font-size: 17px;
+        margin: 17px;
+    }
+    .vtimeline-content-column pre {
         font-size: 17px;
         margin: 17px;
     }
@@ -484,6 +522,11 @@ Timeline
     }
 
     .vtimeline-content-column p{
+        font-size: 16px;
+        margin: 10px 0 15px 0;
+    }
+
+    .vtimeline-content-column pre{
         font-size: 16px;
         margin: 10px 0 15px 0;
     }

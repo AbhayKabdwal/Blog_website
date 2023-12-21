@@ -1,95 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Basics of Regular Expressions in Python</title>
     <link rel="stylesheet" type="text/css" href="../../css/post_style.css">
 </head>
+
 <body>
-    <h1>Regular Expressions in Python</h1>
 
-    <h2>Table of Contents</h2>
-    <ul>
-        <li><a href="#1-what-are-regular-expressions">What are Regular Expressions?</a></li>
-        <li><a href="#2-creating-a-regular-expression">Creating a Regular Expression</a></li>
-        <li><a href="#3-matching-patterns">Matching Patterns</a></li>
-        <li><a href="#4-regular-expression-functions">Regular Expression Functions</a></li>
-        <li><a href="#5-modifiers-and-special-characters">Modifiers and Special Characters</a></li>
-        <li><a href="#6-common-use-cases">Common Use Cases</a></li>
-    </ul>
+    <h1>Regular Expressions in Python: Basics to Advanced</h1>
 
-    <h3 id="1-what-are-regular-expressions">1. What are Regular Expressions?</h3>
-    <p>Regular Expressions (regex or regexp) are sequences of characters that define a search pattern. They are used to perform operations like search, match, and manipulate strings based on patterns. Python's <code>re</code> module provides support for working with regular expressions.</p>
+    <h2>1. Introduction to Regular Expressions</h2>
 
-    <h3 id="2-creating-a-regular-expression">2. Creating a Regular Expression</h3>
-    <p>Regular expressions are typically written as strings with specific syntax. The most basic regex is a plain string that matches itself.</p>
-    <pre><code>import re
+    <h3>1.1 What are Regular Expressions?</h3>
 
+    <p>Regular Expressions (regex or regexp) are sequences of characters that define a search pattern. They enable
+        string manipulation based on patterns.</p>
+
+    <h3>1.2 Why Use Regular Expressions?</h3>
+
+    <p>Regular expressions provide a powerful and flexible way to search, match, and manipulate strings. They are widely
+        used for tasks like validation, extraction, and search-and-replace operations.</p>
+
+    <h2>2. Installing the re Module</h2>
+
+    <pre><code>pip install regex</code></pre>
+
+    <h2>3. Getting Started with Regular Expressions in Python</h2>
+
+    <h3>3.1 Importing the re Module</h3>
+
+    <pre><code>import re</code></pre>
+
+    <h3>3.2 Basic Patterns: Matching Literal Strings</h3>
+
+    <pre>
+        <code>
 pattern = r"hello"
-</code></pre>
-    <p>A regex with a more complex pattern that matches email addresses.</p>
-    <pre><code>pattern = r"\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,7}\b"
-</code></pre>
+text = "Hello, world!"
+match = re.search(pattern, text)
+print(match.group())  # Output: "hello"
+        </code>
+    </pre>
 
-    <h3 id="3-matching-patterns">3. Matching Patterns</h3>
-    <p>Use the <code>re.search()</code> function to find the first occurrence of a pattern in a string.</p>
-    <pre><code>import re
+    <h2>4. Understanding Patterns</h2>
 
+    <h3>4.1 Metacharacters: Building Blocks of Patterns</h3>
+
+    <pre>
+        <code>
+pattern = r"he.l."
+text = "hello"
+match = re.search(pattern, text)
+print(match.group())  # Output: "hello"
+        </code>
+    </pre>
+
+    <h3>4.2 Character Classes and Quantifiers</h3>
+
+    <pre>
+        <code>
+pattern = r"\d{3}-\d{2}-\d{4}"
+text = "Social Security Number: 123-45-6789"
+match = re.search(pattern, text)
+print(match.group())  # Output: "123-45-6789"
+        </code>
+    </pre>
+
+    <h2>5. Searching for Patterns</h2>
+
+    <h3>5.1 The re.search() Function</h3>
+
+    <pre>
+        <code>
 pattern = r"world"
 text = "Hello, world!"
 match = re.search(pattern, text)
 print(match.group())  # Output: "world"
-</code></pre>
-    <p>Use the <code>re.findall()</code> function to find all occurrences of a pattern in a string.</p>
-    <pre><code>import re
+        </code>
+    </pre>
 
-pattern = r"\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,7}\b"
-text = "Emails: alice@example.com, bob@email.net"
+    <h3>5.2 Matching at the Beginning with re.match()</h3>
+
+    <pre>
+        <code>
+pattern = r"Hello"
+text = "Hello, world!"
+match = re.match(pattern, text)
+print(match.group())  # Output: "Hello"
+        </code>
+    </pre>
+
+    <h3>5.3 Finding All Occurrences with re.findall()</h3>
+
+    <pre>
+        <code>
+pattern = r"\b\w+\b"
+text = "This is a simple sentence."
 matches = re.findall(pattern, text)
-print(matches)  # Output: ['alice@example.com', 'bob@email.net']
-</code></pre>
+print(matches)  # Output: ['This', 'is', 'a', 'simple', 'sentence']
+        </code>
+    </pre>
 
-    <h3 id="4-regular-expression-functions">4. Regular Expression Functions</h3>
-    <p><code>re.search()</code>: Searches for a pattern in a string and returns the first match.</p>
-    <p><code>re.findall()</code>: Finds all non-overlapping occurrences of a pattern in a string and returns them as a list.</p>
-    <p><code>re.match()</code>: Matches a pattern only at the beginning of a string.</p>
-    <p><code>re.sub()</code>: Replaces all occurrences of a pattern in a string with a specified replacement.</p>
+    <h2>6. Grouping and Capturing</h2>
 
-    <h3 id="5-modifiers-and-special-characters">5. Modifiers and Special Characters</h3>
-    <p>Use special characters and modifiers to create complex patterns. Some common special characters include <code>.</code> (any character), <code>*</code> (zero or more occurrences), <code>+</code> (one or more occurrences), and <code>?</code> (zero or one occurrence).</p>
-    <pre><code>pattern = r"Hello.*world"
+    <h3>6.1 Creating Groups with Parentheses</h3>
+
+    <pre>
+        <code>
+pattern = r"(\d{3})-(\d{2})-(\d{4})"
+text = "Date of Birth: 123-45-6789"
+match = re.search(pattern, text)
+print(match.group(1))  # Output: "123"
+print(match.group(2))  # Output: "45"
+print(match.group(3))  # Output: "6789"
+        </code>
+    </pre>
+
+    <h3>6.2 Capturing Matched Text</h3>
+
+    <pre>
+        <code>
+pattern = r"hello"
+text = "Hello, world!"
+match = re.search(pattern, text)
+print(match.group())  # Output: "hello"
+        </code>
+    </pre>
+
+    <h3>6.3 Non-Capturing Groups</h3>
+
+    <pre>
+        <code>
+pattern = r"Mr(?:s|)\. Smith"
+text = "Mr. Smith went to the store."
+match = re.search(pattern, text)
+print(match.group())  # Output: "Mr. Smith"
+        </code>
+    </pre>
+
+    <h2>7. Modifiers and Special Characters</h2>
+
+    <h3>7.1 Dot (.) as Any Character</h3>
+
+    <pre>
+        <code>
+pattern = r"Hello....world"
 text = "Hello, Python world!"
 match = re.search(pattern, text)
 print(match.group())  # Output: "Hello, Python world"
-</code></pre>
-    <pre><code>pattern = r"Hello.*?world"
+        </code>
+    </pre>
+
+    <h3>7.2 Asterisk (*) for Zero or More Occurrences</h3>
+
+    <pre>
+        <code>
+pattern = r"ab*c"
+text = "ac, abc, abbc, abbbc"
+matches = re.findall(pattern, text)
+print(matches)  # Output: ['ac', 'abc', 'abbc', 'abbbc']
+        </code>
+    </pre>
+
+    <h3>7.3 Plus (+) for One or More Occurrences</h3>
+
+    <pre>
+        <code>
+pattern = r"ab+c"
+text = "ac, abc, abbc, abbbc"
+matches = re.findall(pattern, text)
+print(matches)  # Output: ['abc', 'abbc', 'abbbc']
+        </code>
+    </pre>
+
+    <h3>7.4 Question Mark (?) for Zero or One Occurrence</h3>
+
+    <pre>
+        <code>
+pattern = r"ab?c"
+text = "ac, abc, abbc, abbbc"
+matches = re.findall(pattern, text)
+print(matches)  # Output: ['ac', 'abc']
+        </code>
+    </pre>
+
+    <h2>8. Advanced Techniques</h2>
+
+    <h3>8.1 Greedy vs. Non-Greedy Matching</h3>
+
+    <pre>
+        <code>
+pattern = r"Hello.*world"
+text = "Hello, Python world!"
+match = re.search(pattern, text)
+print(match.group())  # Output: "Hello, Python world"
+
+pattern = r"Hello.*?world"
 text = "Hello, Python world!"
 match = re.search(pattern, text)
 print(match.group())  # Output: "Hello, world"
-</code></pre>
+        </code>
+    </pre>
 
-    <h3 id="6-common-use-cases">6. Common Use Cases</h3>
-    <p><strong>Validation:</strong> Validate input, like email addresses, phone numbers, or passwords.</p>
-    <p><strong>Extraction:</strong> Extract specific information from a text, like dates, URLs, or numbers.</p>
-    <p><strong>Search and Replace:</strong> Find and replace text based on patterns.</p>
-    <p><strong>Tokenization:</strong> Split text into tokens (words, sentences) based on specific criteria.</p>
+    <h3>8.2 Lookahead and Lookbehind Assertions</h3>
+
+    <pre>
+        <code>
+pattern = r"\b(?=\w{5}\b)\w+\b"
+text = "Match words with exactly 5 characters"
+matches = re.findall(pattern, text)
+print(matches)  # Output: ['Match', 'words']
+        </code>
+    </pre>
+
+    <h3>8.3 Using Backreferences</h3>
+
+    <pre>
+        <code>
+pattern = r"(\w+) \1"
+text = "Repeat Repeat Hello Hello World"
+matches = re.findall(pattern, text)
+print(matches)  # Output: ['Repeat', 'Hello']
+        </code>
+    </pre>
+
+    <h2>9. Common Use Cases</h2>
+
+    <p><strong>Validation</strong>: Validate input, like email addresses, phone numbers, or passwords.</p>
+
+    <p><strong>Extraction</strong>: Extract specific information from a text, like dates, URLs, or numbers.</p>
+
+    <p><strong>Search and Replace</strong>: Find and replace text based on patterns.</p>
+
+    <p><strong>Tokenization</strong>: Split text into tokens (words, sentences) based on specific criteria.</p>
 
     <div id="thank-you">
-        <p>Thank You</p>
-        <p>Excited for more? Subscribe to the channel and hit the bell icon to receive notifications of further content.</p>
+        <h2>Thank You</h2>
+
+        <ul>
+            <li>Excited for more? Subscribe to the channel and hit the bell icon to receive notifications of further contents. Also join my Discord server and Telegram channel for updates and resources.</li>
+        </ul>
     </div>
 
     <div id="contact">
         <h2>Connect with me on -- </h2>
-                <p>Author -- Abhay Kabdwal</p>
-        
-                <a href="https://www.youtube.com/@doctor_innovator/featured"><img src="../../assets/youtube_icon.png" width="50px"></a>
-                <a href="https://discord.gg/7ydGD3aJ"><img src="../../assets/discord_icon.png" width="50px"></a>
-                <a href="https://t.me/doctor_innovator"><img src="../../assets/telegram_icon.png" width="50px"></a>
-                <a href="https://github.com/AbhayKabdwal"><img src="../../assets/github_icon.png" width="50px"></a>
+        <p>Author -- Abhay Kabdwal</p>
+
+        <a href="https://www.youtube.com/@doctor_innovator/featured"><img src="../../assets/youtube_icon.png"
+                width="50px"></a>
+        <a href="https://discord.gg/7ydGD3aJ"><img src="../../assets/discord_icon.png" width="50px"></a>
+        <a href="https://t.me/doctor_innovator"><img src="../../assets/telegram_icon.png" width="50px"></a>
+        <a href="https://github.com/AbhayKabdwal"><img src="../../assets/github_icon.png" width="50px"></a>
     </div>
     </div>
 
 </body>
+
 </html>
