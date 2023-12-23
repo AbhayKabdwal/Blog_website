@@ -314,6 +314,173 @@ fn main():
     '''
 </code></pre>
 
+<h2>7. Functions in Mojo</h2>
+
+<h3>7.1. <code>def</code> functions</h3>
+
+<p>- Dynamism like Python <code>def</code>.</p>
+<p>- Arguments are dynamically typed.</p>
+<p>- Return types default to object.</p>
+<p>- Variables default to mutable.</p>
+<p>- Object type allows dynamic typing.</p>
+
+<h4>Example 1:</h4>
+<pre><code>def greet(name):
+greeting = "Hello, " + name + "!"
+return greeting</code></pre>
+
+<h4>Example 2:</h4>
+<pre><code>def greet(name: String) -&gt; String:
+let greeting = "Hello, " + name + "!"
+return greeting</code></pre>
+
+<h3>7.2. <code>fn</code> functions</h3>
+
+<p>- Strict type checking.</p>
+<p>- Immutable references by default.</p>
+<p>- Variables must be declared as mutable or immutable.</p>
+<p>- Ensures no accidental mutations.</p>
+<p>- Performance improvement with fixed types at compile time.</p>
+
+<h4>Example 1:</h4>
+<pre><code>fn greet(name: String) -&gt; String:
+let greeting = "Hello, " + name + "!"
+return greeting</code></pre>
+
+<h4>Example 2:</h4>
+<pre><code>fn pow(base: Int, exp: Int = 2) -&gt; Int:
+return base ** exp</code></pre>
+
+<h3>7.2.1. Optional arguments</h3>
+
+<p>- Include default values.</p>
+<p>- Cannot define default for inout arguments.</p>
+
+<h4>Example 1:</h4>
+<pre><code>fn pow(base: Int, exp: Int = 2) -&gt; Int:
+return base ** exp</code></pre>
+
+<h4>Example 2:</h4>
+<pre><code>fn use_defaults():
+let z = pow(3)
+print(z)</code></pre>
+
+<h3>7.2.2. Keyword arguments</h3>
+
+<p>- Specify values using argument names.</p>
+<p>- Partial support for keyword arguments in Mojo.</p>
+
+<h4>Example 1:</h4>
+<pre><code>fn use_keywords():
+let z = pow(exp=3, base=2)
+print(z)</code></pre>
+
+<h3>7.2.3. Overloaded functions</h3>
+
+<p>- <code>def</code> accepts any data type.</p>
+<p>- <code>fn</code> requires separate versions for different types.</p>
+<p>- Compiler error if unsupported type.</p>
+
+<h4>Example 1:</h4>
+<pre><code>fn add(x: Int, y: Int) -&gt; Int:
+return x + y</code></pre>
+
+<h4>Example 2:</h4>
+<pre><code>fn add(x: String, y: String) -&gt; String:
+return x + y</code></pre>
+
+<h3>7.2.4. Argument Conventions</h3>
+
+<p>- Borrowed:</p>
+<ul>
+    <li>Immutable reference.</li>
+    <li>Default for <code>fn</code> functions.</li>
+    <li>Efficient for large or costly values.</li>
+</ul>
+
+<pre><code>fn example(borrowed x: Int):
+// code</code></pre>
+
+<p>- Inout:</p>
+<ul>
+    <li>Mutable reference.</li>
+    <li>Allows both reading and mutating.</li>
+    <li>Memory-efficient, avoids unnecessary copies.</li>
+</ul>
+
+<pre><code>def process(inout data: Array):
+// code</code></pre>
+
+<p>- Owned:</p>
+<ul>
+    <li>Exclusive mutable access.</li>
+    <li>Value ownership transfer.</li>
+    <li>Ensures a single owner, enhancing memory safety.</li>
+</ul>
+
+<pre><code>fn update(owned list: List):
+// code</code></pre>
+
+<h3>8. Structs</h3>
+
+<h3>Struct Definition</h3>
+
+<p>- Define a struct with fields.</p>
+<p>- Add a constructor method using <code>__init__</code>.</p>
+<p>- Constructor initializes fields; must include <code>inout self</code> as the first argument.</p>
+
+<h4>Example 1:</h4>
+<pre><code>struct MyPair:
+var first: Int
+var second: Int
+
+fn __init__(inout self, first: Int, second: Int):
+    self.first = first
+    self.second = second</code></pre>
+
+<h3>8.1. Methods</h3>
+
+<p>- Add methods to structs.</p>
+<p>- Use <code>self</code> to access struct fields in methods.</p>
+<p>- Instance methods act on struct instances.</p>
+
+<h4>Example :</h4>
+<pre><code>struct MyPair:
+var first: Int
+var second: Int
+
+fn __init__(inout self, first: Int, second: Int):
+    self.first = first
+    self.second = second
+
+fn get_sum(self) -&gt; Int:
+    return self.first + self.second</code></pre>
+
+<h3>8.2. Static Methods</h3>
+
+<p>- Declare static methods with <code>@staticmethod</code>.</p>
+<p>- Static methods can be called without creating an instance.</p>
+<p>- No <code>self</code> argument for static methods.</p>
+
+<h4>Example :</h4>
+<pre><code>struct Logger:
+
+fn __init__(inout self):
+    pass
+
+@staticmethod
+fn log_info(message: String):
+    print("Info: ", message)
+
+fn main():
+    Logger.log_info("Hello")</code></pre>
+
+<h3>Structs vs Classes</h3>
+
+<p>- Structs are static; bound at compile-time.</p>
+<p>- No dynamic dispatch or runtime modifications.</p>
+<p>- No support for inheritance; can implement traits.</p>
+
     <div id="thank-you">
         <h2>Thank You</h2>
 
