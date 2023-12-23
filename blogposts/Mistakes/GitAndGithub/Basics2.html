@@ -10,15 +10,15 @@
 <body>
     <h1>Git Remote Repository Commands</h1>
 
-    <h2>1. git remote add</h2>
-    <p>This command is used to add a new remote repository.</p>
-    <pre><code>git remote add origin https://github.com/user/repo.git</code></pre>
-    <p>This will add a new remote repository with the name “origin” and the URL “https://github.com/user/repo.git”.</p>
-
-    <h2>2. git remote</h2>
+    <h2>1. git remote</h2>
     <p>This command lists all remote repositories.</p>
     <pre><code>git remote</code></pre>
     <p>This will list all remote repositories that have been added.</p>
+
+    <h2>2. git remote add</h2>
+    <p>This command is used to add a new remote repository.</p>
+    <pre><code>git remote add origin https://github.com/user/repo.git</code></pre>
+    <p>This will add a new remote repository with the name “origin” and the URL “https://github.com/user/repo.git”.</p>
 
     <h2>3. git remote -v</h2>
     <p>This command lists all remote repositories along with their URLs.</p>
@@ -29,6 +29,9 @@
     <p>This command is used to push changes from the local repository to a remote repository.</p>
     <pre><code>git push origin master</code></pre>
     <p>This will push changes from the local “master” branch to the “master” branch in the “origin” remote repository.</p>
+
+    <pre><code>git push -f origin master</code></pre>
+    <p>This will force push all the changes to the remote repository irrespective of its current condition.</p>
 
     <h2>5. git pull</h2>
     <p>This command is used to fetch changes from a remote repository and merge them into the current branch of the local repository.</p>
