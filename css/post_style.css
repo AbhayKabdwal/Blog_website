@@ -40,6 +40,10 @@ ul, ol {
     padding-left: 20px;
 }
 
+a{
+    color: #6091e4;
+}
+
 /* Style the Thank You and Contact Me sections */
 #thank-you, #contact {
     background-color: #161B22;
