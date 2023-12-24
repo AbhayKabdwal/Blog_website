@@ -4,7 +4,7 @@ body {
     font-size: 22px;
     margin: 20px;
     padding: 20px;
-    background-color: #0d1117; /* GitHub Dark Background */
+    background-color: #121821; /* GitHub Dark Background */
     color: #c9d1d9; /* Light text */
     line-height: 1.6;
     border: 2px solid #30363d; /* Add a border around the body */
@@ -15,18 +15,7 @@ body {
 h1, h2, h3 {
     padding: 20px 0;
     margin: 0;
-    color: #58a6ff; /* GitHub Blue for Headings */
-}
-
-/* Style links */
-a {
-    color: #58a6ff;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #1f6feb; /* Slightly darker blue on hover */
-    text-decoration: underline;
+    color: #9ad541e2; /* GitHub Blue for Headings */
 }
 
 /* Style paragraphs */
@@ -36,10 +25,10 @@ p {
 
 /* Style code blocks */
 pre {
-    background-color: #22284f;
+    background-color: #1e242e;
     color: #c9d1d9;
     padding: 10px;
-    border: 1px dotted #30363d; /* GitHub code block border */
+    border: 1px dotted #161B22; /* GitHub code block border */
     border-radius: 10px;
     overflow-x: auto;
     line-height: 1.4;
@@ -53,7 +42,7 @@ ul, ol {
 
 /* Style the Thank You and Contact Me sections */
 #thank-you, #contact {
-    background-color: #0d1117;
+    background-color: #161B22;
     color: #c9d1d9;
     padding: 20px;
     border-radius: 5px;

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Python Basics</title>
+    <link rel="stylesheet" type="text/css" href="../../css/sunburst.css">
     <link rel="stylesheet" type="text/css" href="../../css/post_style.css">
 
 </head>
@@ -16,7 +17,7 @@
     <li>input(): this function takes a string as an argument and returns the user’s input as a string. For example:</li>
     </ul>
 
-    <pre>
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
     # Example : Taking input in python
 
     name = input("What is your name? ") # get the user's name
@@ -26,7 +27,7 @@
 
     <p>The output of the above code depends on what the user enters. For example:</p>
 
-    <pre>
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
     What is your name? Alice
     How old are you? 20
     Hello, Alice. You are 20 years old.
@@ -38,7 +39,7 @@
     <li>print(): this function takes one or more arguments and prints them to the standard output (usually the screen). The arguments can be separated by commas or concatenated by +. For example:</li>
     </ul>
 
-    <pre>
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
     # Example : Printing the output on screen in python
 
     x = 10
@@ -51,7 +52,7 @@
 
     <p>The output of the above code is:</p>
 
-    <pre>
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
     10 + 20 = 30
     10 + 20 = 30
     </pre>
@@ -62,7 +63,7 @@
    <li>We can also use some formatting options to customize the output of the print() function. For example, we can use the sep parameter to specify the separator between the arguments, and the end parameter to specify the end character of the output. For example:</li>
    </ul>
 
-   <pre>
+   <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
    # Example : Parameters of print function in python
 
    print(x, y, z, sep=" - ") # use "-" as separator
@@ -71,7 +72,7 @@
 
    <p>The output of the above code is:</p>
 
-   <pre>
+   <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
    10 - 20 - 30
    10 20 30.
    </pre>
@@ -82,7 +83,7 @@
    <li>We can also use the format() method or the f-string syntax to insert values into placeholders in a string. For example:</li>
    </ul>
 
-   <pre>
+   <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
    # Example : Formatted string method of output in python
 
    print("The value of x is {}".format(x)) # use format() method
@@ -91,7 +92,7 @@
 
    <p>The output of the above code is:</p>
 
-   <pre>
+   <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
    The value of x is 10
    The value of y is 20
    </pre>
@@ -123,4 +124,5 @@
             <a href="https://github.com/AbhayKabdwal"><img src="../../assets/github_icon.png" width="50px"></a>
 </div>
 </body>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
 </html>

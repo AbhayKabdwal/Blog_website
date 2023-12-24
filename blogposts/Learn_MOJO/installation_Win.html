@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mojo Installation</title>
+    <link rel="stylesheet" type="text/css" href="../../css/sunburst.css">
     <link rel="stylesheet" type="text/css" href="../../css/post_style.css">
 
 </head>
@@ -22,7 +23,7 @@
         <li><strong>Enable WSL</strong>: First, you need to enable the WSL feature on Windows. You can do this by opening PowerShell as Administrator and running the command</li>
     </ol>
 
-    <pre>
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
 wsl --install
     </pre>
 
@@ -33,13 +34,13 @@ wsl --install
         <li><strong>Set Ubuntu to use WSL 2</strong>: Set your Ubuntu to use WSL 2. You can do this by opening PowerShell and running the command</li>
     </ol>
 
-    <pre>
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
 wsl --set-version Ubuntu-22.04 2
     </pre>
 
     <p>Check the version of WSL and update it if necessary. You can check your WSL version by opening PowerShell and running the command</p>
 
-    <pre>
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
 wsl --list --verbose
     </pre>
 
@@ -57,7 +58,7 @@ wsl --list --verbose
         <li><strong>Install Modular CLI</strong>: The Mojo SDK is available through the Modular CLI tool, which works like a package manager to install and update Mojo. You can install it by running</li>
     </ol>
 
-    <pre>
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
 npm install -g modular-cli
     </pre>
 
@@ -65,7 +66,7 @@ npm install -g modular-cli
         <li><strong>Install Mojo</strong>: Use the Modular CLI to install Mojo. You can do this by running</li>
     </ol>
 
-    <pre>
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
 modular add mojo
     </pre>
 
@@ -97,4 +98,5 @@ modular add mojo
                 <a href="https://github.com/AbhayKabdwal"><img src="../../assets/github_icon.png" width="50px"></a>
     </div>
 </body>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
 </html>

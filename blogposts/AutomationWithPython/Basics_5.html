@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Functions in Python</title>
+    <link rel="stylesheet" type="text/css" href="../../css/sunburst.css">
     <link rel="stylesheet" type="text/css" href="../../css/post_style.css">
 </head>
 <body>
@@ -19,10 +20,10 @@
 
 <p>The <code>print()</code> function is used to display text or variables on the console.</p>
 
-<pre><code>print("Hello, world!")
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>print("Hello, world!")
 </code></pre>
 
-<pre><code>x = 10
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>x = 10
 y = 20
 print("Sum:", x + y)
 </code></pre>
@@ -31,12 +32,12 @@ print("Sum:", x + y)
 
 <p>The <code>len()</code> function is used to determine the length of a sequence, such as a string, list, or tuple.</p>
 
-<pre><code>text = "Python is fun!"
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>text = "Python is fun!"
 length = len(text)
 print("Length:", length)
 </code></pre>
 
-<pre><code>numbers = [1, 2, 3, 4, 5]
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>numbers = [1, 2, 3, 4, 5]
 count = len(numbers)
 print("Count:", count)
 </code></pre>
@@ -45,12 +46,12 @@ print("Count:", count)
 
 <p>The <code>max()</code> function is used to find the maximum value from a sequence or a set of arguments.</p>
 
-<pre><code>scores = [85, 92, 78, 95, 88]
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>scores = [85, 92, 78, 95, 88]
 highest_score = max(scores)
 print("Highest Score:", highest_score)
 </code></pre>
 
-<pre><code>x = 45
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>x = 45
 y = 72
 z = 60
 max_value = max(x, y, z)
@@ -65,14 +66,14 @@ print("Maximum Value:", max_value)
 
 <p>A simple user-defined function to add two numbers.</p>
 
-<pre><code>def add_numbers(a, b):
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>def add_numbers(a, b):
     return a + b
 
 result = add_numbers(5, 3)
 print("Sum:", result)
 </code></pre>
 
-<pre><code>def add_floats(x, y):
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>def add_floats(x, y):
     return x + y
 
 result = add_floats(3.5, 2.1)
@@ -83,14 +84,14 @@ print("Sum:", result)
 
 <p>A user-defined function to check if a number is even.</p>
 
-<pre><code>def is_even(number):
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>def is_even(number):
     return number % 2 == 0
 
 result = is_even(6)
 print("Is Even:", result)
 </code></pre>
 
-<pre><code>def is_odd(number):
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>def is_odd(number):
     return not is_even(number)
 
 result = is_odd(9)
@@ -101,7 +102,7 @@ print("Is Odd:", result)
 
 <p>A user-defined function to calculate the average of a list of numbers.</p>
 
-<pre><code>def calculate_average(numbers):
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>def calculate_average(numbers):
     total = sum(numbers)
     count = len(numbers)
     return total / count
@@ -111,7 +112,7 @@ average = calculate_average(scores)
 print("Average Score:", average)
 </code></pre>
 
-<pre><code>def grade_average(grades):
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>def grade_average(grades):
     grade_points = {"A": 4.0, "B": 3.0, "C": 2.0, "D": 1.0, "F": 0.0}
     total_points = sum(grade_points[grade] for grade in grades)
     count = len(grades)
@@ -150,4 +151,5 @@ print("Average GPA:", average)
             <a href="https://github.com/AbhayKabdwal"><img src="../../assets/github_icon.png" width="50px"></a>
 </div>
 </body>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
 </html>

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>File Management in Python</title>
+    <link rel="stylesheet" type="text/css" href="../../css/sunburst.css">
     <link rel="stylesheet" type="text/css" href="../../css/post_style.css">
 </head>
 
@@ -32,14 +33,14 @@
     <p>To work with files in Python, you must first open them and close them when you're done.</p>
 
     <h3>Example : Opening and Closing a Text File</h3>
-    <pre><code># Open a file in write mode
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code># Open a file in write mode
 file = open('example.txt', 'w')
 # ... do some operations ...
 file.close()  # Close the file when done
 </code></pre>
 
     <h3>Example : Opening and Closing a Binary File</h3>
-    <pre><code># Open a binary file in read mode
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code># Open a binary file in read mode
 binary_file = open('data.bin', 'rb')
 # ... do some operations ...
 binary_file.close()  # Close the binary file
@@ -49,13 +50,13 @@ binary_file.close()  # Close the binary file
     <p>Reading data from files is a common task in Python.</p>
 
     <h3>Example : Reading a Text File Line by Line</h3>
-    <pre><code>with open('example.txt', 'r') as file:
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>with open('example.txt', 'r') as file:
     for line in file:
         print(line.strip())  # Strip newline character
 </code></pre>
 
     <h3>Example : Reading the Entire Contents of a Binary File</h3>
-    <pre><code>with open('data.bin', 'rb') as binary_file:
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>with open('data.bin', 'rb') as binary_file:
     data = binary_file.read()
     # Process binary data here
 </code></pre>
@@ -64,13 +65,13 @@ binary_file.close()  # Close the binary file
     <p>You can write data to files using various methods.</p>
 
     <h3>Example : Writing to a Text File</h3>
-    <pre><code>with open('example.txt', 'w') as file:
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>with open('example.txt', 'w') as file:
     file.write('Hello, World!\n')
     file.write('Python is awesome!')
 </code></pre>
 
     <h3>Example : Writing to a Binary File</h3>
-    <pre><code>with open('data.bin', 'wb') as binary_file:
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>with open('data.bin', 'wb') as binary_file:
     binary_data = bytes([0x48, 0x65, 0x6C, 0x6C, 0x6F])
     binary_file.write(binary_data)
 </code></pre>
@@ -89,7 +90,7 @@ binary_file.close()  # Close the binary file
     <p>Text files store data in a human-readable format.</p>
 
     <h3>Example : Reading and Writing Text Files</h3>
-    <pre><code>with open('textfile.txt', 'w') as text_file:
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>with open('textfile.txt', 'w') as text_file:
     text_file.write('Python is fun!')
 
 with open('textfile.txt', 'r') as text_file:
@@ -101,7 +102,7 @@ with open('textfile.txt', 'r') as text_file:
     <p>Binary files store data in a non-human-readable format.</p>
 
     <h3>Example : Reading and Writing Binary Files</h3>
-    <pre><code>with open('binaryfile.bin', 'wb') as binary_file:
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>with open('binaryfile.bin', 'wb') as binary_file:
     binary_data = bytes([0x48, 0x65, 0x6C, 0x6C, 0x6F])
     binary_file.write(binary_data)
 
@@ -117,7 +118,7 @@ with open('binaryfile.bin', 'rb') as binary_file:
     <p>Python provides methods for navigating and locating files.</p>
 
     <h3>Example : Checking File Existence</h3>
-    <pre><code>import os
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>import os
 
 if os.path.exists('myfile.txt'):
     print('File exists!')
@@ -126,7 +127,7 @@ else:
 </code></pre>
 
     <h3>Example : Listing Files in a Directory</h3>
-    <pre><code>import os
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>import os
 
 files_in_directory = os.listdir('.')
 for file_name in files_in_directory:
@@ -137,7 +138,7 @@ for file_name in files_in_directory:
     <p>You can obtain information about files, such as size and modification time.</p>
 
     <h3>Example : Getting File Size and Modification Time</h3>
-    <pre><code>import os
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>import os
 
 file_info = os.stat('myfile.txt')
 print(f'File Size: {file_info.st_size} bytes')
@@ -174,5 +175,6 @@ print(f'Modification Time: {file_info.st_mtime}')
     </div>
 
 </body>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
 
 </html>

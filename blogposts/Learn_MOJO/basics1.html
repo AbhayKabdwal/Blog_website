@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MOJO basics 1</title>
+    <link rel="stylesheet" type="text/css" href="../../css/sunburst.css">
     <link rel="stylesheet" type="text/css" href="../../css/post_style.css">
-
+    
 </head>
 <body>
     <h1>MOJO : A basic guide</h1>
@@ -14,7 +15,7 @@
     <p>In Mojo, you can assign a value to a name inside a <code>fn</code>, and it implicitly creates a function scope
         variable just like in Python. For example:</p>
 
-    <pre><code>fn main():
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>fn main():
     let x = 10
     print(x)  # prints: 10
 </code></pre>
@@ -22,14 +23,14 @@
     <p>In the above example, <code>x</code> is a variable that holds the value <code>10</code>. The <code>let</code>
         keyword is used to declare a variable in Mojo.</p>
 
-    <pre><code>fn main():
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>fn main():
     var x = 10
     print(x)   # prints: 10
 </code></pre>
 
     <p>On running the above code segment we get a warning and the desired output</p>
 
-    <pre><code>warning: 'x' was declared as a 'var' but never mutated, consider switching to a 'let'
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>warning: 'x' was declared as a 'var' but never mutated, consider switching to a 'let'
     var x = 10
     ^
 10
@@ -41,13 +42,13 @@
     <p>Similarly, if we try to mutate a variable which is initialized using <code>let</code> keyword we get an
         error.</p>
 
-    <pre><code>fn main():
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>fn main():
     let x = 10
     x = x + 5
     print(x)
 </code></pre>
 
-    <pre><code>error: expression must be mutable in assignment
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>error: expression must be mutable in assignment
     x = x + 5
     ^
 </code></pre>
@@ -65,12 +66,12 @@
     <p>An integer is a whole number that can be either greater than 0, called positive or less than 0, called negative.
         Zero is neither positive nor negative. For example:</p>
 
-    <pre><code>fn main():
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>fn main():
     let number = 42  # integer
     print(number)    # prints: 42
 </code></pre>
 
-    <pre><code>fn main():
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>fn main():
     let marks: Int = 91                 # integer
     print("Your marks are :",marks)     # prints: Your marks are 91
 </code></pre>
@@ -79,12 +80,12 @@
 
     <p>A floating point number is a number, positive or negative, containing one or more decimals. For example:</p>
 
-    <pre><code>fn main():
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>fn main():
     let pi = 3.14     # float
     print(pi)         # prints: 3.14
 </code></pre>
 
-    <pre><code>fn main():
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>fn main():
     let score: Float64 = 8.2              # float
     print("Your score is :", score)       # prints: Your score is 8.2
 </code></pre>
@@ -93,12 +94,12 @@
 
     <p>Strings in Mojo are surrounded by either single quotation marks or double quotation marks. For example:</p>
 
-    <pre><code>fn main():
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>fn main():
     let name = "Mojo"    # string
     print(name)          # prints: Mojo
 </code></pre>
 
-    <pre><code>fn main():
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>fn main():
     let language: String = "Mojo"       # string
     print(language + " is awesome")     # prints: Mojo is awesome
     print(language,"is awesome")
@@ -108,12 +109,12 @@
 
     <p>Booleans represent one of two values: <code>true</code> or <code>false</code>. For example:</p>
 
-    <pre><code>fn main():
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>fn main():
     let is_true = true    # boolean
     print(is_true)        # prints: true
 </code></pre>
 
-    <pre><code>fn main():
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>fn main():
     let is_false: Bool = false      # boolean
     print(is_false)                 # prints: false
 </code></pre>
@@ -128,7 +129,7 @@
     <p>Arithmetic operators are used to perform mathematical operations like addition, subtraction, multiplication,
         etc.</p>
 
-    <pre><code>fn main():
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>fn main():
     let x = 10
     let y = 5
     print(x + y)       # prints: 15
@@ -144,7 +145,7 @@
 
     <p>Assignment operators are used to assign values to variables. The basic assignment operator is <code>=</code>.</p>
 
-    <pre><code>fn main():
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>fn main():
    var x: Int64 = 10  # integer
    print(x)
    x += 5
@@ -167,7 +168,7 @@
 
     <p>Comparison operators are used to compare two values.</p>
 
-    <pre><code>fn main():
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>fn main():
     let x = 10
     let y = 20
     print(x == y)   # prints: false
@@ -182,12 +183,12 @@
 
     <p>The method for giving output here is the same as in Python. Let us see that with the following examples</p>
 
-    <pre><code>fn main():
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>fn main():
     let x: String = "Mojo is fun"
     print(x)
 </code></pre>
 
-    <pre><code>fn main():
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>fn main():
     let c: Int = 10
     print("Hello world",c)
     print("Hello world "+str(c))
@@ -199,7 +200,7 @@
         <code>impy.import_module("builtins").input</code>. Here's a basic script to illustrate how input is taken in
         Mojo:</p>
 
-    <pre><code>from python import Python as impy
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>from python import Python as impy
 
 fn main() raises:
     let py_input = impy.import_module("builtins").input
@@ -215,7 +216,7 @@ fn main() raises:
             string.</li>
     </ul>
 
-    <pre><code>Example : Accepting User Input
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>Example : Accepting User Input
 
 from python import Python as impy
 
@@ -225,7 +226,7 @@ fn main() raises:
     print("Hello, " + user_input + "!")
 </code></pre>
 
-    <pre><code>Example : Calculating the Sum of Two Numbers
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>Example : Calculating the Sum of Two Numbers
 
 from python import Python as impy
 
@@ -245,7 +246,7 @@ fn main() raises:
 
     <h3>5.1 If - Else Statements</h3>
 
-    <pre><code>Example : Check age
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>Example : Check age
 
 fn check_age(age:Int) -&gt; String:
     if age &gt; 18:
@@ -258,7 +259,7 @@ fn main():
     print("You are a",check_age(age))
 </code></pre>
 
-    <pre><code>Example : Check even or odd
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>Example : Check even or odd
 
 fn check_even(number: Int) -&gt; Bool:
     if number % 2 == 0:
@@ -276,7 +277,7 @@ fn main():
 
     <h4>5.2.1 For loop</h4>
 
-    <pre><code>Example
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>Example
 
 fn write_even(num: Int) -&gt; None:
     for i in range (2,num,2):
@@ -290,7 +291,7 @@ fn main():
 
     <h4>5.2.2 While loop</h4>
 
-    <pre><code>fn write_even(num: Int) -&gt; None:
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>fn write_even(num: Int) -&gt; None:
     var i = 2
     while i &lt; num:
         print(i)
@@ -302,11 +303,11 @@ fn main():
 
     <h2>6. Comments</h2>
 
-    <pre><code>fn main():
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>fn main():
     print("Hello world") # this is a  single line comment
 </code></pre>
 
-    <pre><code>fn main():
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>fn main():
     print("Hello world")
     '''
     this is a
@@ -326,12 +327,12 @@ fn main():
 <p>- Object type allows dynamic typing.</p>
 
 <h4>Example 1:</h4>
-<pre><code>def greet(name):
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>def greet(name):
 greeting = "Hello, " + name + "!"
 return greeting</code></pre>
 
 <h4>Example 2:</h4>
-<pre><code>def greet(name: String) -&gt; String:
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>def greet(name: String) -&gt; String:
 let greeting = "Hello, " + name + "!"
 return greeting</code></pre>
 
@@ -344,12 +345,12 @@ return greeting</code></pre>
 <p>- Performance improvement with fixed types at compile time.</p>
 
 <h4>Example 1:</h4>
-<pre><code>fn greet(name: String) -&gt; String:
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>fn greet(name: String) -&gt; String:
 let greeting = "Hello, " + name + "!"
 return greeting</code></pre>
 
 <h4>Example 2:</h4>
-<pre><code>fn pow(base: Int, exp: Int = 2) -&gt; Int:
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>fn pow(base: Int, exp: Int = 2) -&gt; Int:
 return base ** exp</code></pre>
 
 <h3>7.2.1. Optional arguments</h3>
@@ -358,11 +359,11 @@ return base ** exp</code></pre>
 <p>- Cannot define default for inout arguments.</p>
 
 <h4>Example 1:</h4>
-<pre><code>fn pow(base: Int, exp: Int = 2) -&gt; Int:
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>fn pow(base: Int, exp: Int = 2) -&gt; Int:
 return base ** exp</code></pre>
 
 <h4>Example 2:</h4>
-<pre><code>fn use_defaults():
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>fn use_defaults():
 let z = pow(3)
 print(z)</code></pre>
 
@@ -372,7 +373,7 @@ print(z)</code></pre>
 <p>- Partial support for keyword arguments in Mojo.</p>
 
 <h4>Example 1:</h4>
-<pre><code>fn use_keywords():
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>fn use_keywords():
 let z = pow(exp=3, base=2)
 print(z)</code></pre>
 
@@ -383,44 +384,12 @@ print(z)</code></pre>
 <p>- Compiler error if unsupported type.</p>
 
 <h4>Example 1:</h4>
-<pre><code>fn add(x: Int, y: Int) -&gt; Int:
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>fn add(x: Int, y: Int) -&gt; Int:
 return x + y</code></pre>
 
 <h4>Example 2:</h4>
-<pre><code>fn add(x: String, y: String) -&gt; String:
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>fn add(x: String, y: String) -&gt; String:
 return x + y</code></pre>
-
-<h3>7.2.4. Argument Conventions</h3>
-
-<p>- Borrowed:</p>
-<ul>
-    <li>Immutable reference.</li>
-    <li>Default for <code>fn</code> functions.</li>
-    <li>Efficient for large or costly values.</li>
-</ul>
-
-<pre><code>fn example(borrowed x: Int):
-// code</code></pre>
-
-<p>- Inout:</p>
-<ul>
-    <li>Mutable reference.</li>
-    <li>Allows both reading and mutating.</li>
-    <li>Memory-efficient, avoids unnecessary copies.</li>
-</ul>
-
-<pre><code>def process(inout data: Array):
-// code</code></pre>
-
-<p>- Owned:</p>
-<ul>
-    <li>Exclusive mutable access.</li>
-    <li>Value ownership transfer.</li>
-    <li>Ensures a single owner, enhancing memory safety.</li>
-</ul>
-
-<pre><code>fn update(owned list: List):
-// code</code></pre>
 
 <h2>8. Structs</h2>
 
@@ -431,13 +400,13 @@ return x + y</code></pre>
 <p>- Constructor initializes fields; must include <code>inout self</code> as the first argument.</p>
 
 <h4>Example 1:</h4>
-<pre><code>struct MyPair:
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>struct MyPair:
 var first: Int
 var second: Int
 
-fn __init__(inout self, first: Int, second: Int):
-    self.first = first
-    self.second = second</code></pre>
+    fn __init__(inout self, first: Int, second: Int):
+        self.first = first
+        self.second = second</code></pre>
 
 <h3>8.1. Methods</h3>
 
@@ -446,16 +415,16 @@ fn __init__(inout self, first: Int, second: Int):
 <p>- Instance methods act on struct instances.</p>
 
 <h4>Example :</h4>
-<pre><code>struct MyPair:
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>struct MyPair:
 var first: Int
 var second: Int
 
-fn __init__(inout self, first: Int, second: Int):
-    self.first = first
-    self.second = second
+    fn __init__(inout self, first: Int, second: Int):
+        self.first = first
+        self.second = second
 
-fn get_sum(self) -&gt; Int:
-    return self.first + self.second</code></pre>
+    fn get_sum(self) -&gt; Int:
+        return self.first + self.second</code></pre>
 
 <h3>8.2. Static Methods</h3>
 
@@ -464,17 +433,108 @@ fn get_sum(self) -&gt; Int:
 <p>- No <code>self</code> argument for static methods.</p>
 
 <h4>Example :</h4>
-<pre><code>struct Logger:
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>struct Logger:
 
-fn __init__(inout self):
-    pass
+    fn __init__(inout self):
+        pass
 
-@staticmethod
-fn log_info(message: String):
-    print("Info: ", message)
+    @staticmethod
+    fn log_info(message: String):
+        print("Info: ", message)
 
-fn main():
-    Logger.log_info("Hello")</code></pre>
+    fn main():
+        Logger.log_info("Hello")</code></pre>
+
+<h3>8.3. Value Decorator</h3>
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
+@value
+struct Pet:
+    var name: String
+    var age: Int
+</pre>
+
+Because of the @value decorator, these boilerplate functions are automatically created for the above struct:
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
+fn __init__(inout self, owned name: String, age: Int):
+    self.name = name^
+    self.age = age
+
+fn __copyinit__(inout self, existing: Self):
+    self.name = existing.name
+    self.age = existing.age
+
+fn __moveinit__(inout self, owned existing: Self):
+    self.name = existing.name^
+    self.age = existing.age
+</pre>
+
+<h3>8.4. Argument Conventions</h3>
+
+<p>- Borrowed:</p>
+<ul>
+    <li>Immutable reference.</li>
+    <li>Default for <code>fn</code> functions.</li>
+    <li>Efficient for large or costly values.</li>
+</ul>
+
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>@value
+    struct SomethingBig:
+        var id: Int
+    
+        fn print_id(self):
+            print(self.id)
+    
+    fn use_something_big(borrowed a: SomethingBig, b: SomethingBig):
+       a.print_id()
+       b.print_id()
+    
+    var obj1 = SomethingBig(1)
+    var obj2 = SomethingBig(2)
+    
+    use_something_big(obj1, obj2)</code></pre>
+
+<p>- Inout:</p>
+<ul>
+    <li>Mutable reference.</li>
+    <li>Allows both reading and mutating.</li>
+    <li>Memory-efficient, avoids unnecessary copies.</li>
+</ul>
+
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>@value
+    struct Counter:
+        var count: Int
+    
+        fn increase(inout self, amount: Int):
+            self.count += amount
+    
+    var myCounter = Counter(0)
+    print(myCounter.count)
+    myCounter.increase(3)
+    print(myCounter.count)</code></pre>
+
+<p>- Owned:</p>
+<ul>
+    <li>Exclusive mutable access.</li>
+    <li>Value ownership transfer.</li>
+    <li>Ensures a single owner, enhancing memory safety.</li>
+</ul>
+
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>@value
+    struct UniqueNumber:
+        var num: Int
+    
+    def use(p: UniqueNumber):
+        print(p.num)
+    
+    def usePointer():
+        let ptr = UniqueNumber(100)
+        take_ptr(ptr^)
+    
+    def take_ptr(owned p: UniqueNumber):
+        use(p)
+        
+    usePointer()</code></pre>
+
 
 <h3>Structs vs Classes</h3>
 
@@ -499,4 +559,5 @@ fn main():
                 <a href="https://github.com/AbhayKabdwal"><img src="../../assets/github_icon.png" width="50px"></a>
     </div>
 </body>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
 </html>

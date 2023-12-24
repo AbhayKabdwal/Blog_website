@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Git Basics</title>
+    <link rel="stylesheet" type="text/css" href="../../../css/sunburst.css">
     <link rel="stylesheet" type="text/css" href="../../../css/post_style.css">
 
 </head>
@@ -12,46 +13,46 @@
 
     <h2>1. git status</h2>
     <p>This command shows the list of files that you've changed and those you still need to add or commit.</p>
-    <pre><code>git status</code></pre>
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>git status</code></pre>
     <p>This will display the status of your current repository.</p>
 
     <h2>2. git init</h2>
     <p>This command is used to start a new repository.</p>
-    <pre><code>git init</code></pre>
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>git init</code></pre>
     <p>This will initialize a git repository in your current directory.</p>
 
     <h2>3. git config</h2>
     <p>This command sets the author name and email address respectively to be used with your commits.</p>
-    <pre><code>git config --global user.name "John Doe"
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>git config --global user.name "John Doe"
 git config --global user.email "johndoe@example.com"</code></pre>
     <p>This will set your global Git username and email to “John Doe” and “johndoe@example.com” respectively.</p>
 
     <h2>4. git add</h2>
     <p>This command adds a file to the staging area.</p>
-    <pre><code>git add example.txt</code></pre>
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>git add example.txt</code></pre>
     <p>This will add the file example.txt to the staging area.</p>
 
     <h2>5. git commit</h2>
     <p>This command records or snapshots the file permanently in the version history.</p>
-    <pre><code>git commit -m "Add example.txt"</code></pre>
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>git commit -m "Add example.txt"</code></pre>
     <p>This will commit the file example.txt with the message “Add example.txt”.</p>
 
     <h2>6. git branch</h2>
     <p>This command lets you create new branches of your repository.</p>
-    <pre><code>git branch branch_name</code></pre>
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>git branch branch_name</code></pre>
     <p>This will create a new branch with name branch_name.</p>
 
-    <pre><code>git branch </code></pre>
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>git branch </code></pre>
     <p>This will list all branches in your repository and indicate which one you're currently on.</p>
 
     <h2>7. git checkout</h2>
     <p>The command is used to switch from one branch to another.</p>
-    <pre><code>git checkout branch_name</code></pre>
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>git checkout branch_name</code></pre>
     <p>This will switch you to the develop branch in your repository.</p>
 
     <h2>8. git merge</h2>
     <p>The command is used to merge one branch to another.</p>
-    <pre><code>git merge branch_name</code></pre>
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>git merge branch_name</code></pre>
     <p>This will allow you to merge branch_name to your current branch in your repository.</p>
 
     <div id="thank-you">
@@ -71,4 +72,5 @@ git config --global user.email "johndoe@example.com"</code></pre>
                 <a href="https://github.com/AbhayKabdwal"><img src="../../../assets/github_icon.png" width="50px"></a>
     </div>
 </body>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
 </html>

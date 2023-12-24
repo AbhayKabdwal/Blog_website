@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Modules and Libraries in Python</title>
+  <link rel="stylesheet" type="text/css" href="../../css/sunburst.css">
   <link rel="stylesheet" type="text/css" href="../../css/post_style.css">
 </head>
 
@@ -23,14 +24,14 @@
 
   <h4>i. math Module</h4>
 
-  <pre>
+  <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
 import math
 
 result = math.sqrt(16)
 print("Square Root:", result)
   </pre>
 
-  <pre>
+  <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
 import math
 
 circumference = 2 * math.pi * 5
@@ -39,14 +40,14 @@ print("Circumference of a Circle:", circumference)
 
   <h4>ii. random Module</h4>
 
-  <pre>
+  <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
 import random
 
 random_number = random.randint(1, 10)
 print("Random Number:", random_number)
   </pre>
 
-  <pre>
+  <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
 import random
 
 my_list = [1, 2, 3, 4, 5]
@@ -60,14 +61,14 @@ print("Shuffled List:", my_list)
 
   <h3>a. NumPy Library</h3>
 
-  <pre>
+  <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
 import numpy as np
 
 my_array = np.array([1, 2, 3, 4, 5])
 print("NumPy Array:", my_array)
   </pre>
 
-  <pre>
+  <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
 import numpy as np
 
 array1 = np.array([1, 2, 3])
@@ -78,7 +79,7 @@ print("Array Addition:", result)
 
   <h3>b. Pandas Library</h3>
 
-  <pre>
+  <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
 import pandas as pd
 
 data = {'Name': ['Alice', 'Bob', 'Charlie'],
@@ -87,7 +88,7 @@ df = pd.DataFrame(data)
 print("DataFrame:\n", df)
   </pre>
 
-  <pre>
+  <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
 import pandas as pd
 
 df = pd.read_csv('data.csv')
@@ -125,5 +126,6 @@ print("Read Data:\n", df)
 </div>
 
 </body>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
 
 </html>

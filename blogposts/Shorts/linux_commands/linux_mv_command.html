@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mv Command Usage in Linux</title>
+    <link rel="stylesheet" type="text/css" href="../../../css/sunburst.css">
     <link rel="stylesheet" type="text/css" href="../../../css/post_style.css">
 </head>
 <body>
@@ -13,17 +14,17 @@
 <h2>Basic Usage</h2>
 
 <h3>Move Files or Directories</h3>
-<pre>mv file_name destination</pre>
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">mv file_name destination</pre>
 <p>Both filename and directory name can be either relative or absolute.</p>
 
 <h2>Renaming files or Directories</h2>
-<pre>mv old_name new_name</pre>
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">mv old_name new_name</pre>
 
 <h2>Moving multiple files</h2>
-<pre>mv file1 file2 directory/</pre>
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">mv file1 file2 directory/</pre>
 
 <h2>Force Move (Override Existing Files)</h2>
-<pre>mv -f source_directory destination_directory</pre>
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">mv -f source_directory destination_directory</pre>
 The -f option forces the move, overriding existing files without asking for confirmation.
 Forcefully moves file.txt to the /path/to/destination/ directory, replacing any existing file with the same name.
 
@@ -42,4 +43,5 @@ Forcefully moves file.txt to the /path/to/destination/ directory, replacing any 
 </div>
 
 </body>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
 </html>

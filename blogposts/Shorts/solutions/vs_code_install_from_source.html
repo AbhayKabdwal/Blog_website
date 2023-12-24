@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Install VS Code in Linux</title>
+    <link rel="stylesheet" type="text/css" href="../../../css/sunburst.css">
     <link rel="stylesheet" type="text/css" href="../../../css/post_style.css">
 </head>
 <body>
@@ -12,9 +13,9 @@
 
 <h2>Clone official repository</h2>
 
-<pre>git clone https://aur.archlinux.org/visual-studio-code-bin.git</pre>
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">git clone https://aur.archlinux.org/visual-studio-code-bin.git</pre>
 <p>The progress would be something like below</p>
-<pre>git clone https://aur.archlinux.org/visual-studio-code-bin.git
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">git clone https://aur.archlinux.org/visual-studio-code-bin.git
 Cloning into 'visual-studio-code-bin'...
 remote: Enumerating objects: 903, done.
 remote: Counting objects: 100% (903/903), done.
@@ -24,12 +25,12 @@ Receiving objects: 100% (903/903), 471.97 KiB | 466.00 KiB/s, done.
 Resolving deltas: 100% (487/487), done.</pre>
 <br>
 <h2>Change directory to cloned directory</h2>
-<pre>cd visual-studio-code-bin</pre>
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">cd visual-studio-code-bin</pre>
 
 <h2>Make Visual Studio Code package</h2>
-<pre>makepkg -si</pre>
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">makepkg -si</pre>
 <p>The progress would be something like below..</p>
-<pre>
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
     ==> Making package: visual-studio-code-bin 1.85.1-1 (Saturday 16 December 2023 10:47:11 PM)
 ==> Checking runtime dependencies...
 ==> Checking buildtime dependencies...
@@ -80,7 +81,7 @@ Packages (1) visual-studio-code-bin-1.85.1-1
 Total Installed Size:  343.25 MiB
 </pre>
 <p>Enter y for all permissions</p>
-<pre>
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
     :: Proceed with installation? [Y/n] y
 (1/1) checking keys in keyring                                                          [##################################################] 100%
 (1/1) checking package integrity                                                        [##################################################] 100%
@@ -118,4 +119,5 @@ Optional dependencies for visual-studio-code-bin
 </div>
 
 </body>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
 </html>
