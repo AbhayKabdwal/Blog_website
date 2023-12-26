@@ -27,13 +27,17 @@
 
     <h2>2. Installing the re Module</h2>
 
-    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>pip install regex</code></pre>
+    <pre class="prettyprint lang-python"
+        style="padding:15px;border: 1px dotted #30363d"><code>pip install regex</code></pre>
 
     <h2>3. Getting Started with Regular Expressions in Python</h2>
 
     <h3>3.1 Importing the re Module</h3>
 
-    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>import re</code></pre>
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
+    <code>
+    import re
+</code></pre>
 
     <h3>3.2 Basic Patterns: Matching Literal Strings</h3>
 
@@ -50,128 +54,128 @@ print(match.group())  # Output: "hello"
     <img src="./images/regex2.png">
 
     <h2>4. Understanding Patterns</h2>
-    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
-    import re
-    </pre>
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
+import re
+</pre>
 
-    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
-    # [a-m] - A set of characters
-    pattern1 = re.compile(r"[a-m]")
-    print(pattern1.findall("Hello World"))  # Output: ['e', 'l', 'l', 'd']
-    </pre>
-    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
-    # \d - Digits (numbers from 0-9)
-    pattern2 = re.compile(r"\d")
-    print(pattern2.findall("Hello 123 World"))  # Output: ['1', '2', '3']
-    </pre>
-    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
-    # he..o - Any character (except newline character)
-    pattern3 = re.compile(r"he..o")
-    print(pattern3.search("hello"))  # Output: <re.Match object; span=(0, 5), match='hello'>
-    </pre>
-    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
-    # ^hello - Starts with
-    pattern4 = re.compile(r"^hello")
-    print(pattern4.match("hello world"))  # Output: <re.Match object; span=(0, 5), match='hello'>
-    print(pattern4.match("world hello"))  # Output: None
-    </pre>
-    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
-    # planet$ - Ends with
-    pattern5 = re.compile(r"planet$")
-    print(pattern5.search("hello planet"))  # Output: <re.Match object; span=(6, 11), match='planet'>
-    print(pattern5.search("planet hello"))  # Output: None
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
+# [a-m] - A set of characters
+pattern1 = re.compile(r"[a-m]")
+print(pattern1.findall("Hello World"))  # Output: ['e', 'l', 'l', 'd']
 </pre>
-    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
-    # he.*o - Zero or more occurrences
-    pattern6 = re.compile(r"he.*o")
-    print(pattern6.search("hello"))  # Output: <re.Match object; span=(0, 5), match='hello'>
-    print(pattern6.search("heo"))    # Output: <re.Match object; span=(0, 3), match='heo'>
-    </pre>
-    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
-    # he.+o - One or more occurrences
-    pattern7 = re.compile(r"he.+o")
-    print(pattern7.search("hello"))  # Output: <re.Match object; span=(0, 5), match='hello'>
-    print(pattern7.search("heo"))    # Output: None
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
+# \d - Digits (numbers from 0-9)
+pattern2 = re.compile(r"\d")
+print(pattern2.findall("Hello 123 World"))  # Output: ['1', '2', '3']
 </pre>
-    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
-    # he.?o - Zero or one occurrences
-    pattern8 = re.compile(r"he.?o")
-    print(pattern8.search("hello"))  # Output: <re.Match object; span=(0, 5), match='hello'>
-    print(pattern8.search("heo"))    # Output: <re.Match object; span=(0, 3), match='heo'>
-    print(pattern8.search("ho"))     # Output: None
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
+# he..o - Any character (except newline character)
+pattern3 = re.compile(r"he..o")
+print(pattern3.search("hello"))  # Output: &lt;re.Match object; span=(0, 5), match='hello'&gt;
 </pre>
-    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
-    # he.{2}o - Exactly the specified number of occurrences
-    pattern9 = re.compile(r"he.{2}o")
-    print(pattern9.search("hello"))  # Output: <re.Match object; span=(0, 5), match='hello'>
-    print(pattern9.search("heo"))    # Output: None
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
+# ^hello - Starts with
+pattern4 = re.compile(r"^hello")
+print(pattern4.match("hello world"))  # Output: &lt;re.Match object; span=(0, 5), match='hello'&gt;
+print(pattern4.match("world hello"))  # Output: None
 </pre>
-    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
-    # \AThe - Returns a match if "The" is at the beginning of the string
-    pattern10 = re.compile(r"\AThe")
-    print(pattern10.search("The end"))  # Output: <re.Match object; span=(0, 3), match='The'>
-    print(pattern10.search("In The end"))  # Output: None
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
+# planet$ - Ends with
+pattern5 = re.compile(r"planet$")
+print(pattern5.search("hello planet"))  # Output: &lt;re.Match object; span=(6, 11), match='planet'&gt;
+print(pattern5.search("planet hello"))  # Output: None
 </pre>
-    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
-    # r"\bain" - Returns a match if "ain" is at the beginning or end of a word
-    pattern11 = re.compile(r"\bain")
-    print(pattern11.search("rainy day"))  # Output: <re.Match object; span=(1, 4), match='ain'>
-    print(pattern11.search("complain"))   # Output: None
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
+# he.*o - Zero or more occurrences
+pattern6 = re.compile(r"he.*o")
+print(pattern6.search("hello"))  # Output: &lt;re.Match object; span=(0, 5), match='hello'&gt;
+print(pattern6.search("heo"))    # Output: &lt;re.Match object; span=(0, 3), match='heo'&gt;
 </pre>
-    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
-    # r"ain\b" - Returns a match if "ain" is at the beginning or end of a word
-    pattern12 = re.compile(r"ain\b")
-    print(pattern12.search("rainy day"))  # Output: <re.Match object; span=(1, 4), match='ain'>
-    print(pattern12.search("complain"))   # Output: None
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
+# he.+o - One or more occurrences
+pattern7 = re.compile(r"he.+o")
+print(pattern7.search("hello"))  # Output: &lt;re.Match object; span=(0, 5), match='hello'&gt;
+print(pattern7.search("heo"))    # Output: None
 </pre>
-    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
-    # r"\Bain" - Returns a match if "ain" is present, but NOT at the beginning or end of a word
-    pattern13 = re.compile(r"\Bain")
-    print(pattern13.search("rainy day"))  # Output: <re.Match object; span=(2, 5), match='ain'>
-    print(pattern13.search("complain"))   # Output: <re.Match object; span=(4, 7), match='ain'>
-    </pre>
-    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
-    # r"ain\B" - Returns a match if "ain" is present, but NOT at the beginning or end of a word
-    pattern14 = re.compile(r"ain\B")
-    print(pattern14.search("rainy day"))  # Output: <re.Match object; span=(2, 5), match='ain'>
-    print(pattern14.search("complain"))   # Output: None
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
+# he.?o - Zero or one occurrences
+pattern8 = re.compile(r"he.?o")
+print(pattern8.search("hello"))  # Output: None
+print(pattern8.search("heo"))    # Output: &lt;re.Match object; span=(0, 3), match='heo'&gt;
+print(pattern8.search("ho"))     # Output: None
 </pre>
-    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
-    # \d - Returns a match where the string contains digits (numbers from 0-9)
-    pattern15 = re.compile(r"\d")
-    print(pattern15.findall("abc 123 xyz"))  # Output: ['1', '2', '3']
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
+# he.{2}o - Exactly the specified number of occurrences
+pattern9 = re.compile(r"he.{2}o")
+print(pattern9.search("hello"))  # Output: &lt;re.Match object; span=(0, 5), match='hello'&gt;
+print(pattern9.search("heo"))    # Output: None
 </pre>
-    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
-    # \D - Returns a match where the string DOES NOT contain digits
-    pattern16 = re.compile(r"\D")
-    print(pattern16.findall("abc 123 xyz"))  # Output: ['a', 'b', 'c', ' ', 'x', 'y', 'z']
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
+# \AThe - Returns a match if "The" is at the beginning of the string
+pattern10 = re.compile(r"\AThe")
+print(pattern10.search("The end"))  # Output: &lt;re.Match object; span=(0, 3), match='The'&gt;
+print(pattern10.search("In The end"))  # Output: None
 </pre>
-    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
-    # \s - Returns a match where the string contains a white space character
-    pattern17 = re.compile(r"\s")
-    print(pattern17.findall("hello world"))  # Output: [' ']
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
+# r"\bain" - Returns a match if "ain" is at the beginning of a word
+pattern11 = re.compile(r"\bain")
+print(pattern11.search("rainy day"))  # Output: None
+print(pattern11.search("complain"))   # Output: None
 </pre>
-    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
-    # \S - Returns a match where the string DOES NOT contain a white space character
-    pattern18 = re.compile(r"\S")
-    print(pattern18.findall("hello world"))  # Output: ['h', 'e', 'l', 'l', 'o', 'w', 'o', 'r', 'l', 'd']
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
+# r"ain\b" - Returns a match if "ain" is at the end of a word
+pattern12 = re.compile(r"ain\b")
+print(pattern12.search("rainy day"))  # Output: None
+print(pattern12.search("complain"))   # Output: &lt;re.Match object; span=(5, 8), match='ain'&gt;
 </pre>
-    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
-    # \w - Returns a match where the string contains any word characters
-    pattern19 = re.compile(r"\w")
-    print(pattern19.findall("hello_123"))  # Output: ['h', 'e', 'l', 'l', 'o', '_', '1', '2', '3']
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
+# r"\Bain" - Returns a match if "ain" is present, but NOT at the beginning or end of a word
+pattern13 = re.compile(r"\Bain")
+print(pattern13.search("rainy day"))  # Output: &lt;re.Match object; span=(2, 5), match='ain'&gt;
+print(pattern13.search("complain"))   # Output: &lt;re.Match object; span=(4, 7), match='ain'&gt;
 </pre>
-    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
-    # \W - Returns a match where the string DOES NOT contain any word characters
-    pattern20 = re.compile(r"\W")
-    print(pattern20.findall("hello_123"))  # Output: []
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
+# r"ain\B" - Returns a match if "ain" is present, but NOT at the beginning or end of a word
+pattern14 = re.compile(r"ain\B")
+print(pattern14.search("rainy day"))  # Output: &lt;re.Match object; span=(2, 5), match='ain'&gt;
+print(pattern14.search("complain"))   # Output: None
 </pre>
-    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
-    # Spain\Z - Returns a match if "Spain" is at the end of the string
-    pattern21 = re.compile(r"Spain\Z")
-    print(pattern21.search("Spain is beautiful"))  # Output: <re.Match object; span=(0, 5), match='Spain'>
-    print(pattern21.search("I love Spain"))       # Output: None
-    </pre>
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
+# \d - Returns a match where the string contains digits (numbers from 0-9)
+pattern15 = re.compile(r"\d")
+print(pattern15.findall("abc 123 xyz"))  # Output: ['1', '2', '3']
+</pre>
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
+# \D - Returns a match where the string DOES NOT contain digits
+pattern16 = re.compile(r"\D")
+print(pattern16.findall("abc 123 xyz"))  # Output: ['a', 'b', 'c', ' ', 'x', 'y', 'z']
+</pre>
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
+# \s - Returns a match where the string contains a white space character
+pattern17 = re.compile(r"\s")
+print(pattern17.findall("hello world"))  # Output: [' ']
+</pre>
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
+# \S - Returns a match where the string DOES NOT contain a white space character
+pattern18 = re.compile(r"\S")
+print(pattern18.findall("hello world"))  # Output: ['h', 'e', 'l', 'l', 'o', 'w', 'o', 'r', 'l', 'd']
+</pre>
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
+# \w - Returns a match where the string contains any word characters
+pattern19 = re.compile(r"\w")
+print(pattern19.findall("hello_123"))  # Output: ['h', 'e', 'l', 'l', 'o', '_', '1', '2', '3']
+</pre>
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
+# \W - Returns a match where the string DOES NOT contain any word characters
+pattern20 = re.compile(r"\W")
+print(pattern20.findall("hello_123"))  # Output: []
+</pre>
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">
+# Spain\Z - Returns a match if "Spain" is at the end of the string
+pattern21 = re.compile(r"Spain\Z")
+print(pattern21.search("Spain is beautiful"))  # Output: <re.Match object; span=(0, 5), match='Spain'>
+print(pattern21.search("I love Spain"))       # Output: None
+</pre>
 
     <h2>5. Searching for Patterns</h2>
 
