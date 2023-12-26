@@ -465,16 +465,16 @@ fn __moveinit__(inout self, owned existing: Self):
     <li>Memory-efficient, avoids unnecessary copies.</li>
 </ul>
 
-<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>@value
-    fn add(inout a:Int, inout b:Int) -> Int:
-        a = 3
-        b = 2
-        return a + b
-    
-    fn main():
-        var a: Int = 5
-        var b: Int = 6
-        print(add(a,b))       
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>
+fn add(inout a:Int, inout b:Int) -> Int:
+    a = 3
+    b = 2
+    return a + b
+
+fn main():
+    var a: Int = 5
+    var b: Int = 6
+    print(add(a,b))       
 </code></pre>
 
 <p>- Borrowed:</p>
@@ -484,14 +484,14 @@ fn __moveinit__(inout self, owned existing: Self):
     <li>Efficient for large or costly values.</li>
 </ul>
 
-<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>@value
-    fn add(borrowed a:Int, borrowed b:Int) -> Int:
-        return a + b
-    
-    fn main():
-        var a: Int = 5
-        var b: Int = 6
-        print(add(a,b))
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>
+fn add(borrowed a:Int, borrowed b:Int) -> Int:
+    return a + b
+
+fn main():
+    var a: Int = 5
+    var b: Int = 6
+    print(add(a,b))
 </code></pre>
 
 <p>- Owned:</p>
@@ -501,16 +501,16 @@ fn __moveinit__(inout self, owned existing: Self):
     <li>Ensures a single owner, enhancing memory safety.</li>
 </ul>
 
-<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>@value
-    fn add(owned a:Int, owned b:Int) -> Int:
-        a = 3
-        b = 2
-        return a + b
-    
-    fn main():
-        var a: Int = 5
-        var b: Int = 6
-        print(add(a,b))
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>
+fn add(owned a:Int, owned b:Int) -> Int:
+    a = 3
+    b = 2
+    return a + b
+
+fn main():
+    var a: Int = 5
+    var b: Int = 6
+    print(add(a,b))
 </code></pre>
 
 
