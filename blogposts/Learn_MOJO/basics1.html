@@ -404,8 +404,8 @@ var second: Int
 
 <h4>Example :</h4>
 <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>struct MyPair:
-var first: Int
-var second: Int
+    var first: Int
+    var second: Int
 
     fn __init__(inout self, first: Int, second: Int):
         self.first = first
@@ -458,29 +458,6 @@ fn __moveinit__(inout self, owned existing: Self):
 
 <h3>8.4. Argument Conventions</h3>
 
-<p>- Borrowed:</p>
-<ul>
-    <li>Immutable reference.</li>
-    <li>Default for <code>fn</code> functions.</li>
-    <li>Efficient for large or costly values.</li>
-</ul>
-
-<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>@value
-    struct SomethingBig:
-        var id: Int
-    
-        fn print_id(self):
-            print(self.id)
-    
-    fn use_something_big(borrowed a: SomethingBig, b: SomethingBig):
-       a.print_id()
-       b.print_id()
-    
-    var obj1 = SomethingBig(1)
-    var obj2 = SomethingBig(2)
-    
-    use_something_big(obj1, obj2)</code></pre>
-
 <p>- Inout:</p>
 <ul>
     <li>Mutable reference.</li>
@@ -489,16 +466,33 @@ fn __moveinit__(inout self, owned existing: Self):
 </ul>
 
 <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>@value
-    struct Counter:
-        var count: Int
+    fn add(inout a:Int, inout b:Int) -> Int:
+        a = 3
+        b = 2
+        return a + b
     
-        fn increase(inout self, amount: Int):
-            self.count += amount
+    fn main():
+        var a: Int = 5
+        var b: Int = 6
+        print(add(a,b))       
+</code></pre>
+
+<p>- Borrowed:</p>
+<ul>
+    <li>Immutable reference.</li>
+    <li>Default for <code>fn</code> functions.</li>
+    <li>Efficient for large or costly values.</li>
+</ul>
+
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>@value
+    fn add(borrowed a:Int, borrowed b:Int) -> Int:
+        return a + b
     
-    var myCounter = Counter(0)
-    print(myCounter.count)
-    myCounter.increase(3)
-    print(myCounter.count)</code></pre>
+    fn main():
+        var a: Int = 5
+        var b: Int = 6
+        print(add(a,b))
+</code></pre>
 
 <p>- Owned:</p>
 <ul>
@@ -508,20 +502,16 @@ fn __moveinit__(inout self, owned existing: Self):
 </ul>
 
 <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>@value
-    struct UniqueNumber:
-        var num: Int
+    fn add(owned a:Int, owned b:Int) -> Int:
+        a = 3
+        b = 2
+        return a + b
     
-    def use(p: UniqueNumber):
-        print(p.num)
-    
-    def usePointer():
-        let ptr = UniqueNumber(100)
-        take_ptr(ptr^)
-    
-    def take_ptr(owned p: UniqueNumber):
-        use(p)
-        
-    usePointer()</code></pre>
+    fn main():
+        var a: Int = 5
+        var b: Int = 6
+        print(add(a,b))
+</code></pre>
 
 
 <h3>Structs vs Classes</h3>
