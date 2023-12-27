@@ -57,33 +57,33 @@ const blogPosts = [
 
     {
       title: "Basics of linux LS command",
-      htmlFile: "./blogposts/Shorts/linux_commands/linux_ls_command.html",
+      htmlFile: "./blogposts/Misc/Shorts/linux_commands/linux_ls_command.html",
       about: "Learn complete basics and all the variations of linux LS command to traverse and access contents of directories efficiently in under 1 minute along with syntax .. Click here !!",
-      imageSrc: "./blogposts/Shorts/images/linux_commands/linux_ls_command.png",
+      imageSrc: "./blogposts/Misc/Shorts/images/linux_commands/linux_ls_command.png",
       date: "December 17, 2023",
     },
 
     {
       title: "Basics of linux CD command",
-      htmlFile: "./blogposts/Shorts/linux_commands/linux_cd_command.html",
+      htmlFile: "./blogposts/Misc/Shorts/linux_commands/linux_cd_command.html",
       about: "Learn complete basics and all the variations of linux CD command to change directories efficiently in under 1 minute along with syntax .. Click here !!",
-      imageSrc: "./blogposts/Shorts/images/linux_commands/linux_cd_command.png",
+      imageSrc: "./blogposts/Misc/Shorts/images/linux_commands/linux_cd_command.png",
       date: "December 17, 2023",
     },
 
     {
       title: "Basics of linux CAT command",
-      htmlFile: "./blogposts/Shorts/linux_commands/linux_cat_command.html",
+      htmlFile: "./blogposts/Misc/Shorts/linux_commands/linux_cat_command.html",
       about: "Learn complete basics and all the variations of linux CAT command to check the contents of files in under 1 minute along with syntax .. Click here !!",
-      imageSrc: "./blogposts/Shorts/images/linux_commands/linux_cat_command.png",
+      imageSrc: "./blogposts/Misc/Shorts/images/linux_commands/linux_cat_command.png",
       date: "December 17, 2023",
     },
 
     {
       title: "Basics of linux MV command",
-      htmlFile: "./blogposts/Shorts/linux_commands/linux_mv_command.html",
+      htmlFile: "./blogposts/Misc/Shorts/linux_commands/linux_mv_command.html",
       about: "Learn complete basics and all the variations of linux MV command to move and rename files and directories efficiently in under 1 minute along with syntax .. Click here !!",
-      imageSrc: "./blogposts/Shorts/images/linux_commands/linux_mv_command.png",
+      imageSrc: "./blogposts/Misc/Shorts/images/linux_commands/linux_mv_command.png",
       date: "December 17, 2023",
     },
 
@@ -121,17 +121,24 @@ const blogPosts = [
     },
     {
       title: "1 Minute - 1 New Insight",
-      htmlFile: "./blogposts/Shorts/linux_commands/list.html",
+      htmlFile: "./blogposts/Misc/Shorts/linux_commands/list.html",
       about: "Click here to learn many new concepts and ideas in under 1 minute -- Basics unleashed...",
-      imageSrc: "./blogposts/Shorts/images/1_minute.png",
+      imageSrc: "./blogposts/Misc/Shorts/images/1_minute.png",
       date: "October 20, 2023",
     },
     {
       title: "One stop solution - to all your problems",
-      htmlFile: "./blogposts/Shorts/solutions/list.html",
+      htmlFile: "./blogposts/Misc/Shorts/solutions/list.html",
       about: "Click here to find solutions to most common but time consuming problems",
-      imageSrc: "./blogposts/Shorts/images/solutions.png",
+      imageSrc: "./blogposts/Misc/Shorts/images/solutions.png",
       date: "October 21, 2023",
+    },
+    {
+      title: "Tips and Thoughts",
+      htmlFile: "./blogposts/Misc/tips_and_thoughts/list.html",
+      about: "Here are some of my thoughts and some programming tips coming straight from my heart. Click here to know them all ... ",
+      imageSrc: "./blogposts/Misc/images/tips_and_thoughts.png",
+      date: "October 22, 2023",
     },
     // Add other tutorial entries here
   ];
