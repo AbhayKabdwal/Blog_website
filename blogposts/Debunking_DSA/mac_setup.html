@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setting up environment for programming in windows</title>
+    <link rel="stylesheet" type="text/css" href="../../../css/post_style.css">
+
+</head>
+<body>
+    <h1>Setting Up C++ Development Environment with Visual Studio Code on macOS</h1>
+
+    <h2>Prerequisites</h2>
+    <p>Make sure you have the following installed on your macOS machine:</p>
+    <ul>
+        <li><a href="https://code.visualstudio.com/download" target="_blank">Visual Studio Code</a></li>
+        <li><a href="https://developer.apple.com/download/more/" target="_blank">Xcode Command Line Tools</a></li>
+    </ul>
+
+    <h3>1. Install Homebrew (Optional)</h3>
+    <p>If you don't have Homebrew installed, you can install it using the following command in the terminal:</p>
+    <pre>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</pre>
+
+    <h3>2. Install GCC (GNU Compiler Collection)</h3>
+    <p>Use Homebrew to install GCC:</p>
+    <pre>brew install gcc</pre>
+
+    <p>This step is optional as macOS comes with a version of Clang, but using GCC can be beneficial in some cases.</p>
+
+    <h3>3. Install Visual Studio Code</h3>
+    <p>Download and install Visual Studio Code from the official website:</p>
+    <p><a href="https://code.visualstudio.com/download" target="_blank">Visual Studio Code Download</a></p>
+
+    <h3>4. Install Extensions</h3>
+    <p>Open Visual Studio Code, and install the following extensions for C++ development:</p>
+    <ul>
+        <li><a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools" target="_blank">C/C++ Extension</a></li>
+    </ul>
+
+    <h3>5. Create a C++ File</h3>
+    <p>Create a new folder for your C++ projects and open it in Visual Studio Code. Inside the folder, create a new file named main.cpp with the following content:</p>
+    <pre>
+#include &lt;iostream&gt;
+
+int main() {
+    std::cout &lt;&lt; "Hello, World!" &lt;&lt;  std::endl;
+    return 0;
+}
+    </pre>
+
+    <h3>7. Build and Run</h3>
+    <ul>
+        <li>Open your main.cpp file in Visual Studio Code.</li>
+        <li>Press Cmd + Shift + B to build your code.</li>
+        <li>Press F5 to run your code.</li>
+    </ul>
+    
+    <div id="thank-you">
+        <h3>Thank You</h3>
+
+        <ul>
+            <li>Excited for more? Subscribe to the channel and hit the bell icon to receive notifications of further
+                contents. Also join my discord server and telegram channel for updates and resources.</li>
+        </ul>
+    </div>
+
+    <div id="contact">
+        <h2>Connect with me on -- </h2>
+        <p>Author -- Abhay Kabdwal</p>
+
+        <a href="https://www.youtube.com/@doctor_innovator/featured"><img src="../../../assets/youtube_icon.png"
+                width="50px"></a>
+        <a href="https://discord.gg/7ydGD3aJ"><img src="../../../assets/discord_icon.png" width="50px"></a>
+        <a href="https://t.me/doctor_innovator"><img src="../../../assets/telegram_icon.png" width="50px"></a>
+        <a href="https://github.com/AbhayKabdwal"><img src="../../../assets/github_icon.png" width="50px"></a>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
+</html>

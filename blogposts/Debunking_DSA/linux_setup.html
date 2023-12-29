@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setting up environment for programming in linux</title>
+    <link rel="stylesheet" type="text/css" href="../../../css/post_style.css">
+
+</head>
+<body>
+
+<!-- Ubuntu -->
+<section id="ubuntu">
+    <h1>Ubuntu</h1>
+
+    <h2>1. Install Visual Studio Code</h2>
+    <ul>
+        <li>Go to <a href="https://code.visualstudio.com/">Visual Studio Code</a> website.</li>
+        <li>Download and install the <code>.deb</code> package.</li>
+    </ul>
+
+    <h2>2. Install C++ Extension</h2>
+    <ul>
+        <li>Open VS Code.</li>
+        <li>Navigate to Extensions (or press <code>Ctrl + Shift + X</code>).</li>
+        <li>Search for "C/C++" by Microsoft and install it.</li>
+    </ul>
+
+    <h2>3. Install Build Essentials</h2>
+    <pre><code>sudo apt-get update
+sudo apt-get install build-essential
+</code></pre>
+
+    <h2>4. Install C++ Compiler (g++)</h2>
+    <pre><code>sudo apt-get install g++
+</code></pre>
+
+    <h2>5. Verify Installation</h2>
+    <pre><code>g++ --version
+</code></pre>
+    <p>Verify that the version information is displayed.</p>
+
+    <h2>6. Create a Hello World Program</h2>
+    <ul>
+        <li>Open VS Code.</li>
+        <li>Create a new file, e.g., <code>hello.cpp</code>.</li>
+        <li>Write a simple C++ program.</li>
+    </ul>
+    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    cout &lt;&lt; "Hello, World!" &lt;&lt; endl;
+    return 0;
+}
+</code></pre>
+
+    <h2>7. Build and Run</h2>
+    <ul>
+        <li>Save the file.</li>
+        <li>Open the terminal in VS Code.</li>
+        <li>Run the following commands:</li>
+    </ul>
+    <pre><code>g++ -o hello hello.cpp
+./hello
+</code></pre>
+    <p>Verify that "Hello, World!" is printed.</p>
+</section>
+
+<!-- Manjaro -->
+<section id="manjaro">
+    <h1>Manjaro</h1>
+
+    <h2>1. Install Visual Studio Code</h2>
+    <pre><code>sudo pacman -Syu
+sudo pacman -S code
+</code></pre>
+
+    <h2>2. Install C++ Extension</h2>
+    <ul>
+        <li>Open VS Code.</li>
+        <li>Navigate to Extensions (or press <code>Ctrl + Shift + X</code>).</li>
+        <li>Search for "C/C++" by Microsoft and install it.</li>
+    </ul>
+
+    <h2>3. Install Build Essentials</h2>
+    <pre><code>sudo pacman -S base-devel
+</code></pre>
+
+    <h2>4. Install C++ Compiler (g++)</h2>
+    <pre><code>sudo pacman -S gcc
+</code></pre>
+
+    <h2>5. Verify Installation</h2>
+    <pre><code>g++ --version
+</code></pre>
+    <p>Verify that the version information is displayed.</p>
+
+    <h2>6. Create a Hello World Program</h2>
+    <ul>
+        <li>Open VS Code.</li>
+        <li>Create a new file, e.g., <code>hello.cpp</code>.</li>
+        <li>Write a simple C++ program.</li>
+    </ul>
+    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    cout &lt;&lt; "Hello, World!" &lt;&lt; endl;
+    return 0;
+}
+</code></pre>
+
+    <h2>7. Build and Run</h2>
+    <ul>
+        <li>Save the file.</li>
+        <li>Open the terminal in VS Code.</li>
+        <li>Run the following commands:</li>
+    </ul>
+    <pre><code>g++ -o hello hello.cpp
+./hello
+</code></pre>
+    <p>Verify that "Hello, World!" is printed.</p>
+</section>
+
+<!-- Fedora -->
+<section id="fedora">
+    <h1>Fedora</h1>
+
+    <h2>1. Install Visual Studio Code</h2>
+    <pre><code>sudo dnf install code
+</code></pre>
+
+    <h2>2. Install C++ Extension</h2>
+    <ul>
+        <li>Open VS Code.</li>
+        <li>Navigate to Extensions (or press <code>Ctrl + Shift + X</code>).</li>
+        <li>Search for "C/C++" by Microsoft and install it.</li>
+    </ul>
+
+    <h2>3. Install Build Essentials</h2>
+    <pre><code>sudo dnf groupinstall "Development Tools"
+</code></pre>
+
+    <h2>4. Install C++ Compiler (g++)</h2>
+    <pre><code>sudo dnf install gcc-c++
+</code></pre>
+
+    <h2>5. Verify Installation</h2>
+    <pre><code>g++ --version
+</code></pre>
+    <p>Verify that the version information is displayed.</p>
+
+    <h2>6. Create a Hello World Program</h2>
+    <ul>
+        <li>Open VS Code.</li>
+        <li>Create a new file, e.g., <code>hello.cpp</code>.</li>
+        <li>Write a simple C++ program.</li>
+    </ul>
+    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    cout &lt;&lt; "Hello, World!" &lt;&lt; endl;
+    return 0;
+}
+</code></pre>
+
+    <h2>7. Build and Run</h2>
+    <ul>
+        <li>Save the file.</li>
+        <li>Open the terminal in VS Code.</li>
+        <li>Run the following commands:</li>
+    </ul>
+    <pre><code>g++ -o hello hello.cpp
+./hello
+</code></pre>
+    <p>Verify that "Hello, World!" is printed.</p>
+</section>
+
+<!-- Linux Mint -->
+<section id="linux-mint">
+    <h1>Linux Mint</h1>
+
+    <h2>1. Install Visual Studio Code</h2>
+    <pre><code>sudo apt-get update
+sudo apt-get install code
+</code></pre>
+
+    <h2>2. Install C++ Extension</h2>
+    <ul>
+        <li>Open VS Code.</li>
+        <li>Navigate to Extensions (or press <code>Ctrl + Shift + X</code>).</li>
+        <li>Search for "C/C++" by Microsoft and install it.</li>
+    </ul>
+
+    <h2>3. Install Build Essentials</h2>
+    <pre><code>sudo apt-get install build-essential
+</code></pre>
+
+    <h2>4. Install C++ Compiler (g++)</h2>
+    <pre><code>sudo apt-get install g++
+</code></pre>
+
+    <h2>5. Verify Installation</h2>
+    <pre><code>g++ --version
+</code></pre>
+    <p>Verify that the version information is displayed.</p>
+
+    <h2>6. Create a Hello World Program</h2>
+    <ul>
+        <li>Open VS Code.</li>
+        <li>Create a new file, e.g., <code>hello.cpp</code>.</li>
+        <li>Write a simple C++ program.</li>
+    </ul>
+    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    cout &lt;&lt; "Hello, World!" &lt;&lt; endl;
+    return 0;
+}
+</code></pre>
+
+    <h2>7. Build and Run</h2>
+    <ul>
+        <li>Save the file.</li>
+        <li>Open the terminal in VS Code.</li>
+        <li>Run the following commands:</li>
+    </ul>
+    <pre><code>g++ -o hello hello.cpp
+./hello
+</code></pre>
+    <p>Verify that "Hello, World!" is printed.</p>
+</section>
+
+<div id="thank-you">
+    <h3>Thank You</h3>
+
+    <ul>
+        <li>Excited for more? Subscribe to the channel and hit the bell icon to receive notifications of further contents. Also join my discord server and telegram channel for updates and resources.</li>
+    </ul>
+</div>
+
+<div id="contact">
+    <h2>Connect with me on -- </h2>
+            <p>Author -- Abhay Kabdwal</p>
+    
+            <a href="https://www.youtube.com/@doctor_innovator/featured"><img src="../../../assets/youtube_icon.png" width="50px"></a>
+            <a href="https://discord.gg/7ydGD3aJ"><img src="../../../assets/discord_icon.png" width="50px"></a>
+            <a href="https://t.me/doctor_innovator"><img src="../../../assets/telegram_icon.png" width="50px"></a>
+            <a href="https://github.com/AbhayKabdwal"><img src="../../../assets/github_icon.png" width="50px"></a>
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+</html>

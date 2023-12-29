@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setting up environment for programming in windows</title>
+    <link rel="stylesheet" type="text/css" href="../../../css/post_style.css">
+
+</head>
+<body>
+
+    <h1>Setting Up C++ Development Environment with Visual Studio Code on Windows</h1>
+
+    <h2>Prerequisites</h2>
+
+    <p>Before setting up your C++ development environment, ensure that you have the following installed on your Windows
+        machine:</p>
+
+    <ul>
+        <li><a href="https://code.visualstudio.com/">Visual Studio Code</a></li>
+        <li><a href="https://mingw-w64.org/doku.php">MinGW-w64</a> (Minimalist GNU for Windows) for GCC compiler</li>
+        <li><a href="https://cmake.org/download/">CMake</a> (optional, for CMake-based projects)</li>
+    </ul>
+
+    <h2>Steps</h2>
+
+    <h3>1. Install MinGW-w64</h3>
+
+    <p>Download and install MinGW-w64 by following these steps:</p>
+
+    <ol>
+        <li>Visit the <a href="https://sourceforge.net/projects/mingw/">MinGW-w64 download page</a> and download the
+            installer.</li>
+        <li>Run the installer and select the following options:
+            <ul>
+                <li>Version: Latest</li>
+                <li>Architecture: x86_64 (for 64-bit system) or i686 (for 32-bit system)</li>
+            </ul>
+        </li>
+        <li>Set the installation directory (e.g., <code>C:\</code>).</li>
+        <li>Add the MinGW-w64 <code>bin</code> directory to your system PATH. This is usually
+            <code>C:\mingw64\bin</code> or <code>C:\mingw32\bin</code> depending on your architecture.
+        </li>
+    </ol>
+
+    <h3>2. Verify GCC Installation</h3>
+
+    <p>Open a command prompt and run the following commands to verify that GCC is installed correctly:</p>
+
+    <pre>
+<code>gcc --version
+g++ --version</code>
+</pre>
+
+    <h3>3. Install Visual Studio Code</h3>
+
+    <p>Download and install Visual Studio Code from <a href="https://code.visualstudio.com/">official website</a>.
+        Follow the installation instructions provided.</p>
+
+    <h3>4. Install the C/C++ Extension</h3>
+
+    <p>Open Visual Studio Code, go to the Extensions view by clicking on the Extensions icon in the Activity Bar on the
+        side of the window or use the shortcut <code>Ctrl + Shift + X</code>.</p>
+
+    <p>Install the following extensions:</p>
+    <ul>
+        <li>C/C++ -- by microsoft</li>
+        <li>Code Runned -- by Jun Han</li>
+    </ul>
+
+    <h3>5. Run Test program</h3>
+
+    <p>Create a new folder for your C++ projects and open it in Visual Studio Code. Inside the folder, create a new file
+        named <code>main.cpp</code> with the following content:</p>
+
+    <pre>
+<code>#include &lt;iostream&gt;
+
+int main() {
+std::cout &lt;&lt; "Hello, World!" &lt;&lt; std::endl;
+return 0;
+}</code>
+</pre>
+
+    <p>Now click on the triangle icon on the top right.</p>
+
+    <p>If the code runs successfully you will get a <code>Hello, World!</code> written on the output section.</p>
+
+    <p>If not check if you completed all the steps correctly as described above.</p>
+
+    <div id="thank-you">
+        <h3>Thank You</h3>
+
+        <ul>
+            <li>Excited for more? Subscribe to the channel and hit the bell icon to receive notifications of further
+                contents. Also join my discord server and telegram channel for updates and resources.</li>
+        </ul>
+    </div>
+
+    <div id="contact">
+        <h2>Connect with me on -- </h2>
+        <p>Author -- Abhay Kabdwal</p>
+
+        <a href="https://www.youtube.com/@doctor_innovator/featured"><img src="../../../assets/youtube_icon.png"
+                width="50px"></a>
+        <a href="https://discord.gg/7ydGD3aJ"><img src="../../../assets/discord_icon.png" width="50px"></a>
+        <a href="https://t.me/doctor_innovator"><img src="../../../assets/telegram_icon.png" width="50px"></a>
+        <a href="https://github.com/AbhayKabdwal"><img src="../../../assets/github_icon.png" width="50px"></a>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
+</html>
