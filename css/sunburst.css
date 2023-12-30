@@ -7,14 +7,14 @@ pre .com, code .com { color: #4EC9B0; font-style: italic; } /* comment - gray */
 pre .typ, code .typ { color: #89bdff; } /* type - light blue */
 pre .lit, code .lit { color: #C5917B; } /* literal - blue */
 pre .pun, code .pun { color: #3160bc; } /* punctuation - white */
-pre .pln, code .pln { color: #3160bc; } /* plaintext - white */
+pre .pln, code .pln { color: #4d82ec; } /* plaintext - white */
 pre .tag, code .tag { color: #89bdff; } /* html/xml tag    - light blue */
 pre .atn, code .atn { color: #bdb76b; } /* html/xml attribute name  - khaki */
 pre .atv, code .atv { color: #65B042; } /* html/xml attribute value - green */
 pre .dec, code .dec { color: #3387CC; } /* decimal - blue */
 
 pre, code {
-	background-color: #0a1a2a;
+	background-color: #040B12;
 	border-radius: 8px;
 
 }

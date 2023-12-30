@@ -25,7 +25,7 @@ p {
 
 /* Style code blocks */
 pre {
-    background-color: #0a1a2a;
+    background-color: #040B12;
     color: #c9d1d9;
     padding: 10px;
     border: 1px dotted #161B22; /* GitHub code block border */
@@ -55,14 +55,18 @@ a{
 
 /* Responsive styles */
 @media screen and (max-width: 768px) {
+    body{
+        font-size: 16px;
+        padding: 5px 20px 0 5px;
+    }
     h1 {
-        font-size: 32px;
+        font-size: 28px;
     }
     h2 {
-        font-size: 24px;
+        font-size: 22px;
     }
     h3 {
-        font-size: 20px;
+        font-size: 18px;
     }
     p {
         font-size: 16px;
@@ -72,6 +76,10 @@ a{
     }
     ul, ol {
         font-size: 16px;
+    }
+    img{
+        width: 30px;
+        padding: 4px;
     }
     #thank-you, #contact {
         padding: 10px;
