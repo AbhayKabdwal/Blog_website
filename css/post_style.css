@@ -4,7 +4,7 @@ body {
     font-size: 22px;
     margin: 20px;
     padding: 20px;
-    background-color: #121821; /* GitHub Dark Background */
+    background-color: #000C18; /* GitHub Dark Background */
     color: #c9d1d9; /* Light text */
     line-height: 1.6;
     border: 2px solid #30363d; /* Add a border around the body */
@@ -25,7 +25,7 @@ p {
 
 /* Style code blocks */
 pre {
-    background-color: #1e242e;
+    background-color: #0a1a2a;
     color: #c9d1d9;
     padding: 10px;
     border: 1px dotted #161B22; /* GitHub code block border */
@@ -46,7 +46,7 @@ a{
 
 /* Style the Thank You and Contact Me sections */
 #thank-you, #contact {
-    background-color: #161B22;
+    background-color: #0a1a2a;
     color: #c9d1d9;
     padding: 20px;
     border-radius: 5px;
