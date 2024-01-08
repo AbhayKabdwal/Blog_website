@@ -4,11 +4,11 @@ body {
     font-size: 22px;
     margin: 20px;
     padding: 20px;
-    background-color: #000C18; /* GitHub Dark Background */
+    background-color: #001932; /* GitHub Dark Background */
     color: #c9d1d9; /* Light text */
     line-height: 1.6;
-    border: 2px solid #1f2328; /* Add a border around the body */
-    border-radius: 5px; /* Rounded corners */
+    border: 3px dotted #3f4750; /* Add a border around the body */
+    border-radius: 20px; /* Rounded corners */
 }
 
 /* Style headings */
@@ -25,7 +25,7 @@ p {
 
 /* Style code blocks */
 pre {
-    background-color: #0d131a;
+    background-color: #131c25;
     color: #c9d1d9;
     padding: 10px;
     border: 1px dotted #f9fcff; /* GitHub code block border */
