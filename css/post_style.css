@@ -25,10 +25,10 @@ p {
 
 /* Style code blocks */
 pre {
-    background-color: #040B12;
+    background-color: #0d131a;
     color: #c9d1d9;
     padding: 10px;
-    border: 1px dotted #0b0d10; /* GitHub code block border */
+    border: 1px dotted #f9fcff; /* GitHub code block border */
     border-radius: 10px;
     overflow-x: auto;
     line-height: 1.4;
