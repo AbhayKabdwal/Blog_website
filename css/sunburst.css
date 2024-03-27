@@ -1,20 +1,20 @@
 /* Pretty printing styles. Used with prettify.js. */
 /* Vim sunburst theme by David Leibovic */
 
-pre .str, code .str { color: #C5917B; } /* string  - green */
-pre .kwd, code .kwd { color: #E28964; } /* keyword - dark pink */
+pre .str, code .str { color: #e2a083; } /* string  - green */
+pre .kwd, code .kwd { color: #e36f3d; } /* keyword - dark pink */
 pre .com, code .com { color: #4EC9B0; font-style: italic; } /* comment - gray */
 pre .typ, code .typ { color: #89bdff; } /* type - light blue */
 pre .lit, code .lit { color: #C5917B; } /* literal - blue */
-pre .pun, code .pun { color: #3160bc; } /* punctuation - white */
-pre .pln, code .pln { color: #4d82ec; } /* plaintext - white */
+pre .pun, code .pun { color: #0f4cc6; } /* punctuation - white */
+pre .pln, code .pln { color: #1a61ee; } /* plaintext - white */
 pre .tag, code .tag { color: #89bdff; } /* html/xml tag    - light blue */
 pre .atn, code .atn { color: #bdb76b; } /* html/xml attribute name  - khaki */
 pre .atv, code .atv { color: #65B042; } /* html/xml attribute value - green */
-pre .dec, code .dec { color: #3387CC; } /* decimal - blue */
+pre .dec, code .dec { color: #0e7ed9; } /* decimal - blue */
 
 pre, code {
-	background-color: #131c25;
+	background-color: #2E3856;
 	border-radius: 8px;
 
 }

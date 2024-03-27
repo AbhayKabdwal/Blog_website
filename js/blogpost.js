@@ -140,6 +140,13 @@ const blogPosts = [
       imageSrc: "./blogposts/Misc/images/tips_and_thoughts.png",
       date: "October 22, 2023",
     },
+    {
+      title: "Debunking DSA",
+      htmlFile: "./blogposts/Debunking_DSA/list.html",
+      about: "In this course we are going to learn all the topics which are mostly left as thoritical part during study of DSA. LEts start right now ...",
+      imageSrc: "./blogposts/Debunking_DSA/images/DSA.png",
+      date: "March 27, 2024",
+    },
     // Add other tutorial entries here
   ];
   
