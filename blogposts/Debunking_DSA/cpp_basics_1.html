@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cpp basics 1</title>
+    <link rel="stylesheet" type="text/css" href="../../../css/sunburst.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/post_style.css">
+
+</head>
+
+<body>
+
+    <h1>C++ Basics: Variables, Data Types, and Operators</h1>
+
+    <h2>Variables</h2>
+
+    <p>Variables are used to store and manipulate data in a program.</p>
+
+    <h3>Declaration</h3>
+
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>// Syntax: data_type variable_name;
+    int age;
+    </code></pre>
+
+    <h3>Initialization</h3>
+
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>// Syntax: data_type variable_name = initial_value;
+    int age = 25;
+    </code></pre>
+
+    <h2>Data Types</h2>
+
+    <p>C++ supports various data types for different kinds of values.</p>
+
+    <h3>Fundamental Data Types</h3>
+
+    <h4>int: Integer data type</h4>
+
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>int number = 10;
+    </code></pre>
+
+    <h4>float: Floating-point data type</h4>
+
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>float pi = 3.14;
+    </code></pre>
+
+    <h4>double: Double-precision floating-point data type</h4>
+
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>double price = 99.99;
+    </code></pre>
+
+    <h4>char: Character data type</h4>
+
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>char grade = 'A';
+    </code></pre>
+
+    <h3>Derived Data Types</h3>
+
+    <h4>Array: Collection of elements of the same data type</h4>
+
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>int numbers[5] = {1, 2, 3, 4, 5};
+    </code></pre>
+
+    <h4>Pointer: Stores memory addresses</h4>
+
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>int* ptr = &amp;number;
+    </code></pre>
+
+    <h2>Operators</h2>
+
+    <p>Operators perform operations on variables and values.</p>
+
+    <h3>Arithmetic Operators</h3>
+
+    <h4>Addition:</h4>
+
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>int sum = 5 + 3;
+    </code></pre>
+
+    <h4>Subtraction:</h4>
+
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>int difference = 8 - 2;
+    </code></pre>
+
+    <h4>Multiplication:</h4>
+
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>int product = 4 * 6;
+    </code></pre>
+
+    <h4>Division:</h4>
+
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>float quotient = 10.0 / 2;
+    </code></pre>
+
+    <h4>Modulus (Remainder):</h4>
+
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>int remainder = 15 % 7;
+    </code></pre>
+
+    <h3>Relational Operators</h3>
+
+    <h4>Equal to:</h4>
+
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>bool isEqual = (a == b);
+    </code></pre>
+
+    <h4>Not equal to:</h4>
+
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>bool isNotEqual = (a != b);
+    </code></pre>
+
+    <h4>Greater than:</h4>
+
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>bool isGreater = (a &gt; b);
+    </code></pre>
+
+    <h4>Less than:</h4>
+
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>bool isLess = (a &lt; b);
+    </code></pre>
+
+    <h3>Logical Operators</h3>
+
+    <h4>AND:</h4>
+
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>bool andResult = (x &amp;&amp; y);
+    </code></pre>
+
+    <h4>OR:</h4>
+
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>bool orResult = (x || y);
+    </code></pre>
+
+    <h4>NOT:</h4>
+
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>bool notResult = !x;
+    </code></pre>
+
+    <h3>Assignment Operators</h3>
+
+    <h4>Assignment:</h4>
+
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>int a = 10;
+    </code></pre>
+
+    <h4>Add and Assign:</h4>
+
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>a += 5;  // Equivalent to a = a + 5;
+    </code></pre>
+
+    <h4>Subtract and Assign:</h4>
+
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>a -= 3;  // Equivalent to a = a - 3;
+    </code></pre>
+
+    <h4>Multiply and Assign:</h4>
+
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>a *= 2;  // Equivalent to a = a * 2;
+    </code></pre>
+
+    <h4>Divide and Assign:</h4>
+
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>a /= 4;  // Equivalent to a = a / 4;
+    </code></pre>
+
+    <h4>Modulus and Assign:</h4>
+
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>a %= 7;  // Equivalent to a = a % 7;
+    </code></pre>
+
+    <h4>Increment and Decrement Operators</h4>
+
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>a++;  // Equivalent to a = a + 1;
+b--;  // Equivalent to b = b - 1;</code></pre>
+
+    <h2>If-Else Statements</h2>
+
+    <h3>Introduction</h3>
+    <p>In C++, the <code>if</code> and <code>else</code> statements are used for conditional execution of code. They
+        allow you to control the flow of your program based on certain conditions.</p>
+
+    <h3>Syntax</h3>
+
+    <h4>Basic If Statement</h4>
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>if (condition) {
+    // Code to be executed if the condition is true
+}</code></pre>
+
+    <h5>Example:</h5>
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>#include &lt;iostream&gt;
+int main() {
+    int x = 10;
+    if (x > 5) {
+        std::cout &lt;&lt; "x is greater than 5." &lt;&lt; std::endl;
+    }
+return 0;
+}</code></pre>
+
+    <h4>If-Else Statement</h4>
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>if (condition) {
+    // Code to be executed if the condition is true
+} else {
+    // Code to be executed if the condition is false
+}</code></pre>
+
+    <h5>Example:</h5>
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>#include &lt;iostream&gt;
+int main() {
+    int x = 3;
+
+    if (x > 5) {
+        std::cout &lt;&lt; "x is greater than 5." &lt;&lt; std::endl;
+    } else {
+        std::cout &lt;&lt; "x is not greater than 5." &lt;&lt; std::endl;
+    }
+return 0;
+}</code></pre>
+
+    <h4>If-Else If-Else Statement</h4>
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>if (condition1) {
+    // Code to be executed if condition1 is true
+} else if (condition2) {
+    // Code to be executed if condition2 is true
+} else {
+    // Code to be executed if none of the conditions are true
+}</code></pre>
+
+    <h5>Example:</h5>
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>#include &lt;iostream&gt;
+int main() {
+    int x = 3;
+
+    if (x > 5) {
+        std::cout &lt;&lt; "x is greater than 5." &lt;&lt; std::endl;
+    } else if (x == 5) {
+        std::cout &lt;&lt; "x is equal to 5." &lt;&lt; std::endl;
+    } else {
+        std::cout &lt;&lt; "x is less than 5." &lt;&lt; std::endl;
+    }
+return 0;
+}</code></pre>
+
+    <h2>Basics of Loops in C++</h2>
+
+    <p>Loops in C++ are used to repeatedly execute a block of code until a certain condition is met. There are three
+        main types of loops in C++:</p>
+
+    <h3>1. <strong>for loop:</strong></h3>
+    <p>The <code>for</code> loop is used when the number of iterations is known.</p>
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>for (initialization; condition; increment/decrement) {
+    // Code to be repeated
+}</code></pre>
+    <p>Example:</p>
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    for (int i = 0; i &lt; 5; ++i) {
+        cout &lt;&lt; i &lt;&lt; " ";
+    }
+    return 0;
+}</code></pre>
+
+    <h3>2. <strong>while loop:</strong></h3>
+    <p>The <code>while</code> loop is used when the number of iterations is not known in advance.</p>
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>while (condition) {
+    // Code to be repeated
+}</code></pre>
+    <p>Example:</p>
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int count = 0;
+    while (count &lt; 3) {
+        cout &lt;&lt; count &lt;&lt; " ";
+        count++;
+    }
+    return 0;
+}</code></pre>
+
+    <h3>3. <strong>do-while loop:</strong></h3>
+    <p>The <code>do-while</code> loop is similar to the <code>while</code> loop, but it ensures that the code block is
+        executed at least once, as the condition is checked after the loop body.</p>
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>do {
+    // Code to be repeated
+} while (condition);</code></pre>
+    <p>Example:</p>
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int num = 5;
+    do {
+        cout &lt;&lt; num &lt;&lt; " ";
+        num--;
+    } while (num &gt; 0);
+    return 0;
+}</code></pre>
+
+    <h2>Basics of Functions in C++</h2>
+
+    <p>Functions are a fundamental building block in C++ programming, allowing for code organization, reusability, and
+        abstraction. Here are the key aspects of functions:</p>
+
+    <h3>Function Declaration</h3>
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>// Example: Function Declaration
+int add(int a, int b);</code></pre>
+
+    <h3>Function Definition</h3>
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>// Example: Function Definition
+int add(int a, int b) {
+    return a + b;
+}</code></pre>
+
+    <h3>Function Call</h3>
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>// Example: Function Call
+int result = add(5, 3);</code></pre>
+
+    <h3>Return Type</h3>
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>// Example: Function with Void Return Type
+void displayMessage() {
+    cout &lt;&lt; "Hello, World!" &lt;&lt; endl;
+}</code></pre>
+
+    <h3>Parameters</h3>
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>// Example: Function with Parameters
+double calculateAverage(double num1, double num2) {
+    return (num1 + num2) / 2;
+}</code></pre>
+
+    <h3>Default Arguments</h3>
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>// Example: Function with Default Argument
+int multiply(int a, int b = 2) {
+    return a * b;
+}</code></pre>
+
+    <h3>Function Overloading</h3>
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>// Example: Function Overloading
+int add(int a, int b);
+double add(double a, double b);</code></pre>
+
+    <h3>Recursion</h3>
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>// Example: Recursive Function
+int factorial(int n) {
+    if (n == 0 || n == 1)
+        return 1;
+    else
+        return n * factorial(n - 1);
+}</code></pre>
+
+    <h3>Scope of Variables</h3>
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>// Example: Local Scope
+void exampleFunction() {
+    int localVar = 10;
+    // localVar is only accessible within this function
+}</code></pre>
+
+    <h3>Function Prototypes</h3>
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>// Example: Function Prototype
+int multiply(int a, int b);</code></pre>
+
+    <h2>Memory Management in C++</h2>
+
+    <p>Memory management is a critical aspect of C++ programming, involving the allocation and deallocation of memory
+        for variables and data structures. Here are the basics:</p>
+
+    <h3>1. Stack and Heap Memory</h3>
+
+    <h4>Stack Memory</h4>
+    <ul>
+        <li><strong>Description:</strong> Stack memory is used for local variables and function call management.</li>
+        <li><strong>Allocation:</strong> Automatically allocated and deallocated during function calls.</li>
+    </ul>
+    <p>Example:</p>
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>void exampleFunction() {
+    int x = 10;  // x is allocated on the stack
+    // ...
+}</code></pre>
+
+    <h4>Heap Memory</h4>
+    <ul>
+        <li><strong>Description:</strong> Heap memory is used for dynamic memory allocation, allowing objects to persist
+            beyond their scope.</li>
+        <li><strong>Allocation:</strong> Manually allocated and deallocated using <code>new</code> and
+            <code>delete</code> or <code>malloc</code> and <code>free</code>.</li>
+    </ul>
+    <p>Example:</p>
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>int* dynamicVar = new int;  // Allocate integer on the heap
+// ...
+delete dynamicVar;  // Deallocate memory</code></pre>
+
+    <h3>2. Pointers</h3>
+
+    <h4>Pointers</h4>
+    <ul>
+        <li><strong>Description:</strong> Pointers store memory addresses, allowing manipulation of memory directly.
+        </li>
+        <li><strong>Declaration:</strong> <code>int* ptr;</code> declares a pointer to an integer.</li>
+    </ul>
+    <p>Example:</p>
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>int x = 5;
+int* ptr = &x;  // ptr holds the address of x</code></pre>
+
+    <h4>Dereferencing</h4>
+    <ul>
+        <li><strong>Description:</strong> Access the value stored at a memory address using the dereference operator
+            <code>*</code>.</li>
+    </ul>
+    <p>Example:</p>
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>int y = *ptr;  // y now holds the value stored at the address pointed by ptr</code></pre>
+
+    <h3>3. Memory Leak</h3>
+
+    <h4>Description</h4>
+    <ul>
+        <li><strong>Description:</strong> Occurs when memory is allocated but not deallocated, leading to a gradual
+            depletion of available memory.</li>
+    </ul>
+    <p>Example:</p>
+    <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>void memoryLeakExample() {
+    int* dynamicVar = new int;
+    // ... // No deallocation, causing a memory leak
+}</code></pre>
+
+    <div id="thank-you">
+        <h2>Thank You</h2>
+
+        <ul>
+            <li>Excited for more? Subscribe to the channel and hit the bell icon to receive notifications of further
+                contents. Also join my discord server and telegram channel for updates and resources.</li>
+        </ul>
+    </div>
+
+    <div id="contact">
+        <h2>Connect with me on -- </h2>
+        <p>Author -- Abhay Kabdwal</p>
+
+        <a href="https://www.youtube.com/@doctor_innovator/featured"><img src="../../../assets/youtube_icon.png"
+                width="50px"></a>
+        <a href="https://discord.gg/7ydGD3aJ"><img src="../../../assets/discord_icon.png" width="50px"></a>
+        <a href="https://t.me/doctor_innovator"><img src="../../../assets/telegram_icon.png" width="50px"></a>
+        <a href="https://github.com/AbhayKabdwal"><img src="../../../assets/github_icon.png" width="50px"></a>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
+</html>
