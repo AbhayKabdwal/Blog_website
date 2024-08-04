@@ -24,7 +24,7 @@
         </ul>
         <p>These five commands are among the most frequently used Linux commands. They are used for manipulating both files and directories.</p>
         <p>While some tasks are easier with a graphical file manager, command-line programs offer power and flexibility. For instance, copying all HTML files from one directory to another, but only those that do not exist in the destination directory or are newer, is simpler with the command line:</p>
-        <pre><code>cp -u *.html destination</code></pre>
+        <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">cp -u *.html destination</pre>
     </section>
 
     <section>
@@ -97,35 +97,35 @@
         <h2>Commands</h2>
         <h3><code>mkdir</code>—Create Directories</h3>
         <p>The <code>mkdir</code> command is used to create directories:</p>
-        <pre><code>mkdir directory...</code></pre>
+        <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">mkdir directory...</pre>
         <p>Example:</p>
-        <pre><code>mkdir dir1 dir2</code></pre>
+        <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">mkdir dir1 dir2</pre>
         <p>This creates two directories, <code>dir1</code> and <code>dir2</code>.</p>
 
         <h3><code>cp</code>—Copy Files and Directories</h3>
         <p>The <code>cp</code> command copies files or directories:</p>
-        <pre><code>cp item1 item2</code></pre>
+        <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">cp item1 item2</pre>
         <p>Example:</p>
-        <pre><code>cp file1 file2</code></pre>
+        <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">cp file1 file2</pre>
         <p>This copies <code>file1</code> to <code>file2</code>. If <code>file2</code> exists, it is overwritten.</p>
 
         <h3><code>mv</code>—Move and Rename Files</h3>
         <p>The <code>mv</code> command is used to move or rename files:</p>
-        <pre><code>mv item1 item2</code></pre>
+        <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">mv item1 item2</pre>
         <p>Example:</p>
-        <pre><code>mv file1 file2</code></pre>
+        <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">mv file1 file2</pre>
         <p>This moves or renames <code>file1</code> to <code>file2</code>.</p>
 
         <h3><code>rm</code>—Remove Files and Directories</h3>
         <p>The <code>rm</code> command deletes files and directories:</p>
-        <pre><code>rm item...</code></pre>
+        <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">rm item...</pre>
         <p>Be careful with <code>rm</code> as it does not have an undelete command. Use wildcards cautiously.</p>
 
         <h3><code>ln</code>—Create Links</h3>
         <p>The <code>ln</code> command creates hard and symbolic links:</p>
-        <pre><code>ln file link</code></pre>
+        <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">ln file link</pre>
         <p>Example:</p>
-        <pre><code>ln fun fun-hard</code></pre>
+        <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">ln fun fun-hard</pre>
         <p>This creates a hard link to <code>fun</code> named <code>fun-hard</code>.</p>
     </section>
 
@@ -133,23 +133,23 @@
         <h2>Examples and Exercises</h2>
         <h3>Creating Directories</h3>
         <p>To create a directory named <code>playground</>, use:</p>
-        <pre><code>mkdir playground</code></pre>
+        <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">mkdir playground</pre>
 
         <h3>Copying Files</h3>
         <p>To copy a file from <code>/etc</code> to the current directory:</p>
-        <pre><code>cp /etc/passwd .</code></pre>
+        <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">cp /etc/passwd .</pre>
 
         <h3>Moving and Renaming Files</h3>
         <p>To rename a file:</p>
-        <pre><code>mv passwd fun</code></pre>
+        <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">mv passwd fun</pre>
 
         <h3>Creating Hard Links</h3>
         <p>To create hard links:</p>
-        <pre><code>ln fun fun-hard</code></pre>
+        <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">ln fun fun-hard</pre>
 
         <h3>Creating Symbolic Links</h3>
         <p>To create symbolic links:</p>
-        <pre><code>ln -s fun fun-sym</code></pre>
+        <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d">ln -s fun fun-sym</pre>
     </section>
 
     <div id="thank-you">

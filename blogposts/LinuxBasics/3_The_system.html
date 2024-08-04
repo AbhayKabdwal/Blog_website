@@ -21,7 +21,7 @@
 
 <h2>More Fun with ls</h2>
 
-<p><strong>ls</strong> is probably the most used command and for good reason. With it, we can see directory contents and determine a variety of important file and directory attributes. As we have seen, we can simply enter <code>ls</code> to see a list of files and subdirectories contained in the current working directory:</p>
+<p><strong>ls</strong> is probably the most used command and for good reason. With it, we can see directory contents and determine a variety of important file and directory attributes. As we have seen, we can simply enter <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>ls</code></pre> to see a list of files and subdirectories contained in the current working directory:</p>
 <pre>
 [me@linuxbox ~]$ ls
 Desktop Documents Music Pictures Public Templates Videos
@@ -31,7 +31,7 @@ Desktop Documents Music Pictures Public Templates Videos
 [me@linuxbox ~]$ ls /usr
 bin games kerberos libexec sbin src etc include lib local share tmp
 </pre>
-<p>or even specify multiple directories. In this example we will list both the user’s home directory (symbolized by the <code>~</code> character) and the <code>/usr</code> directory:</p>
+<p>or even specify multiple directories. In this example we will list both the user’s home directory (symbolized by the <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>~</code></pre> character) and the <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>/usr</code></pre> directory:</p>
 <pre>
 [me@linuxbox ~]$ ls ~ /usr
 /home/me:
@@ -51,7 +51,7 @@ drwxrwxr-x 2 me me 4096 2012-10-26 17:20 Public
 drwxrwxr-x 2 me me 4096 2012-10-26 17:20 Templates
 drwxrwxr-x 2 me me 4096 2012-10-26 17:20 Videos
 </pre>
-<p>By adding <code>-l</code> to the command, we changed the output to the long format.</p>
+<p>By adding <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>-l</code></pre> to the command, we changed the output to the long format.</p>
 
 <h2>Options and Arguments</h2>
 
@@ -59,15 +59,15 @@ drwxrwxr-x 2 me me 4096 2012-10-26 17:20 Videos
 <pre>
 command -options arguments
 </pre>
-<p>Most commands use options consisting of a single character preceded by a dash, such as <code>-l</code>. But many commands, including those from the GNU Project, also support long options, consisting of a word preceded by two dashes. Also, many commands allow multiple short options to be strung together. In this example, the <code>ls</code> command is given two options, the <code>l</code> option to produce long format output, and the <code>t</code> option to sort the result by the file’s modification time:</p>
+<p>Most commands use options consisting of a single character preceded by a dash, such as <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>-l</code></pre>. But many commands, including those from the GNU Project, also support long options, consisting of a word preceded by two dashes. Also, many commands allow multiple short options to be strung together. In this example, the <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>ls</code></pre> command is given two options, the <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>l</code></pre> option to produce long format output, and the <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>t</code></pre> option to sort the result by the file’s modification time:</p>
 <pre>
 [me@linuxbox ~]$ ls -lt
 </pre>
-<p>We’ll add the long option <code>--reverse</code> to reverse the order of the sort:</p>
+<p>We’ll add the long option <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>--reverse</code></pre> to reverse the order of the sort:</p>
 <pre>
 [me@linuxbox ~]$ ls -lt --reverse
 </pre>
-<p>The <code>ls</code> command has a large number of possible options. The most common are listed in Table 3-1.</p>
+<p>The <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>ls</code></pre> command has a large number of possible options. The most common are listed in Table 3-1.</p>
 
 <h3>Table 3-1: Common ls Options</h3>
 
@@ -85,7 +85,7 @@ command -options arguments
   <tr>
     <td>-d</td>
     <td>--directory</td>
-    <td>Ordinarily, if a directory is specified, ls will list the contents of the directory, not the directory itself. Use this option in conjunction with the <code>-l</code> option to see details about the directory rather than its contents.</td>
+    <td>Ordinarily, if a directory is specified, ls will list the contents of the directory, not the directory itself. Use this option in conjunction with the <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>-l</code></pre> option to see details about the directory rather than its contents.</td>
   </tr>
   <tr>
     <td>-F</td>
@@ -121,7 +121,7 @@ command -options arguments
 
 <h2>A Longer Look at Long Format</h2>
 
-<p>As we saw before, the <code>-l</code> option causes <code>ls</code> to display its results in long format. This format contains a great deal of useful information. Here is the Examples directory from an Ubuntu system:</p>
+<p>As we saw before, the <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>-l</code></pre> option causes <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>ls</code></pre> to display its results in long format. This format contains a great deal of useful information. Here is the Examples directory from an Ubuntu system:</p>
 <pre>
 -rw-r--r-- 1 root root 3576296 2012-04-12 18:52 example.pdf
 -rw-r--r-- 1 root root 17376 2012-04-12 18:52 example.txt

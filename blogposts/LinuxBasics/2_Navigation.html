@@ -22,11 +22,11 @@
 	<p>At any given time, we are inside a single directory and we can see the files contained in the directory and the pathway to the directory above us (called the parent directory) and any subdirectories below us.</p>
 	<p>The directory we are standing in is called the current working directory.</p>
 	<h2>Listing the Contents of a Directory</h2>
-	<p>To list the files and directories in the current working directory, we use the <code>ls</code> command:</p>
+	<p>To list the files and directories in the current working directory, we use the <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>ls</code></pre> command:</p>
 	<pre>[me@linuxbox ~]$ ls
 Desktop    Documents  Music     Pictures  Public    Templates  Videos</pre>
 	<h2>Changing the Current Working Directory</h2>
-	<p>To change your working directory (where we are standing in our tree-shaped maze) we use the <code>cd</code> command:</p>
+	<p>To change your working directory (where we are standing in our tree-shaped maze) we use the <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>cd</code></pre> command:</p>
 	<pre>[me@linuxbox ~]$ cd /usr/bin
 [me@linuxbox bin]$ pwd
 /usr/bin</pre>
@@ -35,7 +35,7 @@ Desktop    Documents  Music     Pictures  Public    Templates  Videos</pre>
 	<h2>Relative Pathnames</h2>
 	<p>Where an absolute pathname starts from the root directory and leads to its destination, a relative pathname starts from the working directory.</p>
 	<p>It uses a couple of special symbols to represent relative positions in the filesystem tree.</p>
-	<p>These special symbols are <code>.</code> (dot) and <code>..</code> (dot dot).</p>
+	<p>These special symbols are <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>.</code></pre> (dot) and <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>..</code></pre> (dot dot).</p>
 	<h2>Some Helpful Shortcuts</h2>
 	<p>In Table 2-1 we see some useful ways the current working directory can be quickly changed.</p>
 	<table>
@@ -47,15 +47,15 @@ Desktop    Documents  Music     Pictures  Public    Templates  Videos</pre>
 		</thead>
 		<tbody>
 			<tr>
-				<td><code>cd</code></td>
+				<td><pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>cd</code></pre></td>
 				<td>Changes the working directory to your home directory.</td>
 			</tr>
 			<tr>
-				<td><code>cd -</code></td>
+				<td><pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>cd -</code></pre></td>
 				<td>Changes the working directory to the previous working directory.</td>
 			</tr>
 			<tr>
-				<td><code>cd ~username</code></td>
+				<td><pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>cd ~username</code></pre></td>
 				<td>Changes the working directory to the home directory of username.</td>
 			</tr>
 		</tbody>
