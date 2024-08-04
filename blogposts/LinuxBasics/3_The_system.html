@@ -22,25 +22,25 @@
 <h2>More Fun with ls</h2>
 
 <p><strong>ls</strong> is probably the most used command and for good reason. With it, we can see directory contents and determine a variety of important file and directory attributes. As we have seen, we can simply enter <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>ls</code></pre> to see a list of files and subdirectories contained in the current working directory:</p>
-<pre>
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>
 [me@linuxbox ~]$ ls
 Desktop Documents Music Pictures Public Templates Videos
-</pre>
+</code></pre>
 <p>Besides the current working directory, we can specify the directory to list, like so:</p>
-<pre>
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>
 [me@linuxbox ~]$ ls /usr
 bin games kerberos libexec sbin src etc include lib local share tmp
-</pre>
+</code></pre>
 <p>or even specify multiple directories. In this example we will list both the user’s home directory (symbolized by the <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>~</code></pre> character) and the <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>/usr</code></pre> directory:</p>
-<pre>
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>
 [me@linuxbox ~]$ ls ~ /usr
 /home/me:
 Desktop Documents Music Pictures Public Templates Videos
 /usr:
 bin games kerberos libexec sbin src etc include lib local share tmp
-</pre>
+</code></pre>
 <p>We can also change the format of the output to reveal more detail:</p>
-<pre>
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>
 [me@linuxbox ~]$ ls -l
 total 56
 drwxrwxr-x 2 me me 4096 2012-10-26 17:20 Desktop
@@ -50,23 +50,23 @@ drwxrwxr-x 2 me me 4096 2012-10-26 17:20 Pictures
 drwxrwxr-x 2 me me 4096 2012-10-26 17:20 Public
 drwxrwxr-x 2 me me 4096 2012-10-26 17:20 Templates
 drwxrwxr-x 2 me me 4096 2012-10-26 17:20 Videos
-</pre>
+</code></pre>
 <p>By adding <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>-l</code></pre> to the command, we changed the output to the long format.</p>
 
 <h2>Options and Arguments</h2>
 
 <p>This brings us to a very important point about how most commands work. Commands are often followed by one or more options that modify their behavior and, further, by one or more arguments, the items upon which the command acts. So most commands look something like this:</p>
-<pre>
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>
 command -options arguments
-</pre>
+</code></pre>
 <p>Most commands use options consisting of a single character preceded by a dash, such as <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>-l</code></pre>. But many commands, including those from the GNU Project, also support long options, consisting of a word preceded by two dashes. Also, many commands allow multiple short options to be strung together. In this example, the <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>ls</code></pre> command is given two options, the <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>l</code></pre> option to produce long format output, and the <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>t</code></pre> option to sort the result by the file’s modification time:</p>
-<pre>
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>
 [me@linuxbox ~]$ ls -lt
-</pre>
+</code></pre>
 <p>We’ll add the long option <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>--reverse</code></pre> to reverse the order of the sort:</p>
-<pre>
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>
 [me@linuxbox ~]$ ls -lt --reverse
-</pre>
+</code></pre>
 <p>The <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>ls</code></pre> command has a large number of possible options. The most common are listed in Table 3-1.</p>
 
 <h3>Table 3-1: Common ls Options</h3>
@@ -85,7 +85,7 @@ command -options arguments
   <tr>
     <td>-d</td>
     <td>--directory</td>
-    <td>Ordinarily, if a directory is specified, ls will list the contents of the directory, not the directory itself. Use this option in conjunction with the <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>-l</code></pre> option to see details about the directory rather than its contents.</td>
+    <td>Ordinarily, if a directory is specified, ls will list the contents of the directory, not the directory itself. Use this option in conjunction with the -l option to see details about the directory rather than its contents.</td>
   </tr>
   <tr>
     <td>-F</td>
@@ -122,11 +122,11 @@ command -options arguments
 <h2>A Longer Look at Long Format</h2>
 
 <p>As we saw before, the <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>-l</code></pre> option causes <pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>ls</code></pre> to display its results in long format. This format contains a great deal of useful information. Here is the Examples directory from an Ubuntu system:</p>
-<pre>
+<pre class="prettyprint lang-python" style="padding:15px;border: 1px dotted #30363d"><code>
 -rw-r--r-- 1 root root 3576296 2012-04-12 18:52 example.pdf
 -rw-r--r-- 1 root root 17376 2012-04-12 18:52 example.txt
 drwxr-xr-x 2 root root 4096 2012-04-12 18:52 images
-</pre>
+</code></pre>
 <p>The first field contains ten characters. The first character indicates the type of file. Here are the most common types:</p>
 <ul>
   <li><strong>-</strong> - Regular file</li>
