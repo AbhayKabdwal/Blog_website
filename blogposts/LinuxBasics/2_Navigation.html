@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Navigation</title>
+    <link rel="stylesheet" type="text/css" href="../../css/sunburst.css">
+    <link rel="stylesheet" type="text/css" href="../../css/post_style.css">
+
+
+</head>
+<body>
+	<h1>Navigation</h1>
+	<p>The first thing we need to learn (besides just typing) is how to navigate the filesystem on our Linux system.</p>
+	<h2>Understanding the Filesystem Tree</h2>
+	<p>Like Windows, a Unix-like operating system such as Linux organizes its files in what is called a hierarchical directory structure.</p>
+	<p>This means that they are organized in a tree-like pattern of directories (sometimes called folders in other systems), which may contain files and other directories.</p>
+	<p>The first directory in the filesystem is called the root directory.</p>
+	<h2>The Current Working Directory</h2>
+	<p>Most of us are probably familiar with a graphical file manager, which represents the filesystem tree.</p>
+	<p>However, the command line has no pictures, so to navigate the filesystem tree, we need to think of it in a different way.</p>
+	<p>Imagine that the filesystem is a maze shaped like an upside-down tree and we are able to stand in the middle of it.</p>
+	<p>At any given time, we are inside a single directory and we can see the files contained in the directory and the pathway to the directory above us (called the parent directory) and any subdirectories below us.</p>
+	<p>The directory we are standing in is called the current working directory.</p>
+	<h2>Listing the Contents of a Directory</h2>
+	<p>To list the files and directories in the current working directory, we use the <code>ls</code> command:</p>
+	<pre>[me@linuxbox ~]$ ls
+Desktop    Documents  Music     Pictures  Public    Templates  Videos</pre>
+	<h2>Changing the Current Working Directory</h2>
+	<p>To change your working directory (where we are standing in our tree-shaped maze) we use the <code>cd</code> command:</p>
+	<pre>[me@linuxbox ~]$ cd /usr/bin
+[me@linuxbox bin]$ pwd
+/usr/bin</pre>
+	<h2>Absolute Pathnames</h2>
+	<p>An absolute pathname begins with the root directory and follows the tree branch by branch until the path to the desired directory or file is completed.</p>
+	<h2>Relative Pathnames</h2>
+	<p>Where an absolute pathname starts from the root directory and leads to its destination, a relative pathname starts from the working directory.</p>
+	<p>It uses a couple of special symbols to represent relative positions in the filesystem tree.</p>
+	<p>These special symbols are <code>.</code> (dot) and <code>..</code> (dot dot).</p>
+	<h2>Some Helpful Shortcuts</h2>
+	<p>In Table 2-1 we see some useful ways the current working directory can be quickly changed.</p>
+	<table>
+		<thead>
+			<tr>
+				<th>Shortcut</th>
+				<th>Result</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><code>cd</code></td>
+				<td>Changes the working directory to your home directory.</td>
+			</tr>
+			<tr>
+				<td><code>cd -</code></td>
+				<td>Changes the working directory to the previous working directory.</td>
+			</tr>
+			<tr>
+				<td><code>cd ~username</code></td>
+				<td>Changes the working directory to the home directory of username.</td>
+			</tr>
+		</tbody>
+	</table>
+	<div id="thank-you">
+		<h2>Thank You</h2>
+	
+		<ul>
+			<li>Excited for more? Subscribe to the channel and hit the bell icon to receive notifications of further contents. Also join my Discord server and Telegram channel for updates and resources.</li>
+		</ul>
+	</div>
+	<h2>Next up in the series</h2>
+	
+	<ul>
+		<li>Basics of Linux command line continued</li>
+		<ul>
+			<li>The system</li>
+		</ul>
+	</ul>
+	
+	<div id="contact">
+		<h2>Connect with me on -- </h2>
+				<p>Author -- Abhay Kabdwal</p>
+		
+				<a href="https://www.youtube.com/@doctor_innovator/featured"><img src="../../assets/youtube_icon.png" width="50px"></a>
+				<a href="https://discord.gg/7ydGD3aJ"><img src="../../assets/discord_icon.png" width="50px"></a>
+				<a href="https://t.me/doctor_innovator"><img src="../../assets/telegram_icon.png" width="50px"></a>
+				<a href="https://github.com/AbhayKabdwal"><img src="../../assets/github_icon.png" width="50px"></a>
+	</div>
+	
+	</body>
+	<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+</html>

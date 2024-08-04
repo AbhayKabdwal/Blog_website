@@ -143,16 +143,25 @@ const blogPosts = [
     {
       title: "Debunking DSA",
       htmlFile: "./blogposts/Debunking_DSA/list.html",
-      about: "In this course we are going to learn all the topics which are mostly left as thoritical part during study of DSA. LEts start right now ...",
+      about: "In this course we are going to learn all the topics which are mostly left as theoritical part during study of DSA. Lets start right now ...",
       imageSrc: "./blogposts/Debunking_DSA/images/DSA.png",
       date: "March 27, 2024",
+    },
+    {
+      title: "The linux lectures",
+      htmlFile: "./blogposts/LinuxBasics/list.html",
+      about: "In this course I am going to teach you the complete linux basics you will need to upgrade your skills in just 15 lectures. Start by clicking here ...",
+      imageSrc: "./blogposts/LinuxBasics/images/thumbnail.png",
+      date: "August 4, 2024",
     },
     // Add other tutorial entries here
   ];
   
 // Sort the tutorials and blogposts by date
-tutorials.sort((a, b) => new Date(a.date) - new Date(b.date));
-blogPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
+tutorials.sort((a, b) => new Date(b.date) - new Date(a.date));
+blogPosts.sort((a, b) => new Date(a.date) - new Date(b.date));
+
+console.log(tutorials)
 
 
 function addPagination() {
